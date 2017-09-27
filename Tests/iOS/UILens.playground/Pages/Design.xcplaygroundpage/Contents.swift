@@ -1,133 +1,55 @@
 import UIKit
-import CoreGraphics
+import IDPDesign
 
-func sideEffect<Value>(_ execute: @escaping (Value) -> ()) -> (Value) -> Value {
-    return {
-        execute($0)
-        
-        return $0
+extension Lens where Object: UIView, Property == CGFloat {
+    static var alpha: Lens {
+        return Lens(
+            get: { $0.alpha },
+            set: setter { $0.alpha = $1 }
+        )
     }
 }
 
-func setter<Value, Property>(_ execute: @escaping (Property, Value) -> ()) -> (Property, Value) -> Value {
-    return {
-        execute($0, $1)
-        
-        return $1
+extension Lens where Object: UIView, Property == UIColor? {
+    static var backgroundColor: Lens {
+        return Lens(
+            get: { $0.backgroundColor },
+            set: setter { $0.backgroundColor = $1 }
+        )
     }
 }
 
-func identity<T>(_ x: T) -> T {
-    return x
-}
-
-struct Design<T> {
-    
-    typealias `Type` = T
-    typealias Chain = (Type) -> Type
-    
-    let chain: Chain
-    
-    init(_ type: Type.Type) {
-        self.init(identity)
-    }
-    
-    init(_ chain: @escaping Chain) {
-        self.chain = chain
+extension Lens where Object: UIButton, Property == CGRect {
+    static var frame: Lens {
+        return Lens(
+            get: { $0.frame },
+            set: setter { $0.frame = $1 }
+        )
     }
 }
 
-struct Setter<T, X> {
-    
-    typealias `Type` = (T, X) -> ()
-    
-    let set: Type
-    
-    init(_ setter: @escaping Type) {
-        self.set = setter
+extension Lens where Object: UIButton, Property == UILabel? {
+    static var label: Lens {
+        return Lens(
+            get: { $0.titleLabel },
+            set: setter { _, _ in }
+        )
     }
 }
 
-struct Composer<T, X> {
-    let design: Design<T>
-    let setter: Setter<T, X>
-    
-    init(_ design: Design<T>, _ setter: Setter<T, X>) {
-        self.design = design
-        self.setter = setter
-    }
-}
-
-protocol UIViewProtocol: class {
-    var alpha: CGFloat { get set }
-    var backgroundColor: UIColor? { get set }
-}
-
-protocol UIButtonProtocol: class {
-    var frame: CGRect { get set }
-}
-
-extension UIView: UIViewProtocol { }
-
-extension UIButton: UIButtonProtocol { }
-
-extension Setter where T: UIView, X == CGFloat {
-    static var alpha: Setter {
-        return Setter { $0.alpha = $1 }
-    }
-}
-
-extension Setter where T: UIView, X == UIColor {
-    static var backgroundColor: Setter {
-        return Setter { $0.backgroundColor = $1 }
-    }
-}
-
-extension Setter where T: UIButton, X == CGRect {
-    static var frame: Setter<T, X> {
-        return Setter { $0.frame = $1 }
-    }
-}
-
-precedencegroup LeftApplyPrecedence {
-    associativity: left
-    higherThan: AssignmentPrecedence
-    lowerThan: TernaryPrecedence
-}
-
-precedencegroup LeftChainPrecedence {
-    associativity: left
-    higherThan: LeftApplyPrecedence
-}
-
-precedencegroup FunctionCompositionPrecedence {
-    associativity: right
-    higherThan: LeftChainPrecedence
-}
-
-infix operator |> : LeftApplyPrecedence
-infix operator +> : LeftChainPrecedence
-infix operator ~ : LeftChainPrecedence
-infix operator • : FunctionCompositionPrecedence
-
-func • <A, B, C> (g: @escaping (B) -> C, f: @escaping (A) -> B) -> ((A) -> C) {
-    return { g(f($0)) }
-}
-
-func +> <T, Arg>(design: Design<T>, setter: Setter<T, Arg>) -> Composer<T, Arg> {
-    return Composer(design, setter)
-}
-
-func ~ <T, Arg>(composer: Composer<T, Arg>, argument: Arg) -> Design<T> {
-    return Design(
-        composer.design.chain • sideEffect { composer.setter.set($0, argument) }
+let style: Style<UIButton> = design(
+    .alpha ~ 1.0,
+    .backgroundColor ~ .red,
+    .frame ~ .zero,
+    .label ~ design(
+        .alpha ~ 0.5,
+        .backgroundColor ~ .green
     )
-}
+)
 
-let f = Design(UIButton.self)
-    +> .alpha ~ 1.0
-    +> .backgroundColor ~ UIColor.red
-    +> .frame ~ .zero
+let button = UIButton()
+button |> style
 
-
-print(type(of: f.chain))
+print(button.backgroundColor as Any)
+print(button.titleLabel?.backgroundColor as Any)
+print(button.titleLabel?.alpha as Any)
