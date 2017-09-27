@@ -1,0 +1,26 @@
+{
+  "name": "IDPDesign",
+  "version": "0.1.0",
+  "summary": "Placeholder",
+  "description": "Placeholder",
+  "homepage": "https://github.com/idapgroup/IDPDesign",
+  "license": {
+    "type": "New BSD",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "IDAP Group": "hello@idapgroup.com"
+  },
+  "source": {
+    "git": "https://github.com/idapgroup/IDPDesign.git",
+    "tag": "0.1.0"
+  },
+  "requires_arc": true,
+  "platforms": {
+    "ios": "8.0",
+    "osx": "10.9",
+    "tvos": "9.0"
+  },
+  "header_mappings_dir": "Source",
+  "source_files": "Source/**/*.{swift,h,m,c,cpp}"
+}
