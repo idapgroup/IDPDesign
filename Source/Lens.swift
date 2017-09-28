@@ -41,18 +41,6 @@ public struct Lens<Object, Property> {
         self.set = set
     }
     
-    /**
-     Inits lens with chainable getter and non-chainable setter.
-     
-     - parameters:
-         - get: Getter function.
-         - set: Setter function.
-     */
-    public init(get: @escaping Getter, setter function: @escaping (Object, Property) -> ()) {
-        self.get = get
-        self.set = setter(function)
-    }
-    
     // MARK: -
     // MARK: Public
     
@@ -66,5 +54,30 @@ public struct Lens<Object, Property> {
                 return self.set($0, newValue)
             }
         )
+    }
+}
+
+extension Lens where Object: AnyObject {
+    
+    /**
+     Inits lens with chainable getter and non-chainable setter.
+     
+     - parameters:
+     - get: Getter function.
+     - set: Setter function.
+     */
+    public init(get: @escaping Getter, setter function: @escaping (Object, Property) -> ()) {
+        self.get = get
+        self.set = setter(function)
+    }
+    
+    /**
+     Inits readonly lens with chainable getter and empty setter.
+     
+     - parameter get: Getter function.
+     */
+    public init(get: @escaping Getter) {
+        self.get = get
+        self.set = setter { _, _ in }
     }
 }

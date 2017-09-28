@@ -87,13 +87,13 @@ public func design<Object>(_ styles: Style<Object>...) -> Style<Object?> {
 }
 
 /**
- Sideffect function creates composable sideffect function.
+ Creates composable function applying subeffects to object.
  
  - parameter execute: Function to make composable.
  
  - returns: A function, that returns the input parameter and applies it to execute function.
  */
-public func sideEffect<Value>(_ execute: @escaping (Value) -> ()) -> (Value) -> Value {
+public func sideEffect<Value: AnyObject>(_ execute: @escaping (Value) -> ()) -> (Value) -> Value {
     return {
         execute($0)
         
@@ -102,13 +102,15 @@ public func sideEffect<Value>(_ execute: @escaping (Value) -> ()) -> (Value) -> 
 }
 
 /**
- Sideffect function creates composable setter function.
+ Creates composable setter function.
  
  - parameter execute: Function to make composable.
  
  - returns: A function, that returns the input parameter and applies it to execute function.
  */
-public func setter<Object, Property>(_ execute: @escaping (Object, Property) -> ()) -> (Object, Property) -> Object {
+public func setter<Object: AnyObject, Property>(_ execute: @escaping (Object, Property) -> ())
+    -> (Object, Property) -> Object
+{
     return {
         execute($0, $1)
         

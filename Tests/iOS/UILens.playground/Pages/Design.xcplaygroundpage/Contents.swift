@@ -30,10 +30,7 @@ extension Lens where Object: UIButton, Property == CGRect {
 
 extension Lens where Object: UIButton, Property == UILabel? {
     static var label: Lens {
-        return Lens(
-            get: { $0.titleLabel },
-            setter: { _, _ in }
-        )
+        return Lens { $0.titleLabel }
     }
 }
 
