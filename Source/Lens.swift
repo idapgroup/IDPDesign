@@ -57,7 +57,7 @@ public struct Lens<Object, Property> {
     }
 }
 
-extension Lens where Object: AnyObject {
+public extension Lens where Object: AnyObject {
     
     /**
      Inits lens with chainable getter and non-chainable setter.

@@ -5,7 +5,6 @@
 //  Created by Oleksa 'trimm' Korin on 9/2/17.
 //  Copyright © 2017 Oleksa 'trimm' Korin. All rights reserved.
 //
-//
 
 /**
  Applies property value to lens.
@@ -81,23 +80,8 @@ public func design<Object>(_ styles: Style<Object>...) -> Style<Object> {
  - returns: New style
  */
 public func design<Object>(_ styles: Style<Object>...) -> Style<Object?> {
-    return Style<Object?> {
+    return Style {
         $0.map { $0 |> Style(styles) }
-    }
-}
-
-/**
- Creates composable function applying subeffects to object.
- 
- - parameter execute: Function to make composable.
- 
- - returns: A function, that returns the input parameter and applies it to execute function.
- */
-public func sideEffect<Value: AnyObject>(_ execute: @escaping (Value) -> ()) -> (Value) -> Value {
-    return {
-        execute($0)
-        
-        return $0
     }
 }
 
