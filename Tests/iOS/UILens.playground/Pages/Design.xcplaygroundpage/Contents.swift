@@ -34,6 +34,17 @@ extension Lens where Object: UIButton, Property == UILabel? {
     }
 }
 
+// Needs to be resolved for oss usage
+//let viewStyle: Style<UIView> = design(
+//    .alpha ~ 1.0,
+//    .backgroundColor ~ .red
+//)
+
+let viewStyle: Style<UIButton> = design(
+    .alpha ~ 1.0,
+    .backgroundColor ~ .red
+)
+
 let style: Style<UIButton> = design(
     .alpha ~ 1.0,
     .backgroundColor ~ .red,
@@ -46,6 +57,15 @@ let style: Style<UIButton> = design(
 
 let button = UIButton()
 button |> style
+
+button |> design(
+    viewStyle,
+    .frame ~ .zero,
+    .label ~ design(
+        .alpha ~ 0.5,
+        .backgroundColor ~ .green
+    )
+)
 
 print(button.backgroundColor as Any)
 print(button.titleLabel?.backgroundColor as Any)
