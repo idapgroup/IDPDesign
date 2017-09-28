@@ -5,7 +5,7 @@ extension Lens where Object: UIView, Property == CGFloat {
     static var alpha: Lens {
         return Lens(
             get: { $0.alpha },
-            set: setter { $0.alpha = $1 }
+            setter: { $0.alpha = $1 }
         )
     }
 }
@@ -14,7 +14,7 @@ extension Lens where Object: UIView, Property == UIColor? {
     static var backgroundColor: Lens {
         return Lens(
             get: { $0.backgroundColor },
-            set: setter { $0.backgroundColor = $1 }
+            setter: { $0.backgroundColor = $1 }
         )
     }
 }
@@ -23,7 +23,7 @@ extension Lens where Object: UIButton, Property == CGRect {
     static var frame: Lens {
         return Lens(
             get: { $0.frame },
-            set: setter { $0.frame = $1 }
+            setter: { $0.frame = $1 }
         )
     }
 }
@@ -32,7 +32,7 @@ extension Lens where Object: UIButton, Property == UILabel? {
     static var label: Lens {
         return Lens(
             get: { $0.titleLabel },
-            set: setter { _, _ in }
+            setter: { _, _ in }
         )
     }
 }

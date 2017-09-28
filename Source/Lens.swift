@@ -30,7 +30,7 @@ public struct Lens<Object, Property> {
     // MARK: Init and Deinit
     
     /**
-     Inits lens with getter and setter.
+     Inits lens with chainable getter and setter.
      
      - parameters:
         - get: Getter function.
@@ -39,6 +39,18 @@ public struct Lens<Object, Property> {
     public init(get: @escaping Getter, set: @escaping Setter) {
         self.get = get
         self.set = set
+    }
+    
+    /**
+     Inits lens with chainable getter and non-chainable setter.
+     
+     - parameters:
+         - get: Getter function.
+         - set: Setter function.
+     */
+    public init(get: @escaping Getter, setter function: @escaping (Object, Property) -> ()) {
+        self.get = get
+        self.set = setter(function)
     }
     
     // MARK: -
