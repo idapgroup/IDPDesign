@@ -35,12 +35,20 @@ public struct Style<T> {
     
     init(_ styles: [Self]) {
         self.init(
-            styles.reduce(identity) { $0 • $1.function }
+            styles.map { $0.function }
         )
     }
     
+    init(_ functions: Function...) {
+        self.init(functions)
+    }
+    
+    init(_ functions: [Function]) {
+        self.function = functions.reduce(identity, •)
+    }
+    
     init(_ function: @escaping Function) {
-        self.function = function
+        self.init([function])
     }
     
     // MARK: -

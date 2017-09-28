@@ -86,6 +86,30 @@ public func design<Object>(_ styles: Style<Object>...) -> Style<Object?> {
 }
 
 /**
+ Creates style for type by using arbitrary setter functions. If setters count = 0, returns an identity style.
+ 
+ - parameter setters: Setters to compose and transform into style.
+ 
+ - returns: New style
+ */
+public func design<Object>(_ setters: @escaping ((Object) -> Object)...) -> Style<Object> {
+    return Style(setters)
+}
+
+/**
+ Creates style for optional type by using arbitrary setter functions. If setters count = 0, returns an identity style.
+ 
+ - parameter setters: Setters to compose and transform into style.
+ 
+ - returns: New style
+ */
+public func design<Object>(_ setters: @escaping ((Object) -> Object)...) -> Style<Object?> {
+    return Style {
+        $0.map { $0 |> Style(setters) }
+    }
+}
+
+/**
  Creates composable setter function.
  
  - parameter execute: Function to make composable.

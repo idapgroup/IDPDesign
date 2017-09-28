@@ -1,6 +1,0 @@
-framework module IDPDesign {
-  umbrella header "IDPDesign-umbrella.h"
-
-  export *
-  module * { export * }
-}

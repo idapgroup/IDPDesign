@@ -18,6 +18,6 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = '9.0'
 
   # Preserve the layout of headers in the Module directory
-  s.header_mappings_dir   = 'Source'
-  s.source_files          = 'Source/**/*.{swift,h,m,c,cpp}'
+  s.header_mappings_dir   = 'IDPDesign'
+  s.source_files          = 'IDPDesign/**/*.{swift,h,m,c,cpp}'
 end
