@@ -73,6 +73,11 @@ public func • <A, B, C>(lhs: Lens<A, B?>, rhs: Lens<B, C>) -> Lens<A, C?> {
     return lhs.bind(rhs)
 }
 
+/// Compose two styles
+public func • <A>(lhs: Style<A>, rhs: Style<A>) -> Style<A> {
+    return Style(lhs, rhs)
+}
+
 /**
  Creates identity style for type.
  

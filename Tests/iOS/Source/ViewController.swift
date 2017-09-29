@@ -22,10 +22,16 @@ class ViewController: UIViewController {
         
         let button = UIButton()
         
-        button |> design(
+        let style: Style<UIButton> = design(
             viewStyle(),
-            .frame ~ .zero,
+            .frame ~ .zero
+        )
+            
+        let titleStyle: Style<UIButton> = design(
             .titleLabel ~ design(
+                .layer ~ design(
+                    .masksToBounds ~ false
+                ),
                 .alpha ~ 0.5,
                 .backgroundColor ~ .green
             ),
@@ -34,9 +40,12 @@ class ViewController: UIViewController {
             )
         )
         
+        button |> style • titleStyle
+        
         print(button.backgroundColor as Any)
         print(button.titleLabel?.backgroundColor as Any)
         print(button.titleLabel?.alpha as Any)
         print(button.titleLabel?.layer.isDoubleSided as Any)
+        print(button.titleLabel?.layer.masksToBounds as Any)
     }
 }

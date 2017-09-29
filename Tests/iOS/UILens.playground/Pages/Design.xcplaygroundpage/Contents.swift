@@ -22,10 +22,16 @@ let style: Style<UIButton> = design(
 let button = UIButton()
 button |> style
 
-button |> design(
+let buttonStyle: Style<UIButton> = design(
     viewStyle(),
-    .frame ~ .zero,
+    .frame ~ .zero
+)
+
+let buttonTitleStyle: Style<UIButton> = design(
     .titleLabel ~ design(
+        .layer ~ design(
+            .masksToBounds ~ false
+        ),
         .alpha ~ 0.5,
         .backgroundColor ~ .green
     ),
@@ -34,7 +40,16 @@ button |> design(
     )
 )
 
+button |> buttonStyle • buttonTitleStyle
+
 print(button.backgroundColor as Any)
 print(button.titleLabel?.backgroundColor as Any)
 print(button.titleLabel?.alpha as Any)
 print(button.titleLabel?.layer.isDoubleSided as Any)
+print(button.titleLabel?.layer.masksToBounds as Any)
+
+print(button.backgroundColor as Any)
+print(button.titleLabel?.backgroundColor as Any)
+print(button.titleLabel?.alpha as Any)
+print(button.titleLabel?.layer.isDoubleSided as Any)
+print(button.titleLabel?.layer.masksToBounds as Any)
