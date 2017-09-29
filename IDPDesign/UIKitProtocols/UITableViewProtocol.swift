@@ -1,12 +1,12 @@
 //
 //  UITableViewProtocol.swift
-//  iOS
+//  IDPDesign
 //
 //  Created by Oleksa 'trimm' Korin on 9/2/17.
 //  Copyright © 2017 Oleksa 'trimm' Korin. All rights reserved.
 //
 
-public protocol UITableViewProtocol: UIObjectType {
+protocol UITableViewProtocol: UIObjectType {
     var dataSource: UITableViewDataSource? { get set }
     var delegate: UITableViewDelegate? { get set }
     var prefetchDataSource: UITableViewDataSourcePrefetching? { get set }

@@ -1,12 +1,12 @@
 //
 //  UIViewProtocol.swift
-//  iOS
+//  IDPDesign
 //
 //  Created by Oleksa 'trimm' Korin on 9/2/17.
 //  Copyright © 2017 Oleksa 'trimm' Korin. All rights reserved.
 //
 
-public protocol UIViewProtocol: UIObjectType {
+protocol UIViewProtocol: UIObjectType {
     var layer: CALayer { get }
     var isUserInteractionEnabled: Bool { get set }
     var frame: CGRect { get set }
@@ -37,6 +37,6 @@ public protocol UIViewProtocol: UIObjectType {
     var translatesAutoresizingMaskIntoConstraints: Bool { get set }
 
     // var constraints: [NSLayoutConstraint] { get }
-    // func addConstraints(_ constraints: [NSLayoutConstraint])
-    // func removeConstraints(_ constraints: [NSLayoutConstraint])
+     func addConstraints(_ constraints: [NSLayoutConstraint])
+     func removeConstraints(_ constraints: [NSLayoutConstraint])
 }

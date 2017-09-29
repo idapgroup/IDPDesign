@@ -1,12 +1,12 @@
 //
 //  UIViewProtocol.swift
-//  iOS
+//  IDPDesign
 //
 //  Created by Oleksa 'trimm' Korin on 9/2/17.
 //  Copyright © 2017 Oleksa 'trimm' Korin. All rights reserved.
 //
 
-public protocol CALayerProtocol: UIObjectType {
+protocol CALayerProtocol: UIObjectType {
     var bounds: CGRect { get set }
     var position: CGPoint { get set }
     var zPosition: CGFloat { get set }
@@ -55,7 +55,6 @@ public protocol CALayerProtocol: UIObjectType {
     var delegate: CALayerDelegate? { get set }
     var style: [AnyHashable : Any]? { get set }
 
-
-    // func affineTransform() -> CGAffineTransform
-    // func setAffineTransform(_ m: CGAffineTransform)
+    func affineTransform() -> CGAffineTransform
+    func setAffineTransform(_ m: CGAffineTransform)
 }

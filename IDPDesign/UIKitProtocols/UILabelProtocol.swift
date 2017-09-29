@@ -1,12 +1,12 @@
 //
 //  UILabelProtocol.swift
-//  iOS
+//  IDPDesign
 //
 //  Created by Oleksa 'trimm' Korin on 9/2/17.
 //  Copyright © 2017 Oleksa 'trimm' Korin. All rights reserved.
 //
 
-public protocol UILabelProtocol: UIObjectType {
+protocol UILabelProtocol: UIObjectType {
     var text: String? { get set }
     var font: UIFont! { get set }
     var textColor: UIColor! { get set }

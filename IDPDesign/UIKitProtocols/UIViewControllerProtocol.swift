@@ -1,12 +1,12 @@
 //
 //  UIViewControllerProtocol.swift
-//  iOS
+//  IDPDesign
 //
 //  Created by Oleksa 'trimm' Korin on 9/2/17.
 //  Copyright © 2017 Oleksa 'trimm' Korin. All rights reserved.
 //
 
-public protocol UIViewControllerProtocol: UIObjectType {
+protocol UIViewControllerProtocol: UIObjectType {
     var view: UIView! { get set }
     var title: String? { get set }
     var parent: UIViewController? { get }

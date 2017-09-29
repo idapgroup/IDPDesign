@@ -1,12 +1,12 @@
 //
 //  UITextInputTraitsProtocol.swift
-//  iOS
+//  IDPDesign
 //
 //  Created by Oleksa 'trimm' Korin on 9/2/17.
 //  Copyright © 2017 Oleksa 'trimm' Korin. All rights reserved.
 //
 
-//public protocol UITextInputTraitsProtocol: UIOptionalObjectProtocolType {
+//protocol UITextInputTraitsProtocol: UIOptionalObjectProtocolType {
 //    var autocapitalizationType: UITextAutocapitalizationType { get set }
 //    var autocorrectionType: UITextAutocorrectionType { get set }
 //    var spellCheckingType: UITextSpellCheckingType { get set }

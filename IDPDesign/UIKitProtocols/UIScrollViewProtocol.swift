@@ -1,12 +1,12 @@
 //
 //  UIScrollViewProtocol.swift
-//  iOS
+//  IDPDesign
 //
 //  Created by Oleksa 'trimm' Korin on 9/2/17.
 //  Copyright © 2017 Oleksa 'trimm' Korin. All rights reserved.
 //
 
-public protocol UIScrollViewProtocol: UIObjectType {
+protocol UIScrollViewProtocol: UIObjectType {
     var contentOffset: CGPoint { get set }
     var contentSize: CGSize { get set }
     var contentInset: UIEdgeInsets { get set }

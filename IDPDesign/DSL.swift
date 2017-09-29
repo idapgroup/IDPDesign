@@ -1,6 +1,6 @@
 //
 //  DSL.swift
-//  Pods
+//  IDPDesign
 //
 //  Created by Oleksa 'trimm' Korin on 9/2/17.
 //  Copyright © 2017 Oleksa 'trimm' Korin. All rights reserved.
@@ -80,9 +80,7 @@ public func design<Object>(_ styles: Style<Object>...) -> Style<Object> {
  - returns: New style
  */
 public func design<Object>(_ styles: Style<Object>...) -> Style<Object?> {
-    return Style {
-        $0.map { $0 |> Style(styles) }
-    }
+    return lift(Style(styles))
 }
 
 /**
@@ -104,8 +102,19 @@ public func design<Object>(_ setters: @escaping ((Object) -> Object)...) -> Styl
  - returns: New style
  */
 public func design<Object>(_ setters: @escaping ((Object) -> Object)...) -> Style<Object?> {
+    return lift(Style(setters))
+}
+
+/**
+ Lifts style for non optional object to style for optional object
+ 
+ - parameter style: Style to lift
+ 
+ - returns: New style
+ */
+public func lift<Object>(_ style: Style<Object>) -> Style<Object?> {
     return Style {
-        $0.map { $0 |> Style(setters) }
+        $0.map { $0 |> style }
     }
 }
 

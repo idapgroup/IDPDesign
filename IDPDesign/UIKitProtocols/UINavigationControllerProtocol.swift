@@ -1,12 +1,12 @@
 //
 //  UINavigationControllerProtocol.swift
-//  iOS
+//  IDPDesign
 //
 //  Created by Oleksa 'trimm' Korin on 9/2/17.
 //  Copyright © 2017 Oleksa 'trimm' Korin. All rights reserved.
 //
 
-public protocol UINavigationControllerProtocol: UIObjectType {
+protocol UINavigationControllerProtocol: UIObjectType {
     var isNavigationBarHidden: Bool { get set }
     var navigationBar: UINavigationBar { get }
     var isToolbarHidden: Bool { get set }

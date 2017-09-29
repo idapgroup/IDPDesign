@@ -1,12 +1,12 @@
 //
 //  UIWebViewProtocol.swift
-//  iOS
+//  IDPDesign
 //
 //  Created by Oleksa 'trimm' Korin on 9/2/17.
 //  Copyright © 2017 Oleksa 'trimm' Korin. All rights reserved.
 //
 
-public protocol UIWebViewProtocol: UIViewProtocol {
+protocol UIWebViewProtocol: UIViewProtocol {
     var delegate: UIWebViewDelegate? { get set }
     var scrollView: UIScrollView { get }
     var scalesPageToFit: Bool { get set }

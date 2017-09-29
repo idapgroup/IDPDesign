@@ -1,12 +1,12 @@
 //
 //  UITextViewProtocol.swift
-//  iOS
+//  IDPDesign
 //
 //  Created by Oleksa 'trimm' Korin on 9/2/17.
 //  Copyright © 2017 Oleksa 'trimm' Korin. All rights reserved.
 //
 
-public protocol UITextViewProtocol: UIObjectType {
+protocol UITextViewProtocol: UIObjectType {
     var delegate: UITextViewDelegate? { get set }
     var text: String! { get set }
     var font: UIFont? { get set }

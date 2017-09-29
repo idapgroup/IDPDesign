@@ -1,12 +1,12 @@
 //
 //  UITableViewCellProtocol.swift
-//  iOS
+//  IDPDesign
 //
 //  Created by Oleksa 'trimm' Korin on 9/2/17.
 //  Copyright © 2017 Oleksa 'trimm' Korin. All rights reserved.
 //
 
-public protocol UITableViewCellProtocol: UIObjectType {
+protocol UITableViewCellProtocol: UIObjectType {
     var imageView: UIImageView? { get }
     var textLabel: UILabel? { get }
     var detailTextLabel: UILabel? { get }
