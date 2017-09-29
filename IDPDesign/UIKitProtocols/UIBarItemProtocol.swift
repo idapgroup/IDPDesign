@@ -16,5 +16,5 @@ protocol UIBarItemProtocol: UIObjectType {
     var tag: Int { get set }
 
     func titleTextAttributes(for state: UIControlState) -> [String : Any]?
-    func setTitleTextAttributes(_ attributes: [String : Any]?, for state: UIControlState)
+    func setTitleTextAttributes(_ attributes: [NSAttributedStringKey : Any]?, for state: UIControlState)
 }

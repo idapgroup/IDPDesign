@@ -118,7 +118,7 @@ public func design<Object>(_ styles: Style<Object>...) -> Style<Object?> {
  
  - returns: New style
  */
-public func design<Object>(_ setters: @escaping ((Object) -> Object)...) -> Style<Object> {
+public func design<Object>(_ setters: ((Object) -> Object)...) -> Style<Object> {
     return Style(setters)
 }
 
@@ -129,7 +129,7 @@ public func design<Object>(_ setters: @escaping ((Object) -> Object)...) -> Styl
  
  - returns: New style
  */
-public func design<Object>(_ setters: @escaping ((Object) -> Object)...) -> Style<Object?> {
+public func design<Object>(_ setters: ((Object) -> Object)...) -> Style<Object?> {
     return lift(Style(setters))
 }
 

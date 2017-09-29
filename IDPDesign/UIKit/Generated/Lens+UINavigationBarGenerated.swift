@@ -80,7 +80,7 @@ public extension Lens where Object: UINavigationBar, Property == UIImage? {
     }
 }
 
-public extension Lens where Object: UINavigationBar, Property == [String : Any]? {
+public extension Lens where Object: UINavigationBar, Property == [NSAttributedStringKey : Any]? {
     public static var titleTextAttributes: Lens {
         return Lens(
             get: { $0.titleTextAttributes },
