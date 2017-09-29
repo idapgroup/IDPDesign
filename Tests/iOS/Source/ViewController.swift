@@ -7,10 +7,36 @@
 //
 
 import UIKit
+import IDPDesign
 
 class ViewController: UIViewController {
     override func viewDidLoad() {
-        let x: UITextInputTraits = UITextField()
-        let t = x.autocapitalizationType
+        super.viewDidLoad()
+        
+        func viewStyle<Object: UIView>() -> Style<Object> {
+            return design(
+                .alpha ~ 1.0,
+                .backgroundColor ~ .red
+            )
+        }
+        
+        let button = UIButton()
+        
+        button |> design(
+            viewStyle(),
+            .frame ~ .zero,
+            .titleLabel ~ design(
+                .alpha ~ 0.5,
+                .backgroundColor ~ .green
+            ),
+            .titleLabel • .layer ~ design(
+                .isDoubleSided ~ false
+            )
+        )
+        
+        print(button.backgroundColor as Any)
+        print(button.titleLabel?.backgroundColor as Any)
+        print(button.titleLabel?.alpha as Any)
+        print(button.titleLabel?.layer.isDoubleSided as Any)
     }
 }

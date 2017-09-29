@@ -68,6 +68,11 @@ public func • <A, B, C>(lhs: Lens<A, B>, rhs: Lens<B, C>) -> Lens<A, C> {
     return lhs.compose(rhs)
 }
 
+/// Compose two lens to have direct access to the subproperty of a property of object
+public func • <A, B, C>(lhs: Lens<A, B?>, rhs: Lens<B, C>) -> Lens<A, C?> {
+    return lhs.bind(rhs)
+}
+
 /**
  Creates identity style for type.
  

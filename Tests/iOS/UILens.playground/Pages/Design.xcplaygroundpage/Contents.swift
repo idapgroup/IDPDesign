@@ -1,4 +1,5 @@
 import UIKit
+import QuartzCore
 import IDPDesign
 
 func viewStyle<Object: UIView>() -> Style<Object> {
@@ -21,17 +22,19 @@ let style: Style<UIButton> = design(
 let button = UIButton()
 button |> style
 
-button.accessibilityHint
-
 button |> design(
     viewStyle(),
     .frame ~ .zero,
     .titleLabel ~ design(
         .alpha ~ 0.5,
         .backgroundColor ~ .green
+    ),
+    .titleLabel • .layer ~ design(
+        .isDoubleSided ~ false
     )
 )
 
 print(button.backgroundColor as Any)
 print(button.titleLabel?.backgroundColor as Any)
 print(button.titleLabel?.alpha as Any)
+print(button.titleLabel?.layer.isDoubleSided as Any)

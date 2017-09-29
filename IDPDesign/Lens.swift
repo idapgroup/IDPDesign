@@ -55,6 +55,22 @@ public struct Lens<Object, Property> {
             }
         )
     }
+    
+    public func bind<UnwrappedProperty, Subproperty>(_ lens: Lens<UnwrappedProperty, Subproperty>) -> Lens<Object, Subproperty?>
+        where Property == UnwrappedProperty?
+    {
+        return Lens<Object, Subproperty?>(
+            get: { self.get($0).flatMap(lens.get) },
+            set: { object, property in
+                let value = self.get(object)
+                let newValue = value.flatMap { value in
+                    property.flatMap { lens.set(value, $0) }
+                }
+                
+                return self.set(object, newValue)
+            }
+        )
+    }
 }
 
 public extension Lens where Object: AnyObject {
