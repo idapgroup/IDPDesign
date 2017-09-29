@@ -3,10 +3,10 @@
 
 import UIKit
 
-extension Lens where Object: CGRect, Property == CGPoint {
-    static var origin: Lens {
+public extension Lens where Object == CGRect, Property == CGPoint {
+    public static var origin: Lens {
         return Lens(
-            get: { $0.origin }
+            get: { $0.origin },
             set: {
                 var result = $0
                 result.origin = $1
@@ -16,10 +16,10 @@ extension Lens where Object: CGRect, Property == CGPoint {
         )
     }
 }
-extension Lens where Object: CGRect, Property == CGSize {
-    static var size: Lens {
+public extension Lens where Object == CGRect, Property == CGSize {
+    public static var size: Lens {
         return Lens(
-            get: { $0.size }
+            get: { $0.size },
             set: {
                 var result = $0
                 result.size = $1

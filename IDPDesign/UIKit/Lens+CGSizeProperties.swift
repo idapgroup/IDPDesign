@@ -3,10 +3,10 @@
 
 import UIKit
 
-extension Lens where Object: CGSize, Property == CGFloat {
-    static var width: Lens {
+public extension Lens where Object == CGSize, Property == CGFloat {
+    public static var width: Lens {
         return Lens(
-            get: { $0.width }
+            get: { $0.width },
             set: {
                 var result = $0
                 result.width = $1
@@ -16,10 +16,10 @@ extension Lens where Object: CGSize, Property == CGFloat {
         )
     }
 }
-extension Lens where Object: CGSize, Property == CGFloat {
-    static var height: Lens {
+public extension Lens where Object == CGSize, Property == CGFloat {
+    public static var height: Lens {
         return Lens(
-            get: { $0.height }
+            get: { $0.height },
             set: {
                 var result = $0
                 result.height = $1

@@ -30,7 +30,7 @@ public protocol UIViewProtocol: UIObjectType {
     var isHidden: Bool { get set }
     var contentMode: UIViewContentMode { get set }
     var mask: UIView? { get set }
-    var tintColor: UIColor! { get set }
+    var tintColor: UIColor? { get set }
     var tintAdjustmentMode: UIViewTintAdjustmentMode { get set }
     var semanticContentAttribute: UISemanticContentAttribute { get set }
     var tag: Int { get set }

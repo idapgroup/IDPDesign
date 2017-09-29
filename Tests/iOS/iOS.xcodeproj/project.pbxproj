@@ -19,6 +19,14 @@
 		D7C15B041F7D4F28005C7511 /* Lens.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C15B001F7D4F28005C7511 /* Lens.swift */; };
 		D7C15B051F7D4F28005C7511 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C15B011F7D4F28005C7511 /* Operators.swift */; };
 		D7C15B061F7D4F28005C7511 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C15B021F7D4F28005C7511 /* Style.swift */; };
+		D7C15B2E1F7E8655005C7511 /* Lens+CALayerProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C15B261F7E8655005C7511 /* Lens+CALayerProperties.swift */; };
+		D7C15B2F1F7E8655005C7511 /* Lens+CGPointProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C15B271F7E8655005C7511 /* Lens+CGPointProperties.swift */; };
+		D7C15B301F7E8655005C7511 /* Lens+CGRectProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C15B281F7E8655005C7511 /* Lens+CGRectProperties.swift */; };
+		D7C15B311F7E8655005C7511 /* Lens+CGSizeProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C15B291F7E8655005C7511 /* Lens+CGSizeProperties.swift */; };
+		D7C15B321F7E8655005C7511 /* Lens+CGVectorProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C15B2A1F7E8655005C7511 /* Lens+CGVectorProperties.swift */; };
+		D7C15B331F7E8655005C7511 /* Lens+UIButtonProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C15B2B1F7E8655005C7511 /* Lens+UIButtonProperties.swift */; };
+		D7C15B341F7E8655005C7511 /* Lens+UIControlProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C15B2C1F7E8655005C7511 /* Lens+UIControlProperties.swift */; };
+		D7C15B351F7E8655005C7511 /* Lens+UIViewProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C15B2D1F7E8655005C7511 /* Lens+UIViewProperties.swift */; };
 		D7FF07B01DFF14940079AC04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FF07AF1DFF14940079AC04 /* AppDelegate.swift */; };
 		D7FF07D01DFF14B70079AC04 /* IDPCastableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FF07CF1DFF14B70079AC04 /* IDPCastableTests.swift */; };
 /* End PBXBuildFile section */
@@ -70,6 +78,14 @@
 		D7C15B001F7D4F28005C7511 /* Lens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lens.swift; sourceTree = "<group>"; };
 		D7C15B011F7D4F28005C7511 /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		D7C15B021F7D4F28005C7511 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		D7C15B261F7E8655005C7511 /* Lens+CALayerProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+CALayerProperties.swift"; sourceTree = "<group>"; };
+		D7C15B271F7E8655005C7511 /* Lens+CGPointProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+CGPointProperties.swift"; sourceTree = "<group>"; };
+		D7C15B281F7E8655005C7511 /* Lens+CGRectProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+CGRectProperties.swift"; sourceTree = "<group>"; };
+		D7C15B291F7E8655005C7511 /* Lens+CGSizeProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+CGSizeProperties.swift"; sourceTree = "<group>"; };
+		D7C15B2A1F7E8655005C7511 /* Lens+CGVectorProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+CGVectorProperties.swift"; sourceTree = "<group>"; };
+		D7C15B2B1F7E8655005C7511 /* Lens+UIButtonProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIButtonProperties.swift"; sourceTree = "<group>"; };
+		D7C15B2C1F7E8655005C7511 /* Lens+UIControlProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIControlProperties.swift"; sourceTree = "<group>"; };
+		D7C15B2D1F7E8655005C7511 /* Lens+UIViewProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIViewProperties.swift"; sourceTree = "<group>"; };
 		D7FF07AC1DFF14940079AC04 /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7FF07AF1DFF14940079AC04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7FF07BB1DFF14940079AC04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -168,6 +184,14 @@
 		D7C15B081F7D5196005C7511 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				D7C15B261F7E8655005C7511 /* Lens+CALayerProperties.swift */,
+				D7C15B271F7E8655005C7511 /* Lens+CGPointProperties.swift */,
+				D7C15B281F7E8655005C7511 /* Lens+CGRectProperties.swift */,
+				D7C15B291F7E8655005C7511 /* Lens+CGSizeProperties.swift */,
+				D7C15B2A1F7E8655005C7511 /* Lens+CGVectorProperties.swift */,
+				D7C15B2B1F7E8655005C7511 /* Lens+UIButtonProperties.swift */,
+				D7C15B2C1F7E8655005C7511 /* Lens+UIControlProperties.swift */,
+				D7C15B2D1F7E8655005C7511 /* Lens+UIViewProperties.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -425,8 +449,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7C15B031F7D4F28005C7511 /* DSL.swift in Sources */,
+				D7C15B351F7E8655005C7511 /* Lens+UIViewProperties.swift in Sources */,
+				D7C15B321F7E8655005C7511 /* Lens+CGVectorProperties.swift in Sources */,
+				D7C15B2F1F7E8655005C7511 /* Lens+CGPointProperties.swift in Sources */,
 				D7C15B041F7D4F28005C7511 /* Lens.swift in Sources */,
+				D7C15B331F7E8655005C7511 /* Lens+UIButtonProperties.swift in Sources */,
 				D7C15B051F7D4F28005C7511 /* Operators.swift in Sources */,
+				D7C15B341F7E8655005C7511 /* Lens+UIControlProperties.swift in Sources */,
+				D7C15B301F7E8655005C7511 /* Lens+CGRectProperties.swift in Sources */,
+				D7C15B311F7E8655005C7511 /* Lens+CGSizeProperties.swift in Sources */,
+				D7C15B2E1F7E8655005C7511 /* Lens+CALayerProperties.swift in Sources */,
 				D7C15B061F7D4F28005C7511 /* Style.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

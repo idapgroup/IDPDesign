@@ -9,13 +9,13 @@ import UIKit
 {% for variable in type.variables %}
 {% if not variable.isStatic %}
 {% if variable.readAccess == "public" or variable.readAccess == "open" or variable.readAccess == "internal" %}
-extension Lens where Object: {{type.name|replace:"Protocol",""}}, Property == {{variable.typeName}} {
-    static var {{variable.name}}: Lens {
+public extension Lens where Object: {{type.name|replace:"Protocol",""}}, Property == {{variable.typeName}} {
+    public static var {{variable.name}}: Lens {
         {% if variable.writeAccess == "" or variable.writeAccess == "private" or variable.writeAccess == "fileprivate" or variable.isComputed %}
         return Lens { $0.{{variable.name}} }
         {% else %}
         return Lens(
-            get: { $0.{{variable.name}} }
+            get: { $0.{{variable.name}} },
             setter: { $0.{{variable.name}} = $1 }
         )
         {% endif %}
@@ -40,10 +40,10 @@ import UIKit
 {% if variable.readAccess == "public" or variable.readAccess == "open" or variable.readAccess == "internal" %}
 {% if variable.writeAccess == "public" or variable.writeAccess == "internal" or variable.writeAccess == "open" %}
 {% if not variable.isComputed and variable.isMutable %}
-extension Lens where Object: {{type.name|replace:"Protocol",""}}, Property == {{variable.typeName}} {
-    static var {{variable.name}}: Lens {
+public extension Lens where Object == {{type.name|replace:"Protocol",""}}, Property == {{variable.typeName}} {
+    public static var {{variable.name}}: Lens {
         return Lens(
-            get: { $0.{{variable.name}} }
+            get: { $0.{{variable.name}} },
             set: {
                 var result = $0
                 result.{{variable.name}} = $1

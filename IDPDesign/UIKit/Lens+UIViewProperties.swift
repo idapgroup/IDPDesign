@@ -3,217 +3,217 @@
 
 import UIKit
 
-extension Lens where Object: UIView, Property == CALayer {
-    static var layer: Lens {
+public extension Lens where Object: UIView, Property == CALayer {
+    public static var layer: Lens {
         return Lens { $0.layer }
     }
 }
-extension Lens where Object: UIView, Property == Bool {
-    static var isUserInteractionEnabled: Lens {
+public extension Lens where Object: UIView, Property == Bool {
+    public static var isUserInteractionEnabled: Lens {
         return Lens(
-            get: { $0.isUserInteractionEnabled }
+            get: { $0.isUserInteractionEnabled },
             setter: { $0.isUserInteractionEnabled = $1 }
         )
     }
 }
-extension Lens where Object: UIView, Property == CGRect {
-    static var frame: Lens {
+public extension Lens where Object: UIView, Property == CGRect {
+    public static var frame: Lens {
         return Lens(
-            get: { $0.frame }
+            get: { $0.frame },
             setter: { $0.frame = $1 }
         )
     }
 }
-extension Lens where Object: UIView, Property == CGRect {
-    static var bounds: Lens {
+public extension Lens where Object: UIView, Property == CGRect {
+    public static var bounds: Lens {
         return Lens(
-            get: { $0.bounds }
+            get: { $0.bounds },
             setter: { $0.bounds = $1 }
         )
     }
 }
-extension Lens where Object: UIView, Property == CGPoint {
-    static var center: Lens {
+public extension Lens where Object: UIView, Property == CGPoint {
+    public static var center: Lens {
         return Lens(
-            get: { $0.center }
+            get: { $0.center },
             setter: { $0.center = $1 }
         )
     }
 }
-extension Lens where Object: UIView, Property == CGAffineTransform {
-    static var transform: Lens {
+public extension Lens where Object: UIView, Property == CGAffineTransform {
+    public static var transform: Lens {
         return Lens(
-            get: { $0.transform }
+            get: { $0.transform },
             setter: { $0.transform = $1 }
         )
     }
 }
-extension Lens where Object: UIView, Property == CGFloat {
-    static var contentScaleFactor: Lens {
+public extension Lens where Object: UIView, Property == CGFloat {
+    public static var contentScaleFactor: Lens {
         return Lens(
-            get: { $0.contentScaleFactor }
+            get: { $0.contentScaleFactor },
             setter: { $0.contentScaleFactor = $1 }
         )
     }
 }
-extension Lens where Object: UIView, Property == Bool {
-    static var isMultipleTouchEnabled: Lens {
+public extension Lens where Object: UIView, Property == Bool {
+    public static var isMultipleTouchEnabled: Lens {
         return Lens(
-            get: { $0.isMultipleTouchEnabled }
+            get: { $0.isMultipleTouchEnabled },
             setter: { $0.isMultipleTouchEnabled = $1 }
         )
     }
 }
-extension Lens where Object: UIView, Property == Bool {
-    static var isExclusiveTouch: Lens {
+public extension Lens where Object: UIView, Property == Bool {
+    public static var isExclusiveTouch: Lens {
         return Lens(
-            get: { $0.isExclusiveTouch }
+            get: { $0.isExclusiveTouch },
             setter: { $0.isExclusiveTouch = $1 }
         )
     }
 }
-extension Lens where Object: UIView, Property == Bool {
-    static var autoresizesSubviews: Lens {
+public extension Lens where Object: UIView, Property == Bool {
+    public static var autoresizesSubviews: Lens {
         return Lens(
-            get: { $0.autoresizesSubviews }
+            get: { $0.autoresizesSubviews },
             setter: { $0.autoresizesSubviews = $1 }
         )
     }
 }
-extension Lens where Object: UIView, Property == UIViewAutoresizing {
-    static var autoresizingMask: Lens {
+public extension Lens where Object: UIView, Property == UIViewAutoresizing {
+    public static var autoresizingMask: Lens {
         return Lens(
-            get: { $0.autoresizingMask }
+            get: { $0.autoresizingMask },
             setter: { $0.autoresizingMask = $1 }
         )
     }
 }
-extension Lens where Object: UIView, Property == UIView? {
-    static var superview: Lens {
+public extension Lens where Object: UIView, Property == UIView? {
+    public static var superview: Lens {
         return Lens { $0.superview }
     }
 }
-extension Lens where Object: UIView, Property == UIWindow? {
-    static var window: Lens {
+public extension Lens where Object: UIView, Property == UIWindow? {
+    public static var window: Lens {
         return Lens { $0.window }
     }
 }
-extension Lens where Object: UIView, Property == UIEdgeInsets {
-    static var layoutMargins: Lens {
+public extension Lens where Object: UIView, Property == UIEdgeInsets {
+    public static var layoutMargins: Lens {
         return Lens(
-            get: { $0.layoutMargins }
+            get: { $0.layoutMargins },
             setter: { $0.layoutMargins = $1 }
         )
     }
 }
-extension Lens where Object: UIView, Property == Bool {
-    static var preservesSuperviewLayoutMargins: Lens {
+public extension Lens where Object: UIView, Property == Bool {
+    public static var preservesSuperviewLayoutMargins: Lens {
         return Lens(
-            get: { $0.preservesSuperviewLayoutMargins }
+            get: { $0.preservesSuperviewLayoutMargins },
             setter: { $0.preservesSuperviewLayoutMargins = $1 }
         )
     }
 }
-extension Lens where Object: UIView, Property == Bool {
-    static var clipsToBounds: Lens {
+public extension Lens where Object: UIView, Property == Bool {
+    public static var clipsToBounds: Lens {
         return Lens(
-            get: { $0.clipsToBounds }
+            get: { $0.clipsToBounds },
             setter: { $0.clipsToBounds = $1 }
         )
     }
 }
-extension Lens where Object: UIView, Property == UIColor? {
-    static var backgroundColor: Lens {
+public extension Lens where Object: UIView, Property == UIColor? {
+    public static var backgroundColor: Lens {
         return Lens(
-            get: { $0.backgroundColor }
+            get: { $0.backgroundColor },
             setter: { $0.backgroundColor = $1 }
         )
     }
 }
-extension Lens where Object: UIView, Property == CGFloat {
-    static var alpha: Lens {
+public extension Lens where Object: UIView, Property == CGFloat {
+    public static var alpha: Lens {
         return Lens(
-            get: { $0.alpha }
+            get: { $0.alpha },
             setter: { $0.alpha = $1 }
         )
     }
 }
-extension Lens where Object: UIView, Property == Bool {
-    static var isOpaque: Lens {
+public extension Lens where Object: UIView, Property == Bool {
+    public static var isOpaque: Lens {
         return Lens(
-            get: { $0.isOpaque }
+            get: { $0.isOpaque },
             setter: { $0.isOpaque = $1 }
         )
     }
 }
-extension Lens where Object: UIView, Property == Bool {
-    static var clearsContextBeforeDrawing: Lens {
+public extension Lens where Object: UIView, Property == Bool {
+    public static var clearsContextBeforeDrawing: Lens {
         return Lens(
-            get: { $0.clearsContextBeforeDrawing }
+            get: { $0.clearsContextBeforeDrawing },
             setter: { $0.clearsContextBeforeDrawing = $1 }
         )
     }
 }
-extension Lens where Object: UIView, Property == Bool {
-    static var isHidden: Lens {
+public extension Lens where Object: UIView, Property == Bool {
+    public static var isHidden: Lens {
         return Lens(
-            get: { $0.isHidden }
+            get: { $0.isHidden },
             setter: { $0.isHidden = $1 }
         )
     }
 }
-extension Lens where Object: UIView, Property == UIViewContentMode {
-    static var contentMode: Lens {
+public extension Lens where Object: UIView, Property == UIViewContentMode {
+    public static var contentMode: Lens {
         return Lens(
-            get: { $0.contentMode }
+            get: { $0.contentMode },
             setter: { $0.contentMode = $1 }
         )
     }
 }
-extension Lens where Object: UIView, Property == UIView? {
-    static var mask: Lens {
+public extension Lens where Object: UIView, Property == UIView? {
+    public static var mask: Lens {
         return Lens(
-            get: { $0.mask }
+            get: { $0.mask },
             setter: { $0.mask = $1 }
         )
     }
 }
-extension Lens where Object: UIView, Property == UIColor! {
-    static var tintColor: Lens {
+public extension Lens where Object: UIView, Property == UIColor? {
+    public static var tintColor: Lens {
         return Lens(
-            get: { $0.tintColor }
+            get: { $0.tintColor },
             setter: { $0.tintColor = $1 }
         )
     }
 }
-extension Lens where Object: UIView, Property == UIViewTintAdjustmentMode {
-    static var tintAdjustmentMode: Lens {
+public extension Lens where Object: UIView, Property == UIViewTintAdjustmentMode {
+    public static var tintAdjustmentMode: Lens {
         return Lens(
-            get: { $0.tintAdjustmentMode }
+            get: { $0.tintAdjustmentMode },
             setter: { $0.tintAdjustmentMode = $1 }
         )
     }
 }
-extension Lens where Object: UIView, Property == UISemanticContentAttribute {
-    static var semanticContentAttribute: Lens {
+public extension Lens where Object: UIView, Property == UISemanticContentAttribute {
+    public static var semanticContentAttribute: Lens {
         return Lens(
-            get: { $0.semanticContentAttribute }
+            get: { $0.semanticContentAttribute },
             setter: { $0.semanticContentAttribute = $1 }
         )
     }
 }
-extension Lens where Object: UIView, Property == Int {
-    static var tag: Lens {
+public extension Lens where Object: UIView, Property == Int {
+    public static var tag: Lens {
         return Lens(
-            get: { $0.tag }
+            get: { $0.tag },
             setter: { $0.tag = $1 }
         )
     }
 }
-extension Lens where Object: UIView, Property == Bool {
-    static var translatesAutoresizingMaskIntoConstraints: Lens {
+public extension Lens where Object: UIView, Property == Bool {
+    public static var translatesAutoresizingMaskIntoConstraints: Lens {
         return Lens(
-            get: { $0.translatesAutoresizingMaskIntoConstraints }
+            get: { $0.translatesAutoresizingMaskIntoConstraints },
             setter: { $0.translatesAutoresizingMaskIntoConstraints = $1 }
         )
     }
