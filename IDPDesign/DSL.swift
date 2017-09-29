@@ -51,6 +51,24 @@ public func |> <Object>(view: Object, style: Style<Object>) -> Object {
 }
 
 /**
+ Composes two functions in left-to-right order, i.e. (f • g)(x) = g(f(x)
+ 
+ - parameters:
+ - g: A function.
+ - g: A function.
+ 
+ - returns: A function that is the composition of `f` and `g`.
+ */
+public func • <A, B, C>(f: @escaping (A) -> B, g: @escaping (B) -> C) -> (A) -> C {
+    return { g(f($0)) }
+}
+
+/// Compose two lens to have direct access to the subproperty of a property of object
+public func • <A, B, C>(lhs: Lens<A, B>, rhs: Lens<B, C>) -> Lens<A, C> {
+    return lhs.compose(rhs)
+}
+
+/**
  Creates identity style for type.
  
  - parameter type: Type to create stye for.
@@ -144,22 +162,4 @@ public func setter<Object: AnyObject, Property>(_ execute: @escaping (Object, Pr
  */
 public func identity<T>(_ x: T) -> T {
     return x
-}
-
-/**
- Composes two functions in left-to-right order, i.e. (f • g)(x) = g(f(x)
- 
- - parameters:
-     - g: A function.
-     - g: A function.
- 
- - returns: A function that is the composition of `f` and `g`.
- */
-public func • <A, B, C>(f: @escaping (A) -> B, g: @escaping (B) -> C) -> (A) -> C {
-    return { g(f($0)) }
-}
-
-/// Compose two lens to have direct access to the subproperty of a property of object
-public func • <A, B, C>(lhs: Lens<A, B>, rhs: Lens<B, C>) -> Lens<A, C> {
-    return lhs.compose(rhs)
 }
