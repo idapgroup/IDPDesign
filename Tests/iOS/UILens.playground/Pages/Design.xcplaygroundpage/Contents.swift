@@ -8,11 +8,6 @@ func viewStyle<Object: UIView>() -> Style<Object> {
     )
 }
 
-//let viewStyle: Style<UIButton> = design(
-//    .alpha ~ 1.0,
-//    .backgroundColor ~ .red
-//)
-
 let style: Style<UIButton> = design(
     .alpha ~ 1.0,
     .backgroundColor ~ .red,
@@ -25,6 +20,8 @@ let style: Style<UIButton> = design(
 
 let button = UIButton()
 button |> style
+
+button.accessibilityHint
 
 button |> design(
     viewStyle(),

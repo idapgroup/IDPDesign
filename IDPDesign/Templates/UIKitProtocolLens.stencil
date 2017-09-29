@@ -1,15 +1,21 @@
 {% macro name type %}{{type.name|replace:"Protocol",""}}{% endmacro %}
 
+// done
+
 {% for type in types.based.UIObjectType %}
 {% if type.kind == "protocol" %}
 {% if not type.name == "UIObjectType" %}
 // sourcery:file:Lens+{% call name type %}Properties.swift
 import UIKit
-
+{% if type.name == "WKWebViewProtocol" %}
+import WebKit
+{% endif %}
 {% for variable in type.variables %}
 {% if not variable.isStatic %}
 {% if variable.readAccess == "public" or variable.readAccess == "open" or variable.readAccess == "internal" %}
+
 public extension Lens where Object: {{type.name|replace:"Protocol",""}}, Property == {{variable.typeName}} {
+    {{variable.attributes.available}}
     public static var {{variable.name}}: Lens {
         {% if variable.writeAccess == "" or variable.writeAccess == "private" or variable.writeAccess == "fileprivate" or variable.isComputed %}
         return Lens { $0.{{variable.name}} }
@@ -40,6 +46,7 @@ import UIKit
 {% if variable.readAccess == "public" or variable.readAccess == "open" or variable.readAccess == "internal" %}
 {% if variable.writeAccess == "public" or variable.writeAccess == "internal" or variable.writeAccess == "open" %}
 {% if not variable.isComputed and variable.isMutable %}
+
 public extension Lens where Object == {{type.name|replace:"Protocol",""}}, Property == {{variable.typeName}} {
     public static var {{variable.name}}: Lens {
         return Lens(

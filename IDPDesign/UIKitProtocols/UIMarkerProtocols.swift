@@ -1,5 +1,5 @@
 //
-//  UIObjectType.swift
+//  UIMarkerProtocols.swift
 //  iOS
 //
 //  Created by Oleksa 'trimm' Korin on 9/2/17.

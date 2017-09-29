@@ -2,4 +2,4 @@ sources:
     - "UIKitProtocols"
 templates:
     - "Templates"
-output: "UIKit"
+output: "UIKit/Generated"
