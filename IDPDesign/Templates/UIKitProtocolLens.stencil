@@ -1,21 +1,24 @@
 {% macro name type %}{{type.name|replace:"Protocol",""}}{% endmacro %}
+{% macro implicitToOptional type %}{{type|replace:"!","?"}}{% endmacro %}
 
 // done
 
 {% for type in types.based.UIObjectType %}
 {% if type.kind == "protocol" %}
 {% if not type.name == "UIObjectType" %}
-// sourcery:file:Lens+{% call name type %}Properties.swift
+// sourcery:file:Lens+{% call name type %}GeneratedProperties.swift
 import UIKit
 {% if type.name == "WKWebViewProtocol" %}
 import WebKit
 {% endif %}
+
+extension {% call name type %}: {{type.name}} { }
 {% for variable in type.variables %}
 {% if not variable.isStatic %}
 {% if variable.readAccess == "public" or variable.readAccess == "open" or variable.readAccess == "internal" %}
 
-public extension Lens where Object: {{type.name|replace:"Protocol",""}}, Property == {{variable.typeName}} {
-    {{variable.attributes.available}}
+{{variable.attributes.available}}
+public extension Lens where Object: {% call name type %}, Property == {% call implicitToOptional variable.typeName %} {
     public static var {{variable.name}}: Lens {
         {% if variable.writeAccess == "" or variable.writeAccess == "private" or variable.writeAccess == "fileprivate" or variable.isComputed %}
         return Lens { $0.{{variable.name}} }
@@ -38,7 +41,7 @@ public extension Lens where Object: {{type.name|replace:"Protocol",""}}, Propert
 {% for type in types.based.UIValueType %}
 {% if type.kind == "protocol" %}
 {% if not type.name == "UIValueType" %}
-// sourcery:file:Lens+{% call name type %}Properties.swift
+// sourcery:file:Lens+{% call name type %}GeneratedProperties.swift
 import UIKit
 
 {% for variable in type.variables %}
@@ -47,7 +50,7 @@ import UIKit
 {% if variable.writeAccess == "public" or variable.writeAccess == "internal" or variable.writeAccess == "open" %}
 {% if not variable.isComputed and variable.isMutable %}
 
-public extension Lens where Object == {{type.name|replace:"Protocol",""}}, Property == {{variable.typeName}} {
+public extension Lens where Object == {% call name type %}, Property == {{variable.typeName}} {
     public static var {{variable.name}}: Lens {
         return Lens(
             get: { $0.{{variable.name}} },
@@ -62,6 +65,43 @@ public extension Lens where Object == {{type.name|replace:"Protocol",""}}, Prope
 }
 {% endif %}
 {% endif %}
+{% endif %}
+{% endif %}
+{% endfor %}
+// sourcery:end
+{% endif %}
+{% endif %}
+{% endfor %}
+
+{% for type in types.based.UIOptionalObjectProtocolType %}
+{% if type.kind == "protocol" %}
+{% if not type.name == "UIOptionalObjectProtocolType" %}
+// sourcery:file:Lens+{% call name type %}GeneratedProperties.swift
+import UIKit
+{% for variable in type.variables %}
+{% if not variable.isStatic %}
+{% if variable.readAccess == "public" or variable.readAccess == "open" or variable.readAccess == "internal" %}
+
+{{variable.attributes.available}}
+public extension Lens where Object: {% call name type %} & AnyObject, Property == {% call implicitToOptional variable.typeName %}? {
+    public static var {{variable.name}}: Lens {
+        {% if variable.writeAccess == "" or variable.writeAccess == "private" or variable.writeAccess == "fileprivate" or variable.isComputed %}
+        return Lens { (object: {% call name type %}) -> {% call implicitToOptional variable.typeName %}? in
+            object.{{variable.name}}
+        }
+        {% else %}
+        return Lens(
+            get: { (object: Object) -> {% call implicitToOptional variable.typeName %}? in
+                object.{{variable.name}}
+            },
+            setter: { (object: Object, value: {% call implicitToOptional variable.typeName %}?) -> () in
+                var mutable = object
+                value.map { mutable.{{variable.name}} = $0 }
+            }
+        )
+        {% endif %}
+    }
+}
 {% endif %}
 {% endif %}
 {% endfor %}

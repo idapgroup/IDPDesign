@@ -15,7 +15,7 @@ public protocol UIImageViewProtocol: UIObjectType {
     var highlightedAnimationImages: [UIImage]? { get set }
     var animationDuration: TimeInterval { get set }
     var animationRepeatCount: Int { get set }
-    var tintColor: UIColor? { get set }
+    var tintColor: UIColor! { get set }
 
         // func startAnimating()
         // func stopAnimating()

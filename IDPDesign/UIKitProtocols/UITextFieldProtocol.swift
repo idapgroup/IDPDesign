@@ -32,4 +32,24 @@ public protocol UITextFieldProtocol: UIObjectType {
     var inputView: UIView? { get set }
     var inputAccessoryView: UIView? { get set }
     var clearsOnInsertion: Bool { get set }
+
+    // UITextInputTraits
+    var autocorrectionType: UITextAutocorrectionType { get set }
+    var spellCheckingType: UITextSpellCheckingType { get set }
+
+    @available(iOS 11.0, *)
+    var smartQuotesType: UITextSmartQuotesType { get set }
+
+    @available(iOS 11.0, *)
+    var smartDashesType: UITextSmartDashesType { get set }
+
+    @available(iOS 11.0, *)
+    var smartInsertDeleteType: UITextSmartInsertDeleteType { get set }
+
+    var keyboardType: UIKeyboardType { get set }
+    var keyboardAppearance: UIKeyboardAppearance { get set }
+    var returnKeyType: UIReturnKeyType { get set }
+    var enablesReturnKeyAutomatically: Bool { get set }
+    var isSecureTextEntry: Bool { get set }
+    // var textContentType: UITextContentType? { get set }
 }

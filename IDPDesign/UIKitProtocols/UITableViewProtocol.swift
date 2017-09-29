@@ -6,7 +6,7 @@
 //  Copyright © 2017 Oleksa 'trimm' Korin. All rights reserved.
 //
 
-public protocol UITextFieldProtocol: UIObjectType {
+public protocol UITableViewProtocol: UIObjectType {
     var dataSource: UITableViewDataSource? { get set }
     var delegate: UITableViewDelegate? { get set }
     var prefetchDataSource: UITableViewDataSourcePrefetching? { get set }

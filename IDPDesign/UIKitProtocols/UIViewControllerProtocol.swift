@@ -7,7 +7,7 @@
 //
 
 public protocol UIViewControllerProtocol: UIObjectType {
-    var view: UIView? { get set }
+    var view: UIView! { get set }
     var title: String? { get set }
     var parent: UIViewController? { get }
     var definesPresentationContext: Bool { get set }
@@ -16,7 +16,6 @@ public protocol UIViewControllerProtocol: UIObjectType {
     var modalTransitionStyle: UIModalTransitionStyle { get set }
     var modalPresentationStyle: UIModalPresentationStyle { get set }
     var modalPresentationCapturesStatusBarAppearance: Bool { get set }
-    var disablesAutomaticKeyboardDismissal: Bool { get set }
     var edgesForExtendedLayout: UIRectEdge { get set }
     var extendedLayoutIncludesOpaqueBars: Bool { get set }
     var automaticallyAdjustsScrollViewInsets: Bool { get set }

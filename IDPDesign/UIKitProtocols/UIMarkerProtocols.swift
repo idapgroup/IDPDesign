@@ -6,6 +6,5 @@
 //  Copyright © 2017 Oleksa 'trimm' Korin. All rights reserved.
 //
 
-protocol UIObjectType: class {}
-
-protocol UIValueType {}
+public protocol UIObjectType: class {}
+public protocol UIValueType {}

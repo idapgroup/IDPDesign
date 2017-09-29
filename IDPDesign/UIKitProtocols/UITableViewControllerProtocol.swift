@@ -7,7 +7,7 @@
 //
 
 public protocol UITableViewControllerProtocol: UIObjectType {
-    var tableView: UITableView? { get set }
+    var tableView: UITableView! { get set }
     var clearsSelectionOnViewWillAppear: Bool { get set }
     var refreshControl: UIRefreshControl? { get set }
 }

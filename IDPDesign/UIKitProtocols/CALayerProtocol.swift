@@ -51,9 +51,9 @@ public protocol CALayerProtocol: UIObjectType {
     var shadowRadius: CGFloat { get set }
     var shadowPath: CGPath? { get set }
     var actions: [String : CAAction]? { get set }
-    var name: String?
-    weak var delegate: CALayerDelegate?
-    var style: [AnyHashable : Any]?
+    var name: String? { get set }
+    var delegate: CALayerDelegate? { get set }
+    var style: [AnyHashable : Any]? { get set }
 
 
     // func affineTransform() -> CGAffineTransform

@@ -9,10 +9,16 @@
 public protocol NSObjectProtocol: UIObjectType {
     var isAccessibilityElement: Bool { get set }
     var accessibilityLabel: String? { get set }
+
+    @available(iOS 11.0, *)
     var accessibilityAttributedLabel: NSAttributedString? { get set }
     var accessibilityHint: String? { get set }
+
+    @available(iOS 11.0, *)
     var accessibilityAttributedHint: NSAttributedString? { get set }
     var accessibilityValue: String? { get set }
+
+    @available(iOS 11.0, *)
     var accessibilityAttributedValue: NSAttributedString? { get set }
     var accessibilityTraits: UIAccessibilityTraits { get set }
     var accessibilityFrame: CGRect { get set }

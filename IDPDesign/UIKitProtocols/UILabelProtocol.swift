@@ -8,8 +8,8 @@
 
 public protocol UILabelProtocol: UIObjectType {
     var text: String? { get set }
-    var font: UIFont? { get set }
-    var textColor: UIColor? { get set }
+    var font: UIFont! { get set }
+    var textColor: UIColor! { get set }
     var shadowColor: UIColor? { get set }
     var shadowOffset: CGSize { get set }
     var textAlignment: NSTextAlignment { get set }

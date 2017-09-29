@@ -10,7 +10,7 @@ public protocol UINavigationControllerProtocol: UIObjectType {
     var isNavigationBarHidden: Bool { get set }
     var navigationBar: UINavigationBar { get }
     var isToolbarHidden: Bool { get set }
-    var toolbar: UIToolbar? { get }
+    var toolbar: UIToolbar! { get }
     var delegate: UINavigationControllerDelegate? { get set }
     var interactivePopGestureRecognizer: UIGestureRecognizer? { get }
     var hidesBarsWhenKeyboardAppears: Bool { get set }

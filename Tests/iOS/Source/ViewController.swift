@@ -10,9 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     override func viewDidLoad() {
-        let x = UITextField()
+        let x: UITextInputTraits = UITextField()
         let t = x.autocapitalizationType
-        
-        UITapGestureRecognizer
     }
 }
