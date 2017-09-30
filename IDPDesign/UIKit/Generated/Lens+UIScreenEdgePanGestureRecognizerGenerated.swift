@@ -5,11 +5,9 @@ import UIKit
 
 extension UIScreenEdgePanGestureRecognizer: UIScreenEdgePanGestureRecognizerProtocol { }
 
-public extension Lens where Object: UIScreenEdgePanGestureRecognizer, Property == UIRectEdge {
-    public static var edges: Lens {
-        return Lens(
-            get: { $0.edges },
-            setter: { $0.edges = $1 }
-        )
-    }
+public func edges<Object: UIScreenEdgePanGestureRecognizer>() -> Lens<Object, UIRectEdge> {
+    return Lens(
+        get: { $0.edges },
+        setter: { $0.edges = $1 }
+    )
 }

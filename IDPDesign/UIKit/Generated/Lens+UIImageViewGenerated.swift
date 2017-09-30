@@ -5,83 +5,65 @@ import UIKit
 
 extension UIImageView: UIImageViewProtocol { }
 
-public extension Lens where Object: UIImageView, Property == UIImage? {
-    public static var image: Lens {
-        return Lens(
-            get: { $0.image },
-            setter: { $0.image = $1 }
-        )
-    }
+public func image<Object: UIImageView>() -> Lens<Object, UIImage?> {
+    return Lens(
+        get: { $0.image },
+        setter: { $0.image = $1 }
+    )
 }
 
-public extension Lens where Object: UIImageView, Property == UIImage? {
-    public static var highlightedImage: Lens {
-        return Lens(
-            get: { $0.highlightedImage },
-            setter: { $0.highlightedImage = $1 }
-        )
-    }
+public func highlightedImage<Object: UIImageView>() -> Lens<Object, UIImage?> {
+    return Lens(
+        get: { $0.highlightedImage },
+        setter: { $0.highlightedImage = $1 }
+    )
 }
 
-public extension Lens where Object: UIImageView, Property == Bool {
-    public static var isUserInteractionEnabled: Lens {
-        return Lens(
-            get: { $0.isUserInteractionEnabled },
-            setter: { $0.isUserInteractionEnabled = $1 }
-        )
-    }
+public func isUserInteractionEnabled<Object: UIImageView>() -> Lens<Object, Bool> {
+    return Lens(
+        get: { $0.isUserInteractionEnabled },
+        setter: { $0.isUserInteractionEnabled = $1 }
+    )
 }
 
-public extension Lens where Object: UIImageView, Property == Bool {
-    public static var isHighlighted: Lens {
-        return Lens(
-            get: { $0.isHighlighted },
-            setter: { $0.isHighlighted = $1 }
-        )
-    }
+public func isHighlighted<Object: UIImageView>() -> Lens<Object, Bool> {
+    return Lens(
+        get: { $0.isHighlighted },
+        setter: { $0.isHighlighted = $1 }
+    )
 }
 
-public extension Lens where Object: UIImageView, Property == [UIImage]? {
-    public static var animationImages: Lens {
-        return Lens(
-            get: { $0.animationImages },
-            setter: { $0.animationImages = $1 }
-        )
-    }
+public func animationImages<Object: UIImageView>() -> Lens<Object, [UIImage]?> {
+    return Lens(
+        get: { $0.animationImages },
+        setter: { $0.animationImages = $1 }
+    )
 }
 
-public extension Lens where Object: UIImageView, Property == [UIImage]? {
-    public static var highlightedAnimationImages: Lens {
-        return Lens(
-            get: { $0.highlightedAnimationImages },
-            setter: { $0.highlightedAnimationImages = $1 }
-        )
-    }
+public func highlightedAnimationImages<Object: UIImageView>() -> Lens<Object, [UIImage]?> {
+    return Lens(
+        get: { $0.highlightedAnimationImages },
+        setter: { $0.highlightedAnimationImages = $1 }
+    )
 }
 
-public extension Lens where Object: UIImageView, Property == TimeInterval {
-    public static var animationDuration: Lens {
-        return Lens(
-            get: { $0.animationDuration },
-            setter: { $0.animationDuration = $1 }
-        )
-    }
+public func animationDuration<Object: UIImageView>() -> Lens<Object, TimeInterval> {
+    return Lens(
+        get: { $0.animationDuration },
+        setter: { $0.animationDuration = $1 }
+    )
 }
 
-public extension Lens where Object: UIImageView, Property == Int {
-    public static var animationRepeatCount: Lens {
-        return Lens(
-            get: { $0.animationRepeatCount },
-            setter: { $0.animationRepeatCount = $1 }
-        )
-    }
+public func animationRepeatCount<Object: UIImageView>() -> Lens<Object, Int> {
+    return Lens(
+        get: { $0.animationRepeatCount },
+        setter: { $0.animationRepeatCount = $1 }
+    )
 }
 
-public extension Lens where Object: UIImageView, Property == UIColor? {
-    public static var tintColor: Lens {
-        return Lens(
-            get: { $0.tintColor },
-            setter: { $0.tintColor = $1 }
-        )
-    }
+public func tintColor<Object: UIImageView>() -> Lens<Object, UIColor?> {
+    return Lens(
+        get: { $0.tintColor },
+        setter: { $0.tintColor = $1 }
+    )
 }

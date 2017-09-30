@@ -4,30 +4,26 @@
 import UIKit
 
 
-public extension Lens where Object == CGRect, Property == CGPoint {
-    public static var origin: Lens {
-        return Lens(
-            get: { $0.origin },
-            set: {
-                var result = $0
-                result.origin = $1
+public func origin() -> Lens<CGRect, CGPoint> {
+    return Lens(
+        get: { $0.origin },
+        set: {
+            var result = $0
+            result.origin = $1
 
-                return result
-            }
-        )
-    }
+            return result
+        }
+    )
 }
 
-public extension Lens where Object == CGRect, Property == CGSize {
-    public static var size: Lens {
-        return Lens(
-            get: { $0.size },
-            set: {
-                var result = $0
-                result.size = $1
+public func size() -> Lens<CGRect, CGSize> {
+    return Lens(
+        get: { $0.size },
+        set: {
+            var result = $0
+            result.size = $1
 
-                return result
-            }
-        )
-    }
+            return result
+        }
+    )
 }

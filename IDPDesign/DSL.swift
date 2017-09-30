@@ -6,6 +6,9 @@
 //  Copyright © 2017 Oleksa 'trimm' Korin. All rights reserved.
 //
 
+/// Function, that returns lens
+public typealias LensGetter<Object, Property> = () -> Lens<Object, Property>
+
 /**
  Applies property value to lens.
  
@@ -41,6 +44,35 @@ public func ~ <Object, Property>(lens: Lens<Object, Property>, style: Style<Prop
 }
 
 /**
+ Applies property value to lens getter.
+ 
+ - returns: Style for property.
+ */
+public func ~ <Object, Property>(lens: LensGetter<Object, Property>, property: Property) -> Style<Object> {
+    return lens() ~ property
+}
+
+/**
+ Applies optional property value to lens getter.
+ 
+ - note: Duplication. Swiftc fails without it.
+ 
+ - returns: Style for property.
+ */
+public func ~ <Object, Property>(lens: LensGetter<Object, Property?>, property: Property?)-> Style<Object> {
+    return lens() ~ property
+}
+
+/**
+ Applies style to lens getter.
+ 
+ - returns: Style for lens.
+ */
+public func ~ <Object, Property>(lens: LensGetter<Object, Property>, style: Style<Property>) -> Style<Object> {
+    return lens() ~ style
+}
+
+/**
  Applies style to object.
  
  - returns: Object with style applied.
@@ -68,9 +100,19 @@ public func • <A, B, C>(lhs: Lens<A, B>, rhs: Lens<B, C>) -> Lens<A, C> {
     return lhs.compose(rhs)
 }
 
-/// Compose two lens to have direct access to the subproperty of a property of object
+/// Compose two lens to have direct access to the optional subproperty of a property of object
 public func • <A, B, C>(lhs: Lens<A, B?>, rhs: Lens<B, C>) -> Lens<A, C?> {
     return lhs.bind(rhs)
+}
+
+/// Compose two lens getters into lens getter to have direct access to the subproperty of a property of object
+public func • <A, B, C>(lhs: @escaping LensGetter<A, B>, rhs: @escaping LensGetter<B, C>) -> LensGetter<A, C> {
+    return { lhs().compose(rhs()) }
+}
+
+/// Compose two lens getters into lens getter to have direct access to the optional subproperty of a property of object
+public func • <A, B, C>(lhs: @escaping LensGetter<A, B?>, rhs: @escaping LensGetter<B, C>) -> LensGetter<A, C?> {
+    return { lhs().bind(rhs()) }
 }
 
 /// Compose two styles

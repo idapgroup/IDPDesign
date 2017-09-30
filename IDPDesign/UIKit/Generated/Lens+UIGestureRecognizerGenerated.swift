@@ -5,80 +5,62 @@ import UIKit
 
 extension UIGestureRecognizer: UIGestureRecognizerProtocol { }
 
-public extension Lens where Object: UIGestureRecognizer, Property == UIGestureRecognizerDelegate? {
-    public static var delegate: Lens {
-        return Lens(
-            get: { $0.delegate },
-            setter: { $0.delegate = $1 }
-        )
-    }
+public func delegate<Object: UIGestureRecognizer>() -> Lens<Object, UIGestureRecognizerDelegate?> {
+    return Lens(
+        get: { $0.delegate },
+        setter: { $0.delegate = $1 }
+    )
 }
 
-public extension Lens where Object: UIGestureRecognizer, Property == Bool {
-    public static var isEnabled: Lens {
-        return Lens(
-            get: { $0.isEnabled },
-            setter: { $0.isEnabled = $1 }
-        )
-    }
+public func isEnabled<Object: UIGestureRecognizer>() -> Lens<Object, Bool> {
+    return Lens(
+        get: { $0.isEnabled },
+        setter: { $0.isEnabled = $1 }
+    )
 }
 
-public extension Lens where Object: UIGestureRecognizer, Property == UIView? {
-    public static var view: Lens {
-        return Lens { $0.view }
-    }
+public func view<Object: UIGestureRecognizer>() -> Lens<Object, UIView?> {
+    return Lens { $0.view }
 }
 
-public extension Lens where Object: UIGestureRecognizer, Property == Bool {
-    public static var cancelsTouchesInView: Lens {
-        return Lens(
-            get: { $0.cancelsTouchesInView },
-            setter: { $0.cancelsTouchesInView = $1 }
-        )
-    }
+public func cancelsTouchesInView<Object: UIGestureRecognizer>() -> Lens<Object, Bool> {
+    return Lens(
+        get: { $0.cancelsTouchesInView },
+        setter: { $0.cancelsTouchesInView = $1 }
+    )
 }
 
-public extension Lens where Object: UIGestureRecognizer, Property == Bool {
-    public static var delaysTouchesBegan: Lens {
-        return Lens(
-            get: { $0.delaysTouchesBegan },
-            setter: { $0.delaysTouchesBegan = $1 }
-        )
-    }
+public func delaysTouchesBegan<Object: UIGestureRecognizer>() -> Lens<Object, Bool> {
+    return Lens(
+        get: { $0.delaysTouchesBegan },
+        setter: { $0.delaysTouchesBegan = $1 }
+    )
 }
 
-public extension Lens where Object: UIGestureRecognizer, Property == Bool {
-    public static var delaysTouchesEnded: Lens {
-        return Lens(
-            get: { $0.delaysTouchesEnded },
-            setter: { $0.delaysTouchesEnded = $1 }
-        )
-    }
+public func delaysTouchesEnded<Object: UIGestureRecognizer>() -> Lens<Object, Bool> {
+    return Lens(
+        get: { $0.delaysTouchesEnded },
+        setter: { $0.delaysTouchesEnded = $1 }
+    )
 }
 
-public extension Lens where Object: UIGestureRecognizer, Property == [NSNumber] {
-    public static var allowedTouchTypes: Lens {
-        return Lens(
-            get: { $0.allowedTouchTypes },
-            setter: { $0.allowedTouchTypes = $1 }
-        )
-    }
+public func allowedTouchTypes<Object: UIGestureRecognizer>() -> Lens<Object, [NSNumber]> {
+    return Lens(
+        get: { $0.allowedTouchTypes },
+        setter: { $0.allowedTouchTypes = $1 }
+    )
 }
 
-public extension Lens where Object: UIGestureRecognizer, Property == [NSNumber] {
-    public static var allowedPressTypes: Lens {
-        return Lens(
-            get: { $0.allowedPressTypes },
-            setter: { $0.allowedPressTypes = $1 }
-        )
-    }
+public func allowedPressTypes<Object: UIGestureRecognizer>() -> Lens<Object, [NSNumber]> {
+    return Lens(
+        get: { $0.allowedPressTypes },
+        setter: { $0.allowedPressTypes = $1 }
+    )
 }
 
-public extension Lens where Object: UIGestureRecognizer, Property == Bool {
-    public static var requiresExclusiveTouchType: Lens {
-        return Lens(
-            get: { $0.requiresExclusiveTouchType },
-            setter: { $0.requiresExclusiveTouchType = $1 }
-        )
-    }
+public func requiresExclusiveTouchType<Object: UIGestureRecognizer>() -> Lens<Object, Bool> {
+    return Lens(
+        get: { $0.requiresExclusiveTouchType },
+        setter: { $0.requiresExclusiveTouchType = $1 }
+    )
 }

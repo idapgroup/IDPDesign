@@ -5,65 +5,51 @@ import UIKit
 
 extension UIBarButtonItem: UIBarButtonItemProtocol { }
 
-public extension Lens where Object: UIBarButtonItem, Property == UIBarButtonItemStyle {
-    public static var style: Lens {
-        return Lens(
-            get: { $0.style },
-            setter: { $0.style = $1 }
-        )
-    }
+public func style<Object: UIBarButtonItem>() -> Lens<Object, UIBarButtonItemStyle> {
+    return Lens(
+        get: { $0.style },
+        setter: { $0.style = $1 }
+    )
 }
 
-public extension Lens where Object: UIBarButtonItem, Property == CGFloat {
-    public static var width: Lens {
-        return Lens(
-            get: { $0.width },
-            setter: { $0.width = $1 }
-        )
-    }
+public func width<Object: UIBarButtonItem>() -> Lens<Object, CGFloat> {
+    return Lens(
+        get: { $0.width },
+        setter: { $0.width = $1 }
+    )
 }
 
-public extension Lens where Object: UIBarButtonItem, Property == Set<String>? {
-    public static var possibleTitles: Lens {
-        return Lens(
-            get: { $0.possibleTitles },
-            setter: { $0.possibleTitles = $1 }
-        )
-    }
+public func possibleTitles<Object: UIBarButtonItem>() -> Lens<Object, Set<String>?> {
+    return Lens(
+        get: { $0.possibleTitles },
+        setter: { $0.possibleTitles = $1 }
+    )
 }
 
-public extension Lens where Object: UIBarButtonItem, Property == UIView? {
-    public static var customView: Lens {
-        return Lens(
-            get: { $0.customView },
-            setter: { $0.customView = $1 }
-        )
-    }
+public func customView<Object: UIBarButtonItem>() -> Lens<Object, UIView?> {
+    return Lens(
+        get: { $0.customView },
+        setter: { $0.customView = $1 }
+    )
 }
 
-public extension Lens where Object: UIBarButtonItem, Property == Selector? {
-    public static var action: Lens {
-        return Lens(
-            get: { $0.action },
-            setter: { $0.action = $1 }
-        )
-    }
+public func action<Object: UIBarButtonItem>() -> Lens<Object, Selector?> {
+    return Lens(
+        get: { $0.action },
+        setter: { $0.action = $1 }
+    )
 }
 
-public extension Lens where Object: UIBarButtonItem, Property == AnyObject? {
-    public static var target: Lens {
-        return Lens(
-            get: { $0.target },
-            setter: { $0.target = $1 }
-        )
-    }
+public func target<Object: UIBarButtonItem>() -> Lens<Object, AnyObject?> {
+    return Lens(
+        get: { $0.target },
+        setter: { $0.target = $1 }
+    )
 }
 
-public extension Lens where Object: UIBarButtonItem, Property == UIColor? {
-    public static var tintColor: Lens {
-        return Lens(
-            get: { $0.tintColor },
-            setter: { $0.tintColor = $1 }
-        )
-    }
+public func tintColor<Object: UIBarButtonItem>() -> Lens<Object, UIColor?> {
+    return Lens(
+        get: { $0.tintColor },
+        setter: { $0.tintColor = $1 }
+    )
 }

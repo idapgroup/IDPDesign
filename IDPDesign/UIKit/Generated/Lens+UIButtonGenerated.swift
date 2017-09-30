@@ -5,59 +5,45 @@ import UIKit
 
 extension UIButton: UIButtonProtocol { }
 
-public extension Lens where Object: UIButton, Property == Bool {
-    public static var adjustsImageWhenDisabled: Lens {
-        return Lens(
-            get: { $0.adjustsImageWhenDisabled },
-            setter: { $0.adjustsImageWhenDisabled = $1 }
-        )
-    }
+public func adjustsImageWhenDisabled<Object: UIButton>() -> Lens<Object, Bool> {
+    return Lens(
+        get: { $0.adjustsImageWhenDisabled },
+        setter: { $0.adjustsImageWhenDisabled = $1 }
+    )
 }
 
-public extension Lens where Object: UIButton, Property == Bool {
-    public static var adjustsImageWhenHighlighted: Lens {
-        return Lens(
-            get: { $0.adjustsImageWhenHighlighted },
-            setter: { $0.adjustsImageWhenHighlighted = $1 }
-        )
-    }
+public func adjustsImageWhenHighlighted<Object: UIButton>() -> Lens<Object, Bool> {
+    return Lens(
+        get: { $0.adjustsImageWhenHighlighted },
+        setter: { $0.adjustsImageWhenHighlighted = $1 }
+    )
 }
 
-public extension Lens where Object: UIButton, Property == UIEdgeInsets {
-    public static var contentEdgeInsets: Lens {
-        return Lens(
-            get: { $0.contentEdgeInsets },
-            setter: { $0.contentEdgeInsets = $1 }
-        )
-    }
+public func contentEdgeInsets<Object: UIButton>() -> Lens<Object, UIEdgeInsets> {
+    return Lens(
+        get: { $0.contentEdgeInsets },
+        setter: { $0.contentEdgeInsets = $1 }
+    )
 }
 
-public extension Lens where Object: UIButton, Property == UIEdgeInsets {
-    public static var imageEdgeInsets: Lens {
-        return Lens(
-            get: { $0.imageEdgeInsets },
-            setter: { $0.imageEdgeInsets = $1 }
-        )
-    }
+public func imageEdgeInsets<Object: UIButton>() -> Lens<Object, UIEdgeInsets> {
+    return Lens(
+        get: { $0.imageEdgeInsets },
+        setter: { $0.imageEdgeInsets = $1 }
+    )
 }
 
-public extension Lens where Object: UIButton, Property == UIImageView? {
-    public static var imageView: Lens {
-        return Lens { $0.imageView }
-    }
+public func imageView<Object: UIButton>() -> Lens<Object, UIImageView?> {
+    return Lens { $0.imageView }
 }
 
-public extension Lens where Object: UIButton, Property == UIEdgeInsets {
-    public static var titleEdgeInsets: Lens {
-        return Lens(
-            get: { $0.titleEdgeInsets },
-            setter: { $0.titleEdgeInsets = $1 }
-        )
-    }
+public func titleEdgeInsets<Object: UIButton>() -> Lens<Object, UIEdgeInsets> {
+    return Lens(
+        get: { $0.titleEdgeInsets },
+        setter: { $0.titleEdgeInsets = $1 }
+    )
 }
 
-public extension Lens where Object: UIButton, Property == UILabel? {
-    public static var titleLabel: Lens {
-        return Lens { $0.titleLabel }
-    }
+public func titleLabel<Object: UIButton>() -> Lens<Object, UILabel?> {
+    return Lens { $0.titleLabel }
 }

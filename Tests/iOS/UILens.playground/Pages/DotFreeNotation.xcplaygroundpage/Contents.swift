@@ -4,39 +4,29 @@ import IDPDesign
 
 func viewStyle<Object: UIView>() -> Style<Object> {
     return design(
-        .alpha ~ 1.0,
-        .backgroundColor ~ .red
+        alpha ~ 1.0,
+        backgroundColor ~ .red
     )
 }
 
-let style: Style<UIButton> = design(
-    .alpha ~ 1.0,
-    .backgroundColor ~ .red,
-    .frame ~ .zero,
-    .titleLabel ~ design(
-        .alpha ~ 0.5,
-        .backgroundColor ~ .green
-    )
-)
-
 let button = UIButton()
-button |> style
 
 let buttonStyle: Style<UIButton> = design(
-    viewStyle(),
-    .frame ~ .zero
+    isUserInteractionEnabled ~ false,
+    backgroundColor ~ .red
 )
 
 let buttonTitleStyle: Style<UIButton> = design(
-    .titleLabel ~ design(
-        .layer ~ design(
-            .masksToBounds ~ false
+    titleLabel ~ design(
+        viewStyle(),
+        layer ~ design(
+            masksToBounds ~ false
         ),
-        .alpha ~ 0.5,
-        .backgroundColor ~ .green
+        alpha ~ 0.5,
+        backgroundColor ~ .green
     ),
-    .titleLabel • .layer ~ design(
-        .isDoubleSided ~ false
+    titleLabel • layer ~ design(
+        isDoubleSided ~ false
     )
 )
 
