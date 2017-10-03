@@ -10,16 +10,14 @@ import UIKit
 
 public typealias UIControlAction = (target: Any?, action: Selector, controlEvents: UIControlEvents)
 
-public extension Lens where Object: UIControl, Property == [UIControlAction] {
-    public static var actions: Lens {
-        return Lens(
-            get: { $0.allActions },
-            setter: {
-                $0.removeTarget(nil, action: nil, for: .allEvents)
-                $1.forEach($0.addTarget(_:action:for:))
-            }
-        )
-    }
+public func actions<Object: UIControl>() -> Lens<Object, [UIControlAction]> {
+    return Lens(
+        get: { $0.allActions },
+        setter: {
+            $0.removeTarget(nil, action: nil, for: .allEvents)
+            $1.forEach($0.addTarget(_:action:for:))
+        }
+    )
 }
 
 fileprivate extension UIControl {

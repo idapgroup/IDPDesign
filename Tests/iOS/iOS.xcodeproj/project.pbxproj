@@ -118,7 +118,7 @@
 		D7C15B051F7D4F28005C7511 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C15B011F7D4F28005C7511 /* Operators.swift */; };
 		D7C15B061F7D4F28005C7511 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C15B021F7D4F28005C7511 /* Style.swift */; };
 		D7FF07B01DFF14940079AC04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FF07AF1DFF14940079AC04 /* AppDelegate.swift */; };
-		D7FF07D01DFF14B70079AC04 /* IDPCastableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FF07CF1DFF14B70079AC04 /* IDPCastableTests.swift */; };
+		D7FF07D01DFF14B70079AC04 /* IDPDesignSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FF07CF1DFF14B70079AC04 /* IDPDesignSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -271,7 +271,7 @@
 		D7FF07BB1DFF14940079AC04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7FF07C01DFF14950079AC04 /* iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7FF07C61DFF14950079AC04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D7FF07CF1DFF14B70079AC04 /* IDPCastableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPCastableTests.swift; sourceTree = "<group>"; };
+		D7FF07CF1DFF14B70079AC04 /* IDPDesignSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDPDesignSpec.swift; sourceTree = "<group>"; };
 		FE18C087B6EC9C8A94DD682D /* Pods_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -519,7 +519,7 @@
 		D7FF07C31DFF14950079AC04 /* iOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				D7FF07CF1DFF14B70079AC04 /* IDPCastableTests.swift */,
+				D7FF07CF1DFF14B70079AC04 /* IDPDesignSpec.swift */,
 				D7FF07C61DFF14950079AC04 /* Info.plist */,
 			);
 			path = iOSTests;
@@ -853,7 +853,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7FF07D01DFF14B70079AC04 /* IDPCastableTests.swift in Sources */,
+				D7FF07D01DFF14B70079AC04 /* IDPDesignSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,13 +8,11 @@
 
 import UIKit
 
-public extension Lens where Object: UIBarItem, Property == [NSAttributedStringKey : Any]? {
-    public static func titleTextAttributes(for state: UIControlState) -> Lens {
-        return Lens(
-            get: { $0.titleTextAttributes(for: state).map(toAttributedStringKey) },
-            setter: { $0.setTitleTextAttributes($1, for: state) }
-        )
-    }
+public func titleTextAttributes<Object: UIBarItem>(for state: UIControlState) -> Lens<Object, [NSAttributedStringKey : Any]?> {
+    return Lens(
+        get: { $0.titleTextAttributes(for: state).map(toAttributedStringKey) },
+        setter: { $0.setTitleTextAttributes($1, for: state) }
+    )
 }
 
 fileprivate func toAttributedStringKey(_ value: [String : Any]) -> [NSAttributedStringKey: Any] {

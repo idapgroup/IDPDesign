@@ -15,8 +15,8 @@ class ViewController: UIViewController {
         
         func viewStyle<Object: UIView>() -> Style<Object> {
             return design(
-                .alpha ~ 1.0,
-                .backgroundColor ~ .red
+                alpha ~ 1.0,
+                backgroundColor ~ .red
             )
         }
         
@@ -24,19 +24,19 @@ class ViewController: UIViewController {
         
         let style: Style<UIButton> = design(
             viewStyle(),
-            .frame ~ .zero
+            frame ~ .zero
         )
             
         let titleStyle: Style<UIButton> = design(
-            .titleLabel ~ design(
-                .layer ~ design(
-                    .masksToBounds ~ false
+            titleLabel ~ design(
+                layer ~ design(
+                    masksToBounds ~ false
                 ),
-                .alpha ~ 0.5,
-                .backgroundColor ~ .green
+                alpha ~ 0.5,
+                backgroundColor ~ .green
             ),
-            .titleLabel • .layer ~ design(
-                .isDoubleSided ~ false
+            titleLabel • layer ~ design(
+                isDoubleSided ~ false
             )
         )
         
