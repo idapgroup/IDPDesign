@@ -111,49 +111,49 @@
 		D793C5F01F7EE69000375223 /* Lens+UILabelGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D793C5C51F7EE69000375223 /* Lens+UILabelGenerated.swift */; };
 		D793C5F11F7EE69000375223 /* Lens+UIPanGestureRecognizerGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D793C5C61F7EE69000375223 /* Lens+UIPanGestureRecognizerGenerated.swift */; };
 		D7A6C5471F841BA20082C9D8 /* CATransform3D+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5461F841BA20082C9D8 /* CATransform3D+Equatable.swift */; };
-		D7A6C5731F8424DA0082C9D8 /* Lens+UIGestureRecognizerGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5481F8424D50082C9D8 /* Lens+UIGestureRecognizerGeneratedSpec.swift */; };
-		D7A6C5741F8424DA0082C9D8 /* Lens+UIBarButtonItemGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5491F8424D50082C9D8 /* Lens+UIBarButtonItemGeneratedSpec.swift */; };
-		D7A6C5751F8424DA0082C9D8 /* Lens+UIControlGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C54A1F8424D60082C9D8 /* Lens+UIControlGeneratedSpec.swift */; };
-		D7A6C5761F8424DA0082C9D8 /* Lens+CGSizeGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C54B1F8424D60082C9D8 /* Lens+CGSizeGeneratedSpec.swift */; };
-		D7A6C5771F8424DA0082C9D8 /* Lens+NSObjectGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C54C1F8424D60082C9D8 /* Lens+NSObjectGeneratedSpec.swift */; };
-		D7A6C5781F8424DA0082C9D8 /* Lens+UIActivityIndicatorViewGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C54D1F8424D60082C9D8 /* Lens+UIActivityIndicatorViewGeneratedSpec.swift */; };
-		D7A6C5791F8424DA0082C9D8 /* Lens+UIPinchGestureRecognizerGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C54E1F8424D60082C9D8 /* Lens+UIPinchGestureRecognizerGeneratedSpec.swift */; };
-		D7A6C57A1F8424DA0082C9D8 /* Lens+UISwipeGestureRecognizerGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C54F1F8424D60082C9D8 /* Lens+UISwipeGestureRecognizerGeneratedSpec.swift */; };
-		D7A6C57B1F8424DA0082C9D8 /* Lens+UINavigationItemGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5501F8424D60082C9D8 /* Lens+UINavigationItemGeneratedSpec.swift */; };
-		D7A6C57C1F8424DA0082C9D8 /* Lens+UITableViewCellGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5511F8424D60082C9D8 /* Lens+UITableViewCellGeneratedSpec.swift */; };
-		D7A6C57D1F8424DA0082C9D8 /* Lens+UIProgressViewGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5521F8424D60082C9D8 /* Lens+UIProgressViewGeneratedSpec.swift */; };
-		D7A6C57E1F8424DA0082C9D8 /* Lens+UIButtonGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5531F8424D60082C9D8 /* Lens+UIButtonGeneratedSpec.swift */; };
-		D7A6C57F1F8424DA0082C9D8 /* Lens+WKWebViewGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5541F8424D60082C9D8 /* Lens+WKWebViewGeneratedSpec.swift */; };
-		D7A6C5801F8424DA0082C9D8 /* Lens+UITableViewGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5551F8424D60082C9D8 /* Lens+UITableViewGeneratedSpec.swift */; };
-		D7A6C5811F8424DA0082C9D8 /* Lens+NSLayoutManagerGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5561F8424D70082C9D8 /* Lens+NSLayoutManagerGeneratedSpec.swift */; };
-		D7A6C5821F8424DA0082C9D8 /* Lens+UIWebViewGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5571F8424D70082C9D8 /* Lens+UIWebViewGeneratedSpec.swift */; };
-		D7A6C5831F8424DA0082C9D8 /* Lens+UITextFieldGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5581F8424D70082C9D8 /* Lens+UITextFieldGeneratedSpec.swift */; };
-		D7A6C5841F8424DA0082C9D8 /* Lens+UIBarItemGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5591F8424D70082C9D8 /* Lens+UIBarItemGeneratedSpec.swift */; };
-		D7A6C5851F8424DA0082C9D8 /* Lens+UINavigationBarGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C55A1F8424D70082C9D8 /* Lens+UINavigationBarGeneratedSpec.swift */; };
-		D7A6C5861F8424DA0082C9D8 /* Lens+CGRectGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C55B1F8424D70082C9D8 /* Lens+CGRectGeneratedSpec.swift */; };
-		D7A6C5871F8424DA0082C9D8 /* Lens+UITabBarGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C55C1F8424D70082C9D8 /* Lens+UITabBarGeneratedSpec.swift */; };
-		D7A6C5881F8424DA0082C9D8 /* Lens+UIValueTypeGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C55D1F8424D70082C9D8 /* Lens+UIValueTypeGeneratedSpec.swift */; };
-		D7A6C5891F8424DA0082C9D8 /* Lens+UIStackViewGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C55E1F8424D70082C9D8 /* Lens+UIStackViewGeneratedSpec.swift */; };
-		D7A6C58A1F8424DA0082C9D8 /* Lens+UIObjectTypeGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C55F1F8424D70082C9D8 /* Lens+UIObjectTypeGeneratedSpec.swift */; };
-		D7A6C58B1F8424DA0082C9D8 /* Lens+UITabBarItemGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5601F8424D80082C9D8 /* Lens+UITabBarItemGeneratedSpec.swift */; };
-		D7A6C58C1F8424DA0082C9D8 /* Lens+CGVectorGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5611F8424D80082C9D8 /* Lens+CGVectorGeneratedSpec.swift */; };
-		D7A6C58D1F8424DA0082C9D8 /* Lens+UIEdgeInsetsGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5621F8424D80082C9D8 /* Lens+UIEdgeInsetsGeneratedSpec.swift */; };
-		D7A6C58E1F8424DA0082C9D8 /* Lens+UIImageViewGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5631F8424D80082C9D8 /* Lens+UIImageViewGeneratedSpec.swift */; };
-		D7A6C58F1F8424DA0082C9D8 /* Lens+UILongPressGestureRecognizerGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5641F8424D80082C9D8 /* Lens+UILongPressGestureRecognizerGeneratedSpec.swift */; };
-		D7A6C5901F8424DA0082C9D8 /* Lens+UIScreenEdgePanGestureRecognizerGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5651F8424D80082C9D8 /* Lens+UIScreenEdgePanGestureRecognizerGeneratedSpec.swift */; };
-		D7A6C5911F8424DA0082C9D8 /* Lens+UIScrollViewGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5661F8424D80082C9D8 /* Lens+UIScrollViewGeneratedSpec.swift */; };
-		D7A6C5921F8424DA0082C9D8 /* Lens+UITableViewControllerGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5671F8424D90082C9D8 /* Lens+UITableViewControllerGeneratedSpec.swift */; };
-		D7A6C5931F8424DA0082C9D8 /* Lens+CGPointGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5681F8424D90082C9D8 /* Lens+CGPointGeneratedSpec.swift */; };
-		D7A6C5941F8424DA0082C9D8 /* Lens+UIViewGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5691F8424D90082C9D8 /* Lens+UIViewGeneratedSpec.swift */; };
-		D7A6C5951F8424DA0082C9D8 /* Lens+UILabelGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C56A1F8424D90082C9D8 /* Lens+UILabelGeneratedSpec.swift */; };
-		D7A6C5961F8424DA0082C9D8 /* Lens+UITextViewGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C56B1F8424D90082C9D8 /* Lens+UITextViewGeneratedSpec.swift */; };
-		D7A6C5971F8424DA0082C9D8 /* Lens+NSMutableParagraphStyleGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C56C1F8424D90082C9D8 /* Lens+NSMutableParagraphStyleGeneratedSpec.swift */; };
-		D7A6C5981F8424DA0082C9D8 /* Lens+UIPanGestureRecognizerGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C56D1F8424D90082C9D8 /* Lens+UIPanGestureRecognizerGeneratedSpec.swift */; };
-		D7A6C5991F8424DA0082C9D8 /* Lens+UIRotationGestureRecognizerGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C56E1F8424DA0082C9D8 /* Lens+UIRotationGestureRecognizerGeneratedSpec.swift */; };
-		D7A6C59A1F8424DA0082C9D8 /* Lens+UINavigationControllerGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C56F1F8424DA0082C9D8 /* Lens+UINavigationControllerGeneratedSpec.swift */; };
-		D7A6C59B1F8424DA0082C9D8 /* Lens+UITapGestureRecognizerGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5701F8424DA0082C9D8 /* Lens+UITapGestureRecognizerGeneratedSpec.swift */; };
-		D7A6C59C1F8424DA0082C9D8 /* Lens+NSTextContainerGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5711F8424DA0082C9D8 /* Lens+NSTextContainerGeneratedSpec.swift */; };
-		D7A6C59D1F8424DA0082C9D8 /* Lens+UIViewControllerGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5721F8424DA0082C9D8 /* Lens+UIViewControllerGeneratedSpec.swift */; };
+		D7A6C5C91F8444420082C9D8 /* Lens+UINavigationControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C59E1F84443D0082C9D8 /* Lens+UINavigationControllerSpec.swift */; };
+		D7A6C5CA1F8444420082C9D8 /* Lens+UITabBarItemSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C59F1F84443D0082C9D8 /* Lens+UITabBarItemSpec.swift */; };
+		D7A6C5CB1F8444420082C9D8 /* Lens+UIObjectTypeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5A01F84443D0082C9D8 /* Lens+UIObjectTypeSpec.swift */; };
+		D7A6C5CC1F8444420082C9D8 /* Lens+UIPinchGestureRecognizerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5A11F84443D0082C9D8 /* Lens+UIPinchGestureRecognizerSpec.swift */; };
+		D7A6C5CD1F8444420082C9D8 /* Lens+UIScreenEdgePanGestureRecognizerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5A21F84443D0082C9D8 /* Lens+UIScreenEdgePanGestureRecognizerSpec.swift */; };
+		D7A6C5CE1F8444420082C9D8 /* Lens+UIProgressViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5A31F84443D0082C9D8 /* Lens+UIProgressViewSpec.swift */; };
+		D7A6C5CF1F8444420082C9D8 /* Lens+UISwipeGestureRecognizerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5A41F84443D0082C9D8 /* Lens+UISwipeGestureRecognizerSpec.swift */; };
+		D7A6C5D01F8444420082C9D8 /* Lens+NSLayoutManagerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5A51F84443D0082C9D8 /* Lens+NSLayoutManagerSpec.swift */; };
+		D7A6C5D11F8444420082C9D8 /* Lens+UILongPressGestureRecognizerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5A61F84443E0082C9D8 /* Lens+UILongPressGestureRecognizerSpec.swift */; };
+		D7A6C5D21F8444420082C9D8 /* Lens+UITableViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5A71F84443E0082C9D8 /* Lens+UITableViewSpec.swift */; };
+		D7A6C5D31F8444420082C9D8 /* Lens+UIRotationGestureRecognizerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5A81F84443E0082C9D8 /* Lens+UIRotationGestureRecognizerSpec.swift */; };
+		D7A6C5D41F8444420082C9D8 /* Lens+UITextViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5A91F84443E0082C9D8 /* Lens+UITextViewSpec.swift */; };
+		D7A6C5D51F8444420082C9D8 /* Lens+UIScrollViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5AA1F84443E0082C9D8 /* Lens+UIScrollViewSpec.swift */; };
+		D7A6C5D61F8444420082C9D8 /* Lens+UIBarButtonItemSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5AB1F84443E0082C9D8 /* Lens+UIBarButtonItemSpec.swift */; };
+		D7A6C5D71F8444420082C9D8 /* Lens+UIBarItemSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5AC1F84443E0082C9D8 /* Lens+UIBarItemSpec.swift */; };
+		D7A6C5D81F8444420082C9D8 /* Lens+UIGestureRecognizerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5AD1F84443E0082C9D8 /* Lens+UIGestureRecognizerSpec.swift */; };
+		D7A6C5D91F8444420082C9D8 /* Lens+NSTextContainerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5AE1F84443E0082C9D8 /* Lens+NSTextContainerSpec.swift */; };
+		D7A6C5DA1F8444420082C9D8 /* Lens+CGPointSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5AF1F84443E0082C9D8 /* Lens+CGPointSpec.swift */; };
+		D7A6C5DB1F8444420082C9D8 /* Lens+WKWebViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5B01F84443F0082C9D8 /* Lens+WKWebViewSpec.swift */; };
+		D7A6C5DC1F8444420082C9D8 /* Lens+UILabelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5B11F84443F0082C9D8 /* Lens+UILabelSpec.swift */; };
+		D7A6C5DD1F8444420082C9D8 /* Lens+NSObjectSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5B21F84443F0082C9D8 /* Lens+NSObjectSpec.swift */; };
+		D7A6C5DE1F8444420082C9D8 /* Lens+UIImageViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5B31F84443F0082C9D8 /* Lens+UIImageViewSpec.swift */; };
+		D7A6C5DF1F8444420082C9D8 /* Lens+UITableViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5B41F84443F0082C9D8 /* Lens+UITableViewControllerSpec.swift */; };
+		D7A6C5E01F8444420082C9D8 /* Lens+UIButtonSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5B51F84443F0082C9D8 /* Lens+UIButtonSpec.swift */; };
+		D7A6C5E11F8444420082C9D8 /* Lens+UITableViewCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5B61F84443F0082C9D8 /* Lens+UITableViewCellSpec.swift */; };
+		D7A6C5E21F8444420082C9D8 /* Lens+UITextFieldSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5B71F84443F0082C9D8 /* Lens+UITextFieldSpec.swift */; };
+		D7A6C5E31F8444420082C9D8 /* Lens+UIViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5B81F8444400082C9D8 /* Lens+UIViewControllerSpec.swift */; };
+		D7A6C5E41F8444420082C9D8 /* Lens+UINavigationBarSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5B91F8444400082C9D8 /* Lens+UINavigationBarSpec.swift */; };
+		D7A6C5E51F8444420082C9D8 /* Lens+UITapGestureRecognizerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5BA1F8444400082C9D8 /* Lens+UITapGestureRecognizerSpec.swift */; };
+		D7A6C5E61F8444420082C9D8 /* Lens+UIViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5BB1F8444400082C9D8 /* Lens+UIViewSpec.swift */; };
+		D7A6C5E71F8444420082C9D8 /* Lens+UIControlSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5BC1F8444400082C9D8 /* Lens+UIControlSpec.swift */; };
+		D7A6C5E81F8444420082C9D8 /* Lens+UINavigationItemSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5BD1F8444400082C9D8 /* Lens+UINavigationItemSpec.swift */; };
+		D7A6C5E91F8444420082C9D8 /* Lens+UITabBarSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5BE1F8444400082C9D8 /* Lens+UITabBarSpec.swift */; };
+		D7A6C5EA1F8444420082C9D8 /* Lens+CGSizeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5BF1F8444410082C9D8 /* Lens+CGSizeSpec.swift */; };
+		D7A6C5EB1F8444420082C9D8 /* Lens+NSMutableParagraphStyleSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5C01F8444410082C9D8 /* Lens+NSMutableParagraphStyleSpec.swift */; };
+		D7A6C5EC1F8444420082C9D8 /* Lens+UIActivityIndicatorViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5C11F8444410082C9D8 /* Lens+UIActivityIndicatorViewSpec.swift */; };
+		D7A6C5ED1F8444420082C9D8 /* Lens+UIEdgeInsetsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5C21F8444410082C9D8 /* Lens+UIEdgeInsetsSpec.swift */; };
+		D7A6C5EE1F8444420082C9D8 /* Lens+CGRectSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5C31F8444410082C9D8 /* Lens+CGRectSpec.swift */; };
+		D7A6C5EF1F8444420082C9D8 /* Lens+UIStackViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5C41F8444410082C9D8 /* Lens+UIStackViewSpec.swift */; };
+		D7A6C5F01F8444420082C9D8 /* Lens+UIValueTypeSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5C51F8444420082C9D8 /* Lens+UIValueTypeSpec.swift */; };
+		D7A6C5F11F8444420082C9D8 /* Lens+CGVectorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5C61F8444420082C9D8 /* Lens+CGVectorSpec.swift */; };
+		D7A6C5F21F8444420082C9D8 /* Lens+UIWebViewSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5C71F8444420082C9D8 /* Lens+UIWebViewSpec.swift */; };
+		D7A6C5F31F8444420082C9D8 /* Lens+UIPanGestureRecognizerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A6C5C81F8444420082C9D8 /* Lens+UIPanGestureRecognizerSpec.swift */; };
 		D7C15AEB1F7D4EEA005C7511 /* IDPDesign.h in Headers */ = {isa = PBXBuildFile; fileRef = D7C15AE91F7D4EEA005C7511 /* IDPDesign.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D7C15AEE1F7D4EEA005C7511 /* IDPDesign.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C15AE71F7D4EEA005C7511 /* IDPDesign.framework */; };
 		D7C15AEF1F7D4EEA005C7511 /* IDPDesign.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D7C15AE71F7D4EEA005C7511 /* IDPDesign.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -161,7 +161,6 @@
 		D7C15B041F7D4F28005C7511 /* Lens.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C15B001F7D4F28005C7511 /* Lens.swift */; };
 		D7C15B051F7D4F28005C7511 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C15B011F7D4F28005C7511 /* Operators.swift */; };
 		D7C15B061F7D4F28005C7511 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C15B021F7D4F28005C7511 /* Style.swift */; };
-		D7D5342F1F84173300DFFB60 /* Lens+CALayerGeneratedSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D5342E1F84173300DFFB60 /* Lens+CALayerGeneratedSpec.swift */; };
 		D7FF07B01DFF14940079AC04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FF07AF1DFF14940079AC04 /* AppDelegate.swift */; };
 		D7FF07D01DFF14B70079AC04 /* IDPDesignSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7FF07CF1DFF14B70079AC04 /* IDPDesignSpec.swift */; };
 /* End PBXBuildFile section */
@@ -305,49 +304,49 @@
 		D793C5C51F7EE69000375223 /* Lens+UILabelGenerated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UILabelGenerated.swift"; sourceTree = "<group>"; };
 		D793C5C61F7EE69000375223 /* Lens+UIPanGestureRecognizerGenerated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIPanGestureRecognizerGenerated.swift"; sourceTree = "<group>"; };
 		D7A6C5461F841BA20082C9D8 /* CATransform3D+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CATransform3D+Equatable.swift"; sourceTree = "<group>"; };
-		D7A6C5481F8424D50082C9D8 /* Lens+UIGestureRecognizerGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIGestureRecognizerGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C5491F8424D50082C9D8 /* Lens+UIBarButtonItemGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIBarButtonItemGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C54A1F8424D60082C9D8 /* Lens+UIControlGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIControlGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C54B1F8424D60082C9D8 /* Lens+CGSizeGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+CGSizeGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C54C1F8424D60082C9D8 /* Lens+NSObjectGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+NSObjectGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C54D1F8424D60082C9D8 /* Lens+UIActivityIndicatorViewGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIActivityIndicatorViewGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C54E1F8424D60082C9D8 /* Lens+UIPinchGestureRecognizerGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIPinchGestureRecognizerGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C54F1F8424D60082C9D8 /* Lens+UISwipeGestureRecognizerGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UISwipeGestureRecognizerGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C5501F8424D60082C9D8 /* Lens+UINavigationItemGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UINavigationItemGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C5511F8424D60082C9D8 /* Lens+UITableViewCellGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UITableViewCellGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C5521F8424D60082C9D8 /* Lens+UIProgressViewGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIProgressViewGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C5531F8424D60082C9D8 /* Lens+UIButtonGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIButtonGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C5541F8424D60082C9D8 /* Lens+WKWebViewGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+WKWebViewGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C5551F8424D60082C9D8 /* Lens+UITableViewGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UITableViewGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C5561F8424D70082C9D8 /* Lens+NSLayoutManagerGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+NSLayoutManagerGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C5571F8424D70082C9D8 /* Lens+UIWebViewGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIWebViewGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C5581F8424D70082C9D8 /* Lens+UITextFieldGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UITextFieldGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C5591F8424D70082C9D8 /* Lens+UIBarItemGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIBarItemGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C55A1F8424D70082C9D8 /* Lens+UINavigationBarGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UINavigationBarGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C55B1F8424D70082C9D8 /* Lens+CGRectGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+CGRectGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C55C1F8424D70082C9D8 /* Lens+UITabBarGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UITabBarGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C55D1F8424D70082C9D8 /* Lens+UIValueTypeGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIValueTypeGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C55E1F8424D70082C9D8 /* Lens+UIStackViewGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIStackViewGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C55F1F8424D70082C9D8 /* Lens+UIObjectTypeGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIObjectTypeGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C5601F8424D80082C9D8 /* Lens+UITabBarItemGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UITabBarItemGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C5611F8424D80082C9D8 /* Lens+CGVectorGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+CGVectorGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C5621F8424D80082C9D8 /* Lens+UIEdgeInsetsGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIEdgeInsetsGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C5631F8424D80082C9D8 /* Lens+UIImageViewGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIImageViewGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C5641F8424D80082C9D8 /* Lens+UILongPressGestureRecognizerGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UILongPressGestureRecognizerGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C5651F8424D80082C9D8 /* Lens+UIScreenEdgePanGestureRecognizerGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIScreenEdgePanGestureRecognizerGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C5661F8424D80082C9D8 /* Lens+UIScrollViewGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIScrollViewGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C5671F8424D90082C9D8 /* Lens+UITableViewControllerGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UITableViewControllerGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C5681F8424D90082C9D8 /* Lens+CGPointGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+CGPointGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C5691F8424D90082C9D8 /* Lens+UIViewGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIViewGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C56A1F8424D90082C9D8 /* Lens+UILabelGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UILabelGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C56B1F8424D90082C9D8 /* Lens+UITextViewGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UITextViewGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C56C1F8424D90082C9D8 /* Lens+NSMutableParagraphStyleGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+NSMutableParagraphStyleGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C56D1F8424D90082C9D8 /* Lens+UIPanGestureRecognizerGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIPanGestureRecognizerGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C56E1F8424DA0082C9D8 /* Lens+UIRotationGestureRecognizerGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIRotationGestureRecognizerGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C56F1F8424DA0082C9D8 /* Lens+UINavigationControllerGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UINavigationControllerGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C5701F8424DA0082C9D8 /* Lens+UITapGestureRecognizerGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UITapGestureRecognizerGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C5711F8424DA0082C9D8 /* Lens+NSTextContainerGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+NSTextContainerGeneratedSpec.swift"; sourceTree = "<group>"; };
-		D7A6C5721F8424DA0082C9D8 /* Lens+UIViewControllerGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIViewControllerGeneratedSpec.swift"; sourceTree = "<group>"; };
+		D7A6C59E1F84443D0082C9D8 /* Lens+UINavigationControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UINavigationControllerSpec.swift"; sourceTree = "<group>"; };
+		D7A6C59F1F84443D0082C9D8 /* Lens+UITabBarItemSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UITabBarItemSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5A01F84443D0082C9D8 /* Lens+UIObjectTypeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIObjectTypeSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5A11F84443D0082C9D8 /* Lens+UIPinchGestureRecognizerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIPinchGestureRecognizerSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5A21F84443D0082C9D8 /* Lens+UIScreenEdgePanGestureRecognizerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIScreenEdgePanGestureRecognizerSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5A31F84443D0082C9D8 /* Lens+UIProgressViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIProgressViewSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5A41F84443D0082C9D8 /* Lens+UISwipeGestureRecognizerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UISwipeGestureRecognizerSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5A51F84443D0082C9D8 /* Lens+NSLayoutManagerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+NSLayoutManagerSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5A61F84443E0082C9D8 /* Lens+UILongPressGestureRecognizerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UILongPressGestureRecognizerSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5A71F84443E0082C9D8 /* Lens+UITableViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UITableViewSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5A81F84443E0082C9D8 /* Lens+UIRotationGestureRecognizerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIRotationGestureRecognizerSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5A91F84443E0082C9D8 /* Lens+UITextViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UITextViewSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5AA1F84443E0082C9D8 /* Lens+UIScrollViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIScrollViewSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5AB1F84443E0082C9D8 /* Lens+UIBarButtonItemSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIBarButtonItemSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5AC1F84443E0082C9D8 /* Lens+UIBarItemSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIBarItemSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5AD1F84443E0082C9D8 /* Lens+UIGestureRecognizerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIGestureRecognizerSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5AE1F84443E0082C9D8 /* Lens+NSTextContainerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+NSTextContainerSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5AF1F84443E0082C9D8 /* Lens+CGPointSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+CGPointSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5B01F84443F0082C9D8 /* Lens+WKWebViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+WKWebViewSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5B11F84443F0082C9D8 /* Lens+UILabelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UILabelSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5B21F84443F0082C9D8 /* Lens+NSObjectSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+NSObjectSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5B31F84443F0082C9D8 /* Lens+UIImageViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIImageViewSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5B41F84443F0082C9D8 /* Lens+UITableViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UITableViewControllerSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5B51F84443F0082C9D8 /* Lens+UIButtonSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIButtonSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5B61F84443F0082C9D8 /* Lens+UITableViewCellSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UITableViewCellSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5B71F84443F0082C9D8 /* Lens+UITextFieldSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UITextFieldSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5B81F8444400082C9D8 /* Lens+UIViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIViewControllerSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5B91F8444400082C9D8 /* Lens+UINavigationBarSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UINavigationBarSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5BA1F8444400082C9D8 /* Lens+UITapGestureRecognizerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UITapGestureRecognizerSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5BB1F8444400082C9D8 /* Lens+UIViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIViewSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5BC1F8444400082C9D8 /* Lens+UIControlSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIControlSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5BD1F8444400082C9D8 /* Lens+UINavigationItemSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UINavigationItemSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5BE1F8444400082C9D8 /* Lens+UITabBarSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UITabBarSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5BF1F8444410082C9D8 /* Lens+CGSizeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+CGSizeSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5C01F8444410082C9D8 /* Lens+NSMutableParagraphStyleSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+NSMutableParagraphStyleSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5C11F8444410082C9D8 /* Lens+UIActivityIndicatorViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIActivityIndicatorViewSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5C21F8444410082C9D8 /* Lens+UIEdgeInsetsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIEdgeInsetsSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5C31F8444410082C9D8 /* Lens+CGRectSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+CGRectSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5C41F8444410082C9D8 /* Lens+UIStackViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIStackViewSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5C51F8444420082C9D8 /* Lens+UIValueTypeSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIValueTypeSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5C61F8444420082C9D8 /* Lens+CGVectorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+CGVectorSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5C71F8444420082C9D8 /* Lens+UIWebViewSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIWebViewSpec.swift"; sourceTree = "<group>"; };
+		D7A6C5C81F8444420082C9D8 /* Lens+UIPanGestureRecognizerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+UIPanGestureRecognizerSpec.swift"; sourceTree = "<group>"; };
 		D7C15AE71F7D4EEA005C7511 /* IDPDesign.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IDPDesign.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7C15AE91F7D4EEA005C7511 /* IDPDesign.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDPDesign.h; sourceTree = "<group>"; };
 		D7C15AEA1F7D4EEA005C7511 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -355,7 +354,6 @@
 		D7C15B001F7D4F28005C7511 /* Lens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lens.swift; sourceTree = "<group>"; };
 		D7C15B011F7D4F28005C7511 /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		D7C15B021F7D4F28005C7511 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
-		D7D5342E1F84173300DFFB60 /* Lens+CALayerGeneratedSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Lens+CALayerGeneratedSpec.swift"; sourceTree = "<group>"; };
 		D7FF07AC1DFF14940079AC04 /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7FF07AF1DFF14940079AC04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7FF07BB1DFF14940079AC04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -413,61 +411,52 @@
 		D70AAE641F84076800BD3AF3 /* Specs */ = {
 			isa = PBXGroup;
 			children = (
-				D70AAE651F84076800BD3AF3 /* Generated */,
+				D7A6C5AF1F84443E0082C9D8 /* Lens+CGPointSpec.swift */,
+				D7A6C5C31F8444410082C9D8 /* Lens+CGRectSpec.swift */,
+				D7A6C5BF1F8444410082C9D8 /* Lens+CGSizeSpec.swift */,
+				D7A6C5C61F8444420082C9D8 /* Lens+CGVectorSpec.swift */,
+				D7A6C5A51F84443D0082C9D8 /* Lens+NSLayoutManagerSpec.swift */,
+				D7A6C5C01F8444410082C9D8 /* Lens+NSMutableParagraphStyleSpec.swift */,
+				D7A6C5B21F84443F0082C9D8 /* Lens+NSObjectSpec.swift */,
+				D7A6C5AE1F84443E0082C9D8 /* Lens+NSTextContainerSpec.swift */,
+				D7A6C5C11F8444410082C9D8 /* Lens+UIActivityIndicatorViewSpec.swift */,
+				D7A6C5AB1F84443E0082C9D8 /* Lens+UIBarButtonItemSpec.swift */,
+				D7A6C5AC1F84443E0082C9D8 /* Lens+UIBarItemSpec.swift */,
+				D7A6C5B51F84443F0082C9D8 /* Lens+UIButtonSpec.swift */,
+				D7A6C5BC1F8444400082C9D8 /* Lens+UIControlSpec.swift */,
+				D7A6C5C21F8444410082C9D8 /* Lens+UIEdgeInsetsSpec.swift */,
+				D7A6C5AD1F84443E0082C9D8 /* Lens+UIGestureRecognizerSpec.swift */,
+				D7A6C5B31F84443F0082C9D8 /* Lens+UIImageViewSpec.swift */,
+				D7A6C5B11F84443F0082C9D8 /* Lens+UILabelSpec.swift */,
+				D7A6C5A61F84443E0082C9D8 /* Lens+UILongPressGestureRecognizerSpec.swift */,
+				D7A6C5B91F8444400082C9D8 /* Lens+UINavigationBarSpec.swift */,
+				D7A6C59E1F84443D0082C9D8 /* Lens+UINavigationControllerSpec.swift */,
+				D7A6C5BD1F8444400082C9D8 /* Lens+UINavigationItemSpec.swift */,
+				D7A6C5A01F84443D0082C9D8 /* Lens+UIObjectTypeSpec.swift */,
+				D7A6C5C81F8444420082C9D8 /* Lens+UIPanGestureRecognizerSpec.swift */,
+				D7A6C5A11F84443D0082C9D8 /* Lens+UIPinchGestureRecognizerSpec.swift */,
+				D7A6C5A31F84443D0082C9D8 /* Lens+UIProgressViewSpec.swift */,
+				D7A6C5A81F84443E0082C9D8 /* Lens+UIRotationGestureRecognizerSpec.swift */,
+				D7A6C5A21F84443D0082C9D8 /* Lens+UIScreenEdgePanGestureRecognizerSpec.swift */,
+				D7A6C5AA1F84443E0082C9D8 /* Lens+UIScrollViewSpec.swift */,
+				D7A6C5C41F8444410082C9D8 /* Lens+UIStackViewSpec.swift */,
+				D7A6C5A41F84443D0082C9D8 /* Lens+UISwipeGestureRecognizerSpec.swift */,
+				D7A6C59F1F84443D0082C9D8 /* Lens+UITabBarItemSpec.swift */,
+				D7A6C5BE1F8444400082C9D8 /* Lens+UITabBarSpec.swift */,
+				D7A6C5B61F84443F0082C9D8 /* Lens+UITableViewCellSpec.swift */,
+				D7A6C5B41F84443F0082C9D8 /* Lens+UITableViewControllerSpec.swift */,
+				D7A6C5A71F84443E0082C9D8 /* Lens+UITableViewSpec.swift */,
+				D7A6C5BA1F8444400082C9D8 /* Lens+UITapGestureRecognizerSpec.swift */,
+				D7A6C5B71F84443F0082C9D8 /* Lens+UITextFieldSpec.swift */,
+				D7A6C5A91F84443E0082C9D8 /* Lens+UITextViewSpec.swift */,
+				D7A6C5C51F8444420082C9D8 /* Lens+UIValueTypeSpec.swift */,
+				D7A6C5B81F8444400082C9D8 /* Lens+UIViewControllerSpec.swift */,
+				D7A6C5BB1F8444400082C9D8 /* Lens+UIViewSpec.swift */,
+				D7A6C5C71F8444420082C9D8 /* Lens+UIWebViewSpec.swift */,
+				D7A6C5B01F84443F0082C9D8 /* Lens+WKWebViewSpec.swift */,
 				D70AAE661F84079000BD3AF3 /* Lens+CALayerSpec.swift */,
 			);
 			path = Specs;
-			sourceTree = "<group>";
-		};
-		D70AAE651F84076800BD3AF3 /* Generated */ = {
-			isa = PBXGroup;
-			children = (
-				D7A6C5681F8424D90082C9D8 /* Lens+CGPointGeneratedSpec.swift */,
-				D7A6C55B1F8424D70082C9D8 /* Lens+CGRectGeneratedSpec.swift */,
-				D7A6C54B1F8424D60082C9D8 /* Lens+CGSizeGeneratedSpec.swift */,
-				D7A6C5611F8424D80082C9D8 /* Lens+CGVectorGeneratedSpec.swift */,
-				D7A6C5561F8424D70082C9D8 /* Lens+NSLayoutManagerGeneratedSpec.swift */,
-				D7A6C56C1F8424D90082C9D8 /* Lens+NSMutableParagraphStyleGeneratedSpec.swift */,
-				D7A6C54C1F8424D60082C9D8 /* Lens+NSObjectGeneratedSpec.swift */,
-				D7A6C5711F8424DA0082C9D8 /* Lens+NSTextContainerGeneratedSpec.swift */,
-				D7A6C54D1F8424D60082C9D8 /* Lens+UIActivityIndicatorViewGeneratedSpec.swift */,
-				D7A6C5491F8424D50082C9D8 /* Lens+UIBarButtonItemGeneratedSpec.swift */,
-				D7A6C5591F8424D70082C9D8 /* Lens+UIBarItemGeneratedSpec.swift */,
-				D7A6C5531F8424D60082C9D8 /* Lens+UIButtonGeneratedSpec.swift */,
-				D7A6C54A1F8424D60082C9D8 /* Lens+UIControlGeneratedSpec.swift */,
-				D7A6C5621F8424D80082C9D8 /* Lens+UIEdgeInsetsGeneratedSpec.swift */,
-				D7A6C5481F8424D50082C9D8 /* Lens+UIGestureRecognizerGeneratedSpec.swift */,
-				D7A6C5631F8424D80082C9D8 /* Lens+UIImageViewGeneratedSpec.swift */,
-				D7A6C56A1F8424D90082C9D8 /* Lens+UILabelGeneratedSpec.swift */,
-				D7A6C5641F8424D80082C9D8 /* Lens+UILongPressGestureRecognizerGeneratedSpec.swift */,
-				D7A6C55A1F8424D70082C9D8 /* Lens+UINavigationBarGeneratedSpec.swift */,
-				D7A6C56F1F8424DA0082C9D8 /* Lens+UINavigationControllerGeneratedSpec.swift */,
-				D7A6C5501F8424D60082C9D8 /* Lens+UINavigationItemGeneratedSpec.swift */,
-				D7A6C55F1F8424D70082C9D8 /* Lens+UIObjectTypeGeneratedSpec.swift */,
-				D7A6C56D1F8424D90082C9D8 /* Lens+UIPanGestureRecognizerGeneratedSpec.swift */,
-				D7A6C54E1F8424D60082C9D8 /* Lens+UIPinchGestureRecognizerGeneratedSpec.swift */,
-				D7A6C5521F8424D60082C9D8 /* Lens+UIProgressViewGeneratedSpec.swift */,
-				D7A6C56E1F8424DA0082C9D8 /* Lens+UIRotationGestureRecognizerGeneratedSpec.swift */,
-				D7A6C5651F8424D80082C9D8 /* Lens+UIScreenEdgePanGestureRecognizerGeneratedSpec.swift */,
-				D7A6C5661F8424D80082C9D8 /* Lens+UIScrollViewGeneratedSpec.swift */,
-				D7A6C55E1F8424D70082C9D8 /* Lens+UIStackViewGeneratedSpec.swift */,
-				D7A6C54F1F8424D60082C9D8 /* Lens+UISwipeGestureRecognizerGeneratedSpec.swift */,
-				D7A6C55C1F8424D70082C9D8 /* Lens+UITabBarGeneratedSpec.swift */,
-				D7A6C5601F8424D80082C9D8 /* Lens+UITabBarItemGeneratedSpec.swift */,
-				D7A6C5511F8424D60082C9D8 /* Lens+UITableViewCellGeneratedSpec.swift */,
-				D7A6C5671F8424D90082C9D8 /* Lens+UITableViewControllerGeneratedSpec.swift */,
-				D7A6C5551F8424D60082C9D8 /* Lens+UITableViewGeneratedSpec.swift */,
-				D7A6C5701F8424DA0082C9D8 /* Lens+UITapGestureRecognizerGeneratedSpec.swift */,
-				D7A6C5581F8424D70082C9D8 /* Lens+UITextFieldGeneratedSpec.swift */,
-				D7A6C56B1F8424D90082C9D8 /* Lens+UITextViewGeneratedSpec.swift */,
-				D7A6C55D1F8424D70082C9D8 /* Lens+UIValueTypeGeneratedSpec.swift */,
-				D7A6C5721F8424DA0082C9D8 /* Lens+UIViewControllerGeneratedSpec.swift */,
-				D7A6C5691F8424D90082C9D8 /* Lens+UIViewGeneratedSpec.swift */,
-				D7A6C5571F8424D70082C9D8 /* Lens+UIWebViewGeneratedSpec.swift */,
-				D7A6C5541F8424D60082C9D8 /* Lens+WKWebViewGeneratedSpec.swift */,
-				D7D5342E1F84173300DFFB60 /* Lens+CALayerGeneratedSpec.swift */,
-			);
-			path = Generated;
 			sourceTree = "<group>";
 		};
 		D74F4D571F7EC54D0043DC8B /* UIKit */ = {
@@ -1011,53 +1000,52 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7A6C5861F8424DA0082C9D8 /* Lens+CGRectGeneratedSpec.swift in Sources */,
-				D7A6C5891F8424DA0082C9D8 /* Lens+UIStackViewGeneratedSpec.swift in Sources */,
-				D7A6C5801F8424DA0082C9D8 /* Lens+UITableViewGeneratedSpec.swift in Sources */,
-				D7A6C5841F8424DA0082C9D8 /* Lens+UIBarItemGeneratedSpec.swift in Sources */,
-				D7A6C59C1F8424DA0082C9D8 /* Lens+NSTextContainerGeneratedSpec.swift in Sources */,
-				D7A6C57B1F8424DA0082C9D8 /* Lens+UINavigationItemGeneratedSpec.swift in Sources */,
-				D7A6C5831F8424DA0082C9D8 /* Lens+UITextFieldGeneratedSpec.swift in Sources */,
-				D7A6C59A1F8424DA0082C9D8 /* Lens+UINavigationControllerGeneratedSpec.swift in Sources */,
-				D7A6C5951F8424DA0082C9D8 /* Lens+UILabelGeneratedSpec.swift in Sources */,
-				D7A6C5991F8424DA0082C9D8 /* Lens+UIRotationGestureRecognizerGeneratedSpec.swift in Sources */,
 				D70AAE671F84079000BD3AF3 /* Lens+CALayerSpec.swift in Sources */,
-				D7A6C5981F8424DA0082C9D8 /* Lens+UIPanGestureRecognizerGeneratedSpec.swift in Sources */,
-				D7A6C5771F8424DA0082C9D8 /* Lens+NSObjectGeneratedSpec.swift in Sources */,
-				D7A6C5931F8424DA0082C9D8 /* Lens+CGPointGeneratedSpec.swift in Sources */,
-				D7A6C5961F8424DA0082C9D8 /* Lens+UITextViewGeneratedSpec.swift in Sources */,
-				D7A6C58C1F8424DA0082C9D8 /* Lens+CGVectorGeneratedSpec.swift in Sources */,
-				D7A6C5731F8424DA0082C9D8 /* Lens+UIGestureRecognizerGeneratedSpec.swift in Sources */,
+				D7A6C5F21F8444420082C9D8 /* Lens+UIWebViewSpec.swift in Sources */,
+				D7A6C5CA1F8444420082C9D8 /* Lens+UITabBarItemSpec.swift in Sources */,
+				D7A6C5E51F8444420082C9D8 /* Lens+UITapGestureRecognizerSpec.swift in Sources */,
+				D7A6C5E11F8444420082C9D8 /* Lens+UITableViewCellSpec.swift in Sources */,
+				D7A6C5D21F8444420082C9D8 /* Lens+UITableViewSpec.swift in Sources */,
+				D7A6C5DA1F8444420082C9D8 /* Lens+CGPointSpec.swift in Sources */,
+				D7A6C5E71F8444420082C9D8 /* Lens+UIControlSpec.swift in Sources */,
+				D7A6C5EB1F8444420082C9D8 /* Lens+NSMutableParagraphStyleSpec.swift in Sources */,
+				D7A6C5EC1F8444420082C9D8 /* Lens+UIActivityIndicatorViewSpec.swift in Sources */,
+				D7A6C5CE1F8444420082C9D8 /* Lens+UIProgressViewSpec.swift in Sources */,
+				D7A6C5E01F8444420082C9D8 /* Lens+UIButtonSpec.swift in Sources */,
+				D7A6C5DC1F8444420082C9D8 /* Lens+UILabelSpec.swift in Sources */,
+				D7A6C5D61F8444420082C9D8 /* Lens+UIBarButtonItemSpec.swift in Sources */,
+				D7A6C5DE1F8444420082C9D8 /* Lens+UIImageViewSpec.swift in Sources */,
+				D7A6C5EF1F8444420082C9D8 /* Lens+UIStackViewSpec.swift in Sources */,
+				D7A6C5E61F8444420082C9D8 /* Lens+UIViewSpec.swift in Sources */,
+				D7A6C5E81F8444420082C9D8 /* Lens+UINavigationItemSpec.swift in Sources */,
+				D7A6C5E21F8444420082C9D8 /* Lens+UITextFieldSpec.swift in Sources */,
 				D7FF07D01DFF14B70079AC04 /* IDPDesignSpec.swift in Sources */,
+				D7A6C5CD1F8444420082C9D8 /* Lens+UIScreenEdgePanGestureRecognizerSpec.swift in Sources */,
+				D7A6C5D51F8444420082C9D8 /* Lens+UIScrollViewSpec.swift in Sources */,
+				D7A6C5DD1F8444420082C9D8 /* Lens+NSObjectSpec.swift in Sources */,
+				D7A6C5D41F8444420082C9D8 /* Lens+UITextViewSpec.swift in Sources */,
+				D7A6C5C91F8444420082C9D8 /* Lens+UINavigationControllerSpec.swift in Sources */,
+				D7A6C5D91F8444420082C9D8 /* Lens+NSTextContainerSpec.swift in Sources */,
+				D7A6C5F01F8444420082C9D8 /* Lens+UIValueTypeSpec.swift in Sources */,
+				D7A6C5D01F8444420082C9D8 /* Lens+NSLayoutManagerSpec.swift in Sources */,
 				D7A6C5471F841BA20082C9D8 /* CATransform3D+Equatable.swift in Sources */,
-				D7A6C59D1F8424DA0082C9D8 /* Lens+UIViewControllerGeneratedSpec.swift in Sources */,
-				D7A6C5871F8424DA0082C9D8 /* Lens+UITabBarGeneratedSpec.swift in Sources */,
-				D7A6C5811F8424DA0082C9D8 /* Lens+NSLayoutManagerGeneratedSpec.swift in Sources */,
-				D7D5342F1F84173300DFFB60 /* Lens+CALayerGeneratedSpec.swift in Sources */,
-				D7A6C5791F8424DA0082C9D8 /* Lens+UIPinchGestureRecognizerGeneratedSpec.swift in Sources */,
-				D7A6C57E1F8424DA0082C9D8 /* Lens+UIButtonGeneratedSpec.swift in Sources */,
-				D7A6C57C1F8424DA0082C9D8 /* Lens+UITableViewCellGeneratedSpec.swift in Sources */,
-				D7A6C5941F8424DA0082C9D8 /* Lens+UIViewGeneratedSpec.swift in Sources */,
-				D7A6C58B1F8424DA0082C9D8 /* Lens+UITabBarItemGeneratedSpec.swift in Sources */,
-				D7A6C5881F8424DA0082C9D8 /* Lens+UIValueTypeGeneratedSpec.swift in Sources */,
-				D7A6C5971F8424DA0082C9D8 /* Lens+NSMutableParagraphStyleGeneratedSpec.swift in Sources */,
-				D7A6C57A1F8424DA0082C9D8 /* Lens+UISwipeGestureRecognizerGeneratedSpec.swift in Sources */,
-				D7A6C57D1F8424DA0082C9D8 /* Lens+UIProgressViewGeneratedSpec.swift in Sources */,
-				D7A6C5781F8424DA0082C9D8 /* Lens+UIActivityIndicatorViewGeneratedSpec.swift in Sources */,
-				D7A6C5761F8424DA0082C9D8 /* Lens+CGSizeGeneratedSpec.swift in Sources */,
-				D7A6C5911F8424DA0082C9D8 /* Lens+UIScrollViewGeneratedSpec.swift in Sources */,
-				D7A6C5741F8424DA0082C9D8 /* Lens+UIBarButtonItemGeneratedSpec.swift in Sources */,
-				D7A6C5901F8424DA0082C9D8 /* Lens+UIScreenEdgePanGestureRecognizerGeneratedSpec.swift in Sources */,
-				D7A6C58E1F8424DA0082C9D8 /* Lens+UIImageViewGeneratedSpec.swift in Sources */,
-				D7A6C5851F8424DA0082C9D8 /* Lens+UINavigationBarGeneratedSpec.swift in Sources */,
-				D7A6C5751F8424DA0082C9D8 /* Lens+UIControlGeneratedSpec.swift in Sources */,
-				D7A6C58A1F8424DA0082C9D8 /* Lens+UIObjectTypeGeneratedSpec.swift in Sources */,
-				D7A6C58D1F8424DA0082C9D8 /* Lens+UIEdgeInsetsGeneratedSpec.swift in Sources */,
-				D7A6C5921F8424DA0082C9D8 /* Lens+UITableViewControllerGeneratedSpec.swift in Sources */,
-				D7A6C59B1F8424DA0082C9D8 /* Lens+UITapGestureRecognizerGeneratedSpec.swift in Sources */,
-				D7A6C58F1F8424DA0082C9D8 /* Lens+UILongPressGestureRecognizerGeneratedSpec.swift in Sources */,
-				D7A6C5821F8424DA0082C9D8 /* Lens+UIWebViewGeneratedSpec.swift in Sources */,
-				D7A6C57F1F8424DA0082C9D8 /* Lens+WKWebViewGeneratedSpec.swift in Sources */,
+				D7A6C5D11F8444420082C9D8 /* Lens+UILongPressGestureRecognizerSpec.swift in Sources */,
+				D7A6C5EE1F8444420082C9D8 /* Lens+CGRectSpec.swift in Sources */,
+				D7A6C5E31F8444420082C9D8 /* Lens+UIViewControllerSpec.swift in Sources */,
+				D7A6C5E41F8444420082C9D8 /* Lens+UINavigationBarSpec.swift in Sources */,
+				D7A6C5D71F8444420082C9D8 /* Lens+UIBarItemSpec.swift in Sources */,
+				D7A6C5EA1F8444420082C9D8 /* Lens+CGSizeSpec.swift in Sources */,
+				D7A6C5ED1F8444420082C9D8 /* Lens+UIEdgeInsetsSpec.swift in Sources */,
+				D7A6C5F31F8444420082C9D8 /* Lens+UIPanGestureRecognizerSpec.swift in Sources */,
+				D7A6C5F11F8444420082C9D8 /* Lens+CGVectorSpec.swift in Sources */,
+				D7A6C5E91F8444420082C9D8 /* Lens+UITabBarSpec.swift in Sources */,
+				D7A6C5CC1F8444420082C9D8 /* Lens+UIPinchGestureRecognizerSpec.swift in Sources */,
+				D7A6C5DF1F8444420082C9D8 /* Lens+UITableViewControllerSpec.swift in Sources */,
+				D7A6C5D81F8444420082C9D8 /* Lens+UIGestureRecognizerSpec.swift in Sources */,
+				D7A6C5CB1F8444420082C9D8 /* Lens+UIObjectTypeSpec.swift in Sources */,
+				D7A6C5D31F8444420082C9D8 /* Lens+UIRotationGestureRecognizerSpec.swift in Sources */,
+				D7A6C5DB1F8444420082C9D8 /* Lens+WKWebViewSpec.swift in Sources */,
+				D7A6C5CF1F8444420082C9D8 /* Lens+UISwipeGestureRecognizerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

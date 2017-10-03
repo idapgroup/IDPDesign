@@ -141,9 +141,9 @@
 
 {% for type in types.protocols %}
     {% if not type.name == "UIObjectType" or not type.name == "UIValueType" %}
-// sourcery:file:Lens+{% call name type %}GeneratedSpec.swift
+// sourcery:file:Lens+{% call name type %}Spec.swift
 //
-//  Lens+{% call name type %}GeneratedSpec.swift
+//  Lens+{% call name type %}Spec.swift
 //  iOSTests
 //
 //  Created by Oleksa 'trimm' Korin on 9/2/17.
@@ -160,9 +160,9 @@ import WebKit
 
 @testable import IDPDesign
 
-class Lens{% call name type %}GeneratedSpec: QuickSpec {
+class Lens{% call name type %}Spec: QuickSpec {
     override func spec() {
-        describe("Lens+{% call name type %}GeneratedSpec") {
+        describe("Lens+{% call name type %}Spec") {
             {% for variable in type.variables %}
                 {% if not variable.isStatic %}
                     {% if variable.readAccess == "public" or variable.readAccess == "open" or variable.readAccess == "internal" %}
