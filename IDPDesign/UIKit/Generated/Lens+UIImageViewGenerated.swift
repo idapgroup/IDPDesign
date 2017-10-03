@@ -19,13 +19,6 @@ public func highlightedImage<Object: UIImageView>() -> Lens<Object, UIImage?> {
     )
 }
 
-public func isUserInteractionEnabled<Object: UIImageView>() -> Lens<Object, Bool> {
-    return Lens(
-        get: { $0.isUserInteractionEnabled },
-        setter: { $0.isUserInteractionEnabled = $1 }
-    )
-}
-
 public func isHighlighted<Object: UIImageView>() -> Lens<Object, Bool> {
     return Lens(
         get: { $0.isHighlighted },
@@ -58,12 +51,5 @@ public func animationRepeatCount<Object: UIImageView>() -> Lens<Object, Int> {
     return Lens(
         get: { $0.animationRepeatCount },
         setter: { $0.animationRepeatCount = $1 }
-    )
-}
-
-public func tintColor<Object: UIImageView>() -> Lens<Object, UIColor?> {
-    return Lens(
-        get: { $0.tintColor },
-        setter: { $0.tintColor = $1 }
     )
 }

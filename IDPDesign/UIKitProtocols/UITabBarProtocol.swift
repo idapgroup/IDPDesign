@@ -10,7 +10,6 @@ protocol UITabBarProtocol: UIObjectType {
     var delegate: UITabBarDelegate? { get set }
     var items: [UITabBarItem]? { get set }
     var selectedItem: UITabBarItem? { get set }
-    var tintColor: UIColor! { get set }
     var barTintColor: UIColor? { get set }
     var unselectedItemTintColor: UIColor? { get set }
     var backgroundImage: UIImage? { get set }

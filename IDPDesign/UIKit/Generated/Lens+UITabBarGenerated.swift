@@ -26,13 +26,6 @@ public func selectedItem<Object: UITabBar>() -> Lens<Object, UITabBarItem?> {
     )
 }
 
-public func tintColor<Object: UITabBar>() -> Lens<Object, UIColor?> {
-    return Lens(
-        get: { $0.tintColor },
-        setter: { $0.tintColor = $1 }
-    )
-}
-
 public func barTintColor<Object: UITabBar>() -> Lens<Object, UIColor?> {
     return Lens(
         get: { $0.barTintColor },

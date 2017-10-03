@@ -87,8 +87,8 @@ class LensUIButtonSpec: QuickSpec {
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.imageView).to(equal(value))
+                    expect(resultValue).toNot(equal(value))
+                    expect(resultObject.imageView).to(equal(resultValue))
                 }
             }
 
@@ -117,8 +117,8 @@ class LensUIButtonSpec: QuickSpec {
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.titleLabel).to(equal(value))
+                    expect(resultValue).toNot(equal(value))
+                    expect(resultObject.titleLabel).to(equal(resultValue))
                 }
             }
         }

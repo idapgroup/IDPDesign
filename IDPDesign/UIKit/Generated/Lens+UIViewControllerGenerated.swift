@@ -79,13 +79,6 @@ public func extendedLayoutIncludesOpaqueBars<Object: UIViewController>() -> Lens
     )
 }
 
-public func automaticallyAdjustsScrollViewInsets<Object: UIViewController>() -> Lens<Object, Bool> {
-    return Lens(
-        get: { $0.automaticallyAdjustsScrollViewInsets },
-        setter: { $0.automaticallyAdjustsScrollViewInsets = $1 }
-    )
-}
-
 public func preferredContentSize<Object: UIViewController>() -> Lens<Object, CGSize> {
     return Lens(
         get: { $0.preferredContentSize },

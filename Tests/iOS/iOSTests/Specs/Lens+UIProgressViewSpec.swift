@@ -22,7 +22,7 @@ class LensUIProgressViewSpec: QuickSpec {
                     let lens: Lens<UIProgressView, UIProgressViewStyle> = progressViewStyle()
                     let object = UIProgressView()
 
-                    let value: UIProgressViewStyle = UIProgressViewStyle()
+                    let value: UIProgressViewStyle = .bar
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -112,7 +112,7 @@ class LensUIProgressViewSpec: QuickSpec {
                     let lens: Lens<UIProgressView, Progress?> = observedProgress()
                     let object = UIProgressView()
 
-                    let value: Progress = 
+                    let value: Progress = Progress()
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

@@ -82,7 +82,7 @@ class LensUIImageViewSpec: QuickSpec {
                     let lens: Lens<UIImageView, [UIImage]?> = animationImages()
                     let object = UIImageView()
 
-                    let value: [UIImage] = 
+                    let value: [UIImage] = [UIImage()]
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -97,7 +97,7 @@ class LensUIImageViewSpec: QuickSpec {
                     let lens: Lens<UIImageView, [UIImage]?> = highlightedAnimationImages()
                     let object = UIImageView()
 
-                    let value: [UIImage] = 
+                    let value: [UIImage] = [UIImage()]
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

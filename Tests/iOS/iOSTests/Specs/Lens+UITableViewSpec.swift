@@ -19,46 +19,64 @@ class LensUITableViewSpec: QuickSpec {
 
             context("dataSource") {
                 it("should get and set") {
+                    class DataSource: NSObject, UITableViewDataSource {
+                        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+                            return 0
+                        }
+                        
+                        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+                            return UITableViewCell()
+                        }
+                    }
+                    
                     let lens: Lens<UITableView, UITableViewDataSource?> = dataSource()
                     let object = UITableView()
 
-                    let value: UITableViewDataSource = UITableViewDataSource()
+                    let value: UITableViewDataSource = DataSource()
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.dataSource).to(equal(value))
+                    expect(resultValue).to(beIdenticalTo(value))
+                    expect(resultObject.dataSource).to(beIdenticalTo(value))
                 }
             }
 
             context("delegate") {
                 it("should get and set") {
+                    class Delegate: NSObject, UITableViewDelegate { }
+                    
                     let lens: Lens<UITableView, UITableViewDelegate?> = delegate()
                     let object = UITableView()
 
-                    let value: UITableViewDelegate = UITableViewDelegate()
+                    let value: UITableViewDelegate = Delegate()
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.delegate).to(equal(value))
+                    expect(resultValue).to(beIdenticalTo(value))
+                    expect(resultObject.delegate).to(beIdenticalTo(value))
                 }
             }
 
             context("prefetchDataSource") {
                 it("should get and set") {
+                    class DataSource: NSObject, UITableViewDataSourcePrefetching {
+                        func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+
+                        }
+                    }
+                    
                     let lens: Lens<UITableView, UITableViewDataSourcePrefetching?> = prefetchDataSource()
                     let object = UITableView()
 
-                    let value: UITableViewDataSourcePrefetching = UITableViewDataSourcePrefetching()
+                    let value: UITableViewDataSourcePrefetching = DataSource()
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.prefetchDataSource).to(equal(value))
+                    expect(resultValue).to(beIdenticalTo(value))
+                    expect(resultObject.prefetchDataSource).to(beIdenticalTo(value))
                 }
             }
 

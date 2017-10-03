@@ -19,16 +19,18 @@ class LensUIWebViewSpec: QuickSpec {
 
             context("delegate") {
                 it("should get and set") {
+                    class Delegate: NSObject, UIWebViewDelegate { }
+                    
                     let lens: Lens<UIWebView, UIWebViewDelegate?> = delegate()
                     let object = UIWebView()
 
-                    let value: UIWebViewDelegate = UIWebViewDelegate()
+                    let value: UIWebViewDelegate = Delegate()
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.delegate).to(equal(value))
+                    expect(resultValue).to(beIdenticalTo(value))
+                    expect(resultObject.delegate).to(beIdenticalTo(value))
                 }
             }
 
@@ -157,7 +159,7 @@ class LensUIWebViewSpec: QuickSpec {
                     let lens: Lens<UIWebView, UIWebPaginationMode> = paginationMode()
                     let object = UIWebView()
 
-                    let value: UIWebPaginationMode = UIWebPaginationMode()
+                    let value: UIWebPaginationMode = .bottomToTop
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -172,7 +174,7 @@ class LensUIWebViewSpec: QuickSpec {
                     let lens: Lens<UIWebView, UIWebPaginationBreakingMode> = paginationBreakingMode()
                     let object = UIWebView()
 
-                    let value: UIWebPaginationBreakingMode = UIWebPaginationBreakingMode()
+                    let value: UIWebPaginationBreakingMode = .column
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

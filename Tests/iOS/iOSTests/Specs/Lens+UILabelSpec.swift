@@ -37,7 +37,7 @@ class LensUILabelSpec: QuickSpec {
                     let lens: Lens<UILabel, UIFont?> = font()
                     let object = UILabel()
 
-                    let value: UIFont = UIFont()
+                    let value: UIFont = UIFont.boldSystemFont(ofSize: 40)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -97,7 +97,7 @@ class LensUILabelSpec: QuickSpec {
                     let lens: Lens<UILabel, NSTextAlignment> = textAlignment()
                     let object = UILabel()
 
-                    let value: NSTextAlignment = NSTextAlignment()
+                    let value: NSTextAlignment = .right
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -112,7 +112,7 @@ class LensUILabelSpec: QuickSpec {
                     let lens: Lens<UILabel, NSLineBreakMode> = lineBreakMode()
                     let object = UILabel()
 
-                    let value: NSLineBreakMode = NSLineBreakMode()
+                    let value: NSLineBreakMode = .byTruncatingHead
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -232,7 +232,7 @@ class LensUILabelSpec: QuickSpec {
                     let lens: Lens<UILabel, UIBaselineAdjustment> = baselineAdjustment()
                     let object = UILabel()
 
-                    let value: UIBaselineAdjustment = UIBaselineAdjustment()
+                    let value: UIBaselineAdjustment = .alignCenters
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

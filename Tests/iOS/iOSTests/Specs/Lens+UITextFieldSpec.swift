@@ -67,7 +67,7 @@ class LensUITextFieldSpec: QuickSpec {
                     let lens: Lens<UITextField, UIFont?> = font()
                     let object = UITextField()
 
-                    let value: UIFont = UIFont()
+                    let value: UIFont = UIFont.boldSystemFont(ofSize: 40)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -82,7 +82,7 @@ class LensUITextFieldSpec: QuickSpec {
                     let lens: Lens<UITextField, NSTextAlignment> = textAlignment()
                     let object = UITextField()
 
-                    let value: NSTextAlignment = NSTextAlignment()
+                    let value: NSTextAlignment = .right
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -97,7 +97,7 @@ class LensUITextFieldSpec: QuickSpec {
                     let lens: Lens<UITextField, UITextBorderStyle> = borderStyle()
                     let object = UITextField()
 
-                    let value: UITextBorderStyle = UITextBorderStyle()
+                    let value: UITextBorderStyle = .roundedRect
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -112,13 +112,17 @@ class LensUITextFieldSpec: QuickSpec {
                     let lens: Lens<UITextField, [String : Any]> = defaultTextAttributes()
                     let object = UITextField()
 
-                    let value: [String : Any] = { var result = object.defaultTextAttributes; result[NSForegroundColorAttributeName] = UIColor.red; return result }()
+                    let value: [String : Any] = {
+                        var result = object.defaultTextAttributes
+                        result[NSForegroundColorAttributeName] = UIColor.red
+                        return result
+                    }()
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.defaultTextAttributes).to(equal(value))
+                    expect(resultValue).to(beIdenticalTo(value))
+                    expect(resultObject.defaultTextAttributes).to(beIdenticalTo(value))
                 }
             }
 
@@ -199,16 +203,18 @@ class LensUITextFieldSpec: QuickSpec {
 
             context("delegate") {
                 it("should get and set") {
+                    class Delegate: NSObject, UITextFieldDelegate { }
+                    
                     let lens: Lens<UITextField, UITextFieldDelegate?> = delegate()
                     let object = UITextField()
 
-                    let value: UITextFieldDelegate = UITextFieldDelegate()
+                    let value: UITextFieldDelegate = Delegate()
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.delegate).to(equal(value))
+                    expect(resultValue).to(beIdenticalTo(value))
+                    expect(resultObject.delegate).to(beIdenticalTo(value))
                 }
             }
 
@@ -262,13 +268,13 @@ class LensUITextFieldSpec: QuickSpec {
                     let lens: Lens<UITextField, [String : Any]?> = typingAttributes()
                     let object = UITextField()
 
-                    let value: [String : Any] = 
+                    let value: [String : Any]? = nil
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.typingAttributes).to(equal(value))
+                    expect(resultValue).to(beIdenticalTo(value))
+                    expect(resultObject.typingAttributes).to(beIdenticalTo(value))
                 }
             }
 
@@ -277,7 +283,7 @@ class LensUITextFieldSpec: QuickSpec {
                     let lens: Lens<UITextField, UITextFieldViewMode> = clearButtonMode()
                     let object = UITextField()
 
-                    let value: UITextFieldViewMode = UITextFieldViewMode()
+                    let value: UITextFieldViewMode = .unlessEditing
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -307,7 +313,7 @@ class LensUITextFieldSpec: QuickSpec {
                     let lens: Lens<UITextField, UITextFieldViewMode> = leftViewMode()
                     let object = UITextField()
 
-                    let value: UITextFieldViewMode = UITextFieldViewMode()
+                    let value: UITextFieldViewMode = .unlessEditing
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -337,7 +343,7 @@ class LensUITextFieldSpec: QuickSpec {
                     let lens: Lens<UITextField, UITextFieldViewMode> = rightViewMode()
                     let object = UITextField()
 
-                    let value: UITextFieldViewMode = UITextFieldViewMode()
+                    let value: UITextFieldViewMode = .unlessEditing
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -397,7 +403,7 @@ class LensUITextFieldSpec: QuickSpec {
                     let lens: Lens<UITextField, UITextAutocorrectionType> = autocorrectionType()
                     let object = UITextField()
 
-                    let value: UITextAutocorrectionType = UITextAutocorrectionType()
+                    let value: UITextAutocorrectionType = .yes
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -412,7 +418,7 @@ class LensUITextFieldSpec: QuickSpec {
                     let lens: Lens<UITextField, UITextSpellCheckingType> = spellCheckingType()
                     let object = UITextField()
 
-                    let value: UITextSpellCheckingType = UITextSpellCheckingType()
+                    let value: UITextSpellCheckingType = .yes
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -427,7 +433,7 @@ class LensUITextFieldSpec: QuickSpec {
                     let lens: Lens<UITextField, UITextSmartQuotesType> = smartQuotesType()
                     let object = UITextField()
 
-                    let value: UITextSmartQuotesType = UITextSmartQuotesType()
+                    let value: UITextSmartQuotesType = .yes
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -442,7 +448,7 @@ class LensUITextFieldSpec: QuickSpec {
                     let lens: Lens<UITextField, UITextSmartDashesType> = smartDashesType()
                     let object = UITextField()
 
-                    let value: UITextSmartDashesType = UITextSmartDashesType()
+                    let value: UITextSmartDashesType = .yes
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -457,7 +463,7 @@ class LensUITextFieldSpec: QuickSpec {
                     let lens: Lens<UITextField, UITextSmartInsertDeleteType> = smartInsertDeleteType()
                     let object = UITextField()
 
-                    let value: UITextSmartInsertDeleteType = UITextSmartInsertDeleteType()
+                    let value: UITextSmartInsertDeleteType = .yes
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -472,7 +478,7 @@ class LensUITextFieldSpec: QuickSpec {
                     let lens: Lens<UITextField, UIKeyboardType> = keyboardType()
                     let object = UITextField()
 
-                    let value: UIKeyboardType = UIKeyboardType()
+                    let value: UIKeyboardType = .phonePad
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -487,7 +493,7 @@ class LensUITextFieldSpec: QuickSpec {
                     let lens: Lens<UITextField, UIKeyboardAppearance> = keyboardAppearance()
                     let object = UITextField()
 
-                    let value: UIKeyboardAppearance = UIKeyboardAppearance()
+                    let value: UIKeyboardAppearance = .dark
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -502,7 +508,7 @@ class LensUITextFieldSpec: QuickSpec {
                     let lens: Lens<UITextField, UIReturnKeyType> = returnKeyType()
                     let object = UITextField()
 
-                    let value: UIReturnKeyType = UIReturnKeyType()
+                    let value: UIReturnKeyType = .done
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

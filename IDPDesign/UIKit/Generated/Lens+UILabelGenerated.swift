@@ -75,13 +75,6 @@ public func isHighlighted<Object: UILabel>() -> Lens<Object, Bool> {
     )
 }
 
-public func isUserInteractionEnabled<Object: UILabel>() -> Lens<Object, Bool> {
-    return Lens(
-        get: { $0.isUserInteractionEnabled },
-        setter: { $0.isUserInteractionEnabled = $1 }
-    )
-}
-
 public func isEnabled<Object: UILabel>() -> Lens<Object, Bool> {
     return Lens(
         get: { $0.isEnabled },

@@ -20,7 +20,7 @@ class LensUIBarItemSpec: QuickSpec {
             context("isEnabled") {
                 it("should get and set") {
                     let lens: Lens<UIBarItem, Bool> = isEnabled()
-                    let object = UIBarItem()
+                    let object = UIBarButtonItem()
 
                     let value: Bool = !object.isEnabled
 
@@ -35,7 +35,7 @@ class LensUIBarItemSpec: QuickSpec {
             context("title") {
                 it("should get and set") {
                     let lens: Lens<UIBarItem, String?> = title()
-                    let object = UIBarItem()
+                    let object = UIBarButtonItem()
 
                     let value: String = "mama"
 
@@ -50,7 +50,7 @@ class LensUIBarItemSpec: QuickSpec {
             context("image") {
                 it("should get and set") {
                     let lens: Lens<UIBarItem, UIImage?> = image()
-                    let object = UIBarItem()
+                    let object = UIBarButtonItem()
 
                     let value: UIImage = UIImage()
 
@@ -65,7 +65,7 @@ class LensUIBarItemSpec: QuickSpec {
             context("landscapeImagePhone") {
                 it("should get and set") {
                     let lens: Lens<UIBarItem, UIImage?> = landscapeImagePhone()
-                    let object = UIBarItem()
+                    let object = UIBarButtonItem()
 
                     let value: UIImage = UIImage()
 
@@ -80,7 +80,7 @@ class LensUIBarItemSpec: QuickSpec {
             context("imageInsets") {
                 it("should get and set") {
                     let lens: Lens<UIBarItem, UIEdgeInsets> = imageInsets()
-                    let object = UIBarItem()
+                    let object = UIBarButtonItem()
 
                     let value: UIEdgeInsets = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
 
@@ -95,7 +95,7 @@ class LensUIBarItemSpec: QuickSpec {
             context("landscapeImagePhoneInsets") {
                 it("should get and set") {
                     let lens: Lens<UIBarItem, UIEdgeInsets> = landscapeImagePhoneInsets()
-                    let object = UIBarItem()
+                    let object = UIBarButtonItem()
 
                     let value: UIEdgeInsets = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
 
@@ -110,7 +110,7 @@ class LensUIBarItemSpec: QuickSpec {
             context("tag") {
                 it("should get and set") {
                     let lens: Lens<UIBarItem, Int> = tag()
-                    let object = UIBarItem()
+                    let object = UIBarButtonItem()
 
                     let value: Int = 2
 

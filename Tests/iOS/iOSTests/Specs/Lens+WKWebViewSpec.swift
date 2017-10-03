@@ -23,7 +23,7 @@ class LensWKWebViewSpec: QuickSpec {
                     let lens: Lens<WKWebView, WKWebViewConfiguration> = configuration()
                     let object = WKWebView()
 
-                    let value: WKWebViewConfiguration = 
+                    let value: WKWebViewConfiguration = WKWebViewConfiguration()
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -35,31 +35,35 @@ class LensWKWebViewSpec: QuickSpec {
 
             context("navigationDelegate") {
                 it("should get and set") {
+                    class Delegate: NSObject, WKNavigationDelegate { }
+                    
                     let lens: Lens<WKWebView, WKNavigationDelegate?> = navigationDelegate()
                     let object = WKWebView()
 
-                    let value: WKNavigationDelegate = 
+                    let value: WKNavigationDelegate = Delegate()
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.navigationDelegate).to(equal(value))
+                    expect(resultValue).to(beIdenticalTo(value))
+                    expect(resultObject.navigationDelegate).to(beIdenticalTo(value))
                 }
             }
 
             context("uiDelegate") {
                 it("should get and set") {
+                    class Delegate: NSObject, WKUIDelegate { }
+                    
                     let lens: Lens<WKWebView, WKUIDelegate?> = uiDelegate()
                     let object = WKWebView()
 
-                    let value: WKUIDelegate = 
+                    let value: WKUIDelegate = Delegate()
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.uiDelegate).to(equal(value))
+                    expect(resultValue).to(beIdenticalTo(value))
+                    expect(resultObject.uiDelegate).to(beIdenticalTo(value))
                 }
             }
 
@@ -68,7 +72,7 @@ class LensWKWebViewSpec: QuickSpec {
                     let lens: Lens<WKWebView, SecTrust?> = serverTrust()
                     let object = WKWebView()
 
-                    let value: SecTrust = 
+                    let value: SecTrust? = nil
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

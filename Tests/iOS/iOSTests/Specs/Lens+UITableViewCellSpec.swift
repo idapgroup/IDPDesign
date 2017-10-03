@@ -27,8 +27,8 @@ class LensUITableViewCellSpec: QuickSpec {
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.imageView).to(equal(value))
+                    expect(resultValue).toNot(equal(value))
+                    expect(resultObject.imageView).to(equal(resultValue))
                 }
             }
 
@@ -42,8 +42,8 @@ class LensUITableViewCellSpec: QuickSpec {
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.textLabel).to(equal(value))
+                    expect(resultValue).toNot(equal(value))
+                    expect(resultObject.textLabel).to(equal(resultValue))
                 }
             }
 
@@ -57,8 +57,8 @@ class LensUITableViewCellSpec: QuickSpec {
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.detailTextLabel).to(equal(value))
+                    expect(resultValue).toNot(equal(value))
+                    expect(resultObject.detailTextLabel).to(equal(resultValue))
                 }
             }
 
@@ -72,8 +72,8 @@ class LensUITableViewCellSpec: QuickSpec {
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.contentView).to(equal(value))
+                    expect(resultValue).toNot(equal(value))
+                    expect(resultObject.contentView).to(equal(resultValue))
                 }
             }
 
@@ -127,7 +127,7 @@ class LensUITableViewCellSpec: QuickSpec {
                     let lens: Lens<UITableViewCell, UITableViewCellSelectionStyle> = selectionStyle()
                     let object = UITableViewCell()
 
-                    let value: UITableViewCellSelectionStyle = UITableViewCellSelectionStyle()
+                    let value: UITableViewCellSelectionStyle = .none
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -202,7 +202,7 @@ class LensUITableViewCellSpec: QuickSpec {
                     let lens: Lens<UITableViewCell, UITableViewCellAccessoryType> = accessoryType()
                     let object = UITableViewCell()
 
-                    let value: UITableViewCellAccessoryType = UITableViewCellAccessoryType()
+                    let value: UITableViewCellAccessoryType = .checkmark
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -232,7 +232,7 @@ class LensUITableViewCellSpec: QuickSpec {
                     let lens: Lens<UITableViewCell, UITableViewCellAccessoryType> = editingAccessoryType()
                     let object = UITableViewCell()
 
-                    let value: UITableViewCellAccessoryType = UITableViewCellAccessoryType()
+                    let value: UITableViewCellAccessoryType = .checkmark
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -322,7 +322,7 @@ class LensUITableViewCellSpec: QuickSpec {
                     let lens: Lens<UITableViewCell, UITableViewCellFocusStyle> = focusStyle()
                     let object = UITableViewCell()
 
-                    let value: UITableViewCellFocusStyle = UITableViewCellFocusStyle()
+                    let value: UITableViewCellFocusStyle = .custom
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

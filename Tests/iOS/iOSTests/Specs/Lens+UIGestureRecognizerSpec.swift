@@ -19,16 +19,18 @@ class LensUIGestureRecognizerSpec: QuickSpec {
 
             context("delegate") {
                 it("should get and set") {
+                    class Delegate: NSObject, UIGestureRecognizerDelegate { }
+                    
                     let lens: Lens<UIGestureRecognizer, UIGestureRecognizerDelegate?> = delegate()
                     let object = UIGestureRecognizer()
 
-                    let value: UIGestureRecognizerDelegate = UIGestureRecognizerDelegate()
+                    let value: UIGestureRecognizerDelegate = Delegate()
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.delegate).to(equal(value))
+                    expect(resultValue).to(beIdenticalTo(value))
+                    expect(resultObject.delegate).to(beIdenticalTo(value))
                 }
             }
 
@@ -57,8 +59,8 @@ class LensUIGestureRecognizerSpec: QuickSpec {
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.view).to(equal(value))
+                    expect(resultValue).toNot(equal(value))
+                    expect(resultObject.view).to(equal(resultValue))
                 }
             }
 
@@ -112,7 +114,7 @@ class LensUIGestureRecognizerSpec: QuickSpec {
                     let lens: Lens<UIGestureRecognizer, [NSNumber]> = allowedTouchTypes()
                     let object = UIGestureRecognizer()
 
-                    let value: [NSNumber] = 
+                    let value: [NSNumber] = [UITouchType.direct.rawValue as NSNumber]
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -127,7 +129,7 @@ class LensUIGestureRecognizerSpec: QuickSpec {
                     let lens: Lens<UIGestureRecognizer, [NSNumber]> = allowedPressTypes()
                     let object = UIGestureRecognizer()
 
-                    let value: [NSNumber] = 
+                    let value: [NSNumber] = [UIPressType.leftArrow.rawValue as NSNumber]
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

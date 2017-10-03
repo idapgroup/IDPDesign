@@ -19,16 +19,18 @@ class LensUITabBarSpec: QuickSpec {
 
             context("delegate") {
                 it("should get and set") {
+                    class Delegate: NSObject, UITabBarDelegate { }
+
                     let lens: Lens<UITabBar, UITabBarDelegate?> = delegate()
                     let object = UITabBar()
 
-                    let value: UITabBarDelegate = UITabBarDelegate()
+                    let value: UITabBarDelegate = Delegate()
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.delegate).to(equal(value))
+                    expect(resultValue).to(beIdenticalTo(value))
+                    expect(resultObject.delegate).to(beIdenticalTo(value))
                 }
             }
 
@@ -37,7 +39,7 @@ class LensUITabBarSpec: QuickSpec {
                     let lens: Lens<UITabBar, [UITabBarItem]?> = items()
                     let object = UITabBar()
 
-                    let value: [UITabBarItem] = 
+                    let value: [UITabBarItem] = [UITabBarItem()]
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -157,7 +159,7 @@ class LensUITabBarSpec: QuickSpec {
                     let lens: Lens<UITabBar, UITabBarItemPositioning> = itemPositioning()
                     let object = UITabBar()
 
-                    let value: UITabBarItemPositioning = UITabBarItemPositioning()
+                    let value: UITabBarItemPositioning = .fill
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -202,7 +204,7 @@ class LensUITabBarSpec: QuickSpec {
                     let lens: Lens<UITabBar, UIBarStyle> = barStyle()
                     let object = UITabBar()
 
-                    let value: UIBarStyle = UIBarStyle()
+                    let value: UIBarStyle = .black
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

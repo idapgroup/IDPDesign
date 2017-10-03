@@ -3,7 +3,8 @@
 
 import UIKit
 
-extension UIBarItem: UIBarItemProtocol { }
+// TODO: SWIFTC CAN'T HANDLE CONFORMANCE IN TESTS FOR SOME REASON
+//extension UIBarItem: UIBarItemProtocol { }
 
 public func isEnabled<Object: UIBarItem>() -> Lens<Object, Bool> {
     return Lens(

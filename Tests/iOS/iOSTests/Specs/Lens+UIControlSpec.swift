@@ -22,7 +22,7 @@ class LensUIControlSpec: QuickSpec {
                     let lens: Lens<UIControl, UIControlContentHorizontalAlignment> = contentHorizontalAlignment()
                     let object = UIControl()
 
-                    let value: UIControlContentHorizontalAlignment = UIControlContentHorizontalAlignment()
+                    let value: UIControlContentHorizontalAlignment = .right
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -37,7 +37,7 @@ class LensUIControlSpec: QuickSpec {
                     let lens: Lens<UIControl, UIControlContentVerticalAlignment> = contentVerticalAlignment()
                     let object = UIControl()
 
-                    let value: UIControlContentVerticalAlignment = UIControlContentVerticalAlignment()
+                    let value: UIControlContentVerticalAlignment = .bottom
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

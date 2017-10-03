@@ -157,7 +157,7 @@ class LensNSMutableParagraphStyleSpec: QuickSpec {
                     let lens: Lens<NSMutableParagraphStyle, NSWritingDirection> = baseWritingDirection()
                     let object = NSMutableParagraphStyle()
 
-                    let value: NSWritingDirection = NSWritingDirection()
+                    let value: NSWritingDirection = .rightToLeft
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

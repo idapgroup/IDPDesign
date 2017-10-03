@@ -17,7 +17,6 @@ protocol UILabelProtocol: UIObjectType {
     var attributedText: NSAttributedString? { get set }
     var highlightedTextColor: UIColor? { get set }
     var isHighlighted: Bool { get set }
-    var isUserInteractionEnabled: Bool { get set }
     var isEnabled: Bool { get set }
     var numberOfLines: Int { get set }
     var adjustsFontSizeToFitWidth: Bool { get set }

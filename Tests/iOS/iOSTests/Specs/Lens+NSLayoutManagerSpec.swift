@@ -129,13 +129,13 @@ class LensNSLayoutManagerSpec: QuickSpec {
                     let lens: Lens<NSLayoutManager, NSTextContainer?> = extraLineFragmentTextContainer()
                     let object = NSLayoutManager()
 
-                    let value: NSTextContainer = NSTextContainer()
+                    let value: NSTextContainer = NSTextContainer(size: CGSize(width: 1, height: 1))
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.extraLineFragmentTextContainer).to(equal(value))
+                    expect(resultValue).toNot(equal(value))
+                    expect(resultObject.extraLineFragmentTextContainer).to(equal(resultValue))
                 }
             }
         }

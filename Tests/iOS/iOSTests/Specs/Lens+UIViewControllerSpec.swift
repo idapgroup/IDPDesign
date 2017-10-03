@@ -112,7 +112,7 @@ class LensUIViewControllerSpec: QuickSpec {
                     let lens: Lens<UIViewController, UIModalTransitionStyle> = modalTransitionStyle()
                     let object = UIViewController()
 
-                    let value: UIModalTransitionStyle = UIModalTransitionStyle()
+                    let value: UIModalTransitionStyle = .crossDissolve
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -127,7 +127,7 @@ class LensUIViewControllerSpec: QuickSpec {
                     let lens: Lens<UIViewController, UIModalPresentationStyle> = modalPresentationStyle()
                     let object = UIViewController()
 
-                    let value: UIModalPresentationStyle = UIModalPresentationStyle()
+                    let value: UIModalPresentationStyle = .none
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -179,21 +179,6 @@ class LensUIViewControllerSpec: QuickSpec {
 
                     expect(resultValue).to(equal(value))
                     expect(resultObject.extendedLayoutIncludesOpaqueBars).to(equal(value))
-                }
-            }
-
-            context("automaticallyAdjustsScrollViewInsets") {
-                it("should get and set") {
-                    let lens: Lens<UIViewController, Bool> = automaticallyAdjustsScrollViewInsets()
-                    let object = UIViewController()
-
-                    let value: Bool = !object.automaticallyAdjustsScrollViewInsets
-
-                    let resultObject = lens.set(object, value)
-                    let resultValue = lens.get(resultObject)
-
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.automaticallyAdjustsScrollViewInsets).to(equal(value))
                 }
             }
 

@@ -42,8 +42,8 @@ class LensUINavigationControllerSpec: QuickSpec {
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.navigationBar).to(equal(value))
+                    expect(resultValue).toNot(equal(value))
+                    expect(resultObject.navigationBar).to(equal(resultValue))
                 }
             }
 
@@ -72,23 +72,25 @@ class LensUINavigationControllerSpec: QuickSpec {
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.toolbar).to(equal(value))
+                    expect(resultValue).toNot(equal(value))
+                    expect(resultObject.toolbar).to(equal(resultValue))
                 }
             }
 
             context("delegate") {
                 it("should get and set") {
+                    class Delegate: NSObject, UINavigationControllerDelegate { }
+                    
                     let lens: Lens<UINavigationController, UINavigationControllerDelegate?> = delegate()
                     let object = UINavigationController()
 
-                    let value: UINavigationControllerDelegate = UINavigationControllerDelegate()
+                    let value: UINavigationControllerDelegate = Delegate()
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.delegate).to(equal(value))
+                    expect(resultValue).to(beIdenticalTo(value))
+                    expect(resultObject.delegate).to(beIdenticalTo(value))
                 }
             }
 
@@ -102,8 +104,8 @@ class LensUINavigationControllerSpec: QuickSpec {
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.interactivePopGestureRecognizer).to(equal(value))
+                    expect(resultValue).toNot(equal(value))
+                    expect(resultObject.interactivePopGestureRecognizer).to(equal(resultValue))
                 }
             }
 
@@ -147,8 +149,8 @@ class LensUINavigationControllerSpec: QuickSpec {
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.barHideOnSwipeGestureRecognizer).to(equal(value))
+                    expect(resultValue).toNot(equal(value))
+                    expect(resultObject.barHideOnSwipeGestureRecognizer).to(equal(resultValue))
                 }
             }
 
@@ -192,8 +194,8 @@ class LensUINavigationControllerSpec: QuickSpec {
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.barHideOnTapGestureRecognizer).to(equal(value))
+                    expect(resultValue).toNot(equal(value))
+                    expect(resultObject.barHideOnTapGestureRecognizer).to(equal(resultValue))
                 }
             }
         }

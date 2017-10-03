@@ -337,7 +337,7 @@ class LensUIViewSpec: QuickSpec {
                     let lens: Lens<UIView, UIViewContentMode> = contentMode()
                     let object = UIView()
 
-                    let value: UIViewContentMode = UIViewContentMode()
+                    let value: UIViewContentMode = .redraw
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -382,7 +382,7 @@ class LensUIViewSpec: QuickSpec {
                     let lens: Lens<UIView, UIViewTintAdjustmentMode> = tintAdjustmentMode()
                     let object = UIView()
 
-                    let value: UIViewTintAdjustmentMode = UIViewTintAdjustmentMode()
+                    let value: UIViewTintAdjustmentMode = .dimmed
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -397,7 +397,7 @@ class LensUIViewSpec: QuickSpec {
                     let lens: Lens<UIView, UISemanticContentAttribute> = semanticContentAttribute()
                     let object = UIView()
 
-                    let value: UISemanticContentAttribute = UISemanticContentAttribute()
+                    let value: UISemanticContentAttribute = .spatial
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

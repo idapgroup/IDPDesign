@@ -64,16 +64,18 @@ class LensUIScrollViewSpec: QuickSpec {
 
             context("delegate") {
                 it("should get and set") {
+                    class Delegate: NSObject, UIScrollViewDelegate { }
+                    
                     let lens: Lens<UIScrollView, UIScrollViewDelegate?> = delegate()
                     let object = UIScrollView()
 
-                    let value: UIScrollViewDelegate = UIScrollViewDelegate()
+                    let value: UIScrollViewDelegate = Delegate()
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.delegate).to(equal(value))
+                    expect(resultValue).to(beIdenticalTo(value))
+                    expect(resultObject.delegate).to(beIdenticalTo(value))
                 }
             }
 
@@ -217,7 +219,7 @@ class LensUIScrollViewSpec: QuickSpec {
                     let lens: Lens<UIScrollView, UIScrollViewIndicatorStyle> = indicatorStyle()
                     let object = UIScrollView()
 
-                    let value: UIScrollViewIndicatorStyle = UIScrollViewIndicatorStyle()
+                    let value: UIScrollViewIndicatorStyle = .white
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -232,7 +234,7 @@ class LensUIScrollViewSpec: QuickSpec {
                     let lens: Lens<UIScrollView, CGFloat> = decelerationRate()
                     let object = UIScrollView()
 
-                    let value: CGFloat = 0.5
+                    let value: CGFloat = UIScrollViewDecelerationRateFast
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -247,7 +249,7 @@ class LensUIScrollViewSpec: QuickSpec {
                     let lens: Lens<UIScrollView, UIScrollViewIndexDisplayMode> = indexDisplayMode()
                     let object = UIScrollView()
 
-                    let value: UIScrollViewIndexDisplayMode = UIScrollViewIndexDisplayMode()
+                    let value: UIScrollViewIndexDisplayMode = .alwaysHidden
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -372,8 +374,8 @@ class LensUIScrollViewSpec: QuickSpec {
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.panGestureRecognizer).to(equal(value))
+                    expect(resultValue).toNot(equal(value))
+                    expect(resultObject.panGestureRecognizer).to(equal(resultValue))
                 }
             }
 
@@ -387,8 +389,8 @@ class LensUIScrollViewSpec: QuickSpec {
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.pinchGestureRecognizer).to(equal(value))
+                    expect(resultValue).toNot(equal(value))
+                    expect(resultObject.pinchGestureRecognizer).to(equal(resultValue))
                 }
             }
 
@@ -397,7 +399,7 @@ class LensUIScrollViewSpec: QuickSpec {
                     let lens: Lens<UIScrollView, UIScrollViewKeyboardDismissMode> = keyboardDismissMode()
                     let object = UIScrollView()
 
-                    let value: UIScrollViewKeyboardDismissMode = UIScrollViewKeyboardDismissMode()
+                    let value: UIScrollViewKeyboardDismissMode = .interactive
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
