@@ -16,7 +16,7 @@ import UIKit
 
 @testable import IDPDesign
 
-class LensUIScrollViewProtocolGeneratedSpec: QuickSpec {
+class LensUIScrollViewGeneratedSpec: QuickSpec {
     override func spec() {
         describe("Lens+UIScrollViewGeneratedSpec") {
 
@@ -25,7 +25,7 @@ class LensUIScrollViewProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<UIScrollView, CGPoint> = contentOffset()
                     let object = UIScrollView()
 
-                    let value: CGPoint = CGPoint(x:1,y:1)
+                    let value: CGPoint = CGPoint(x: 1, y: 1)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -40,7 +40,7 @@ class LensUIScrollViewProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<UIScrollView, CGSize> = contentSize()
                     let object = UIScrollView()
 
-                    let value: CGSize = CGSize(width:1,height:1)
+                    let value: CGSize = CGSize(width: 1, height: 1)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -55,7 +55,7 @@ class LensUIScrollViewProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<UIScrollView, UIEdgeInsets> = contentInset()
                     let object = UIScrollView()
 
-                    let value: UIEdgeInsets = UIEdgeInsets()
+                    let value: UIEdgeInsets = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -205,7 +205,7 @@ class LensUIScrollViewProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<UIScrollView, UIEdgeInsets> = scrollIndicatorInsets()
                     let object = UIScrollView()
 
-                    let value: UIEdgeInsets = UIEdgeInsets()
+                    let value: UIEdgeInsets = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

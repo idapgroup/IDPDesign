@@ -16,7 +16,7 @@ import UIKit
 
 @testable import IDPDesign
 
-class LensUIProgressViewProtocolGeneratedSpec: QuickSpec {
+class LensUIProgressViewGeneratedSpec: QuickSpec {
     override func spec() {
         describe("Lens+UIProgressViewGeneratedSpec") {
 

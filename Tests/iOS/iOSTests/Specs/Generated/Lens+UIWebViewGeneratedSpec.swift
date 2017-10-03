@@ -16,7 +16,7 @@ import UIKit
 
 @testable import IDPDesign
 
-class LensUIWebViewProtocolGeneratedSpec: QuickSpec {
+class LensUIWebViewGeneratedSpec: QuickSpec {
     override func spec() {
         describe("Lens+UIWebViewGeneratedSpec") {
 

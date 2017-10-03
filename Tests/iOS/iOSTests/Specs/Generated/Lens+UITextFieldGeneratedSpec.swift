@@ -16,7 +16,7 @@ import UIKit
 
 @testable import IDPDesign
 
-class LensUITextFieldProtocolGeneratedSpec: QuickSpec {
+class LensUITextFieldGeneratedSpec: QuickSpec {
     override func spec() {
         describe("Lens+UITextFieldGeneratedSpec") {
 
@@ -115,7 +115,7 @@ class LensUITextFieldProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<UITextField, [String : Any]> = defaultTextAttributes()
                     let object = UITextField()
 
-                    let value: [String : Any] = 
+                    let value: [String : Any] = { var result = object.defaultTextAttributes; result[NSForegroundColorAttributeName] = UIColor.red; return result }()
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

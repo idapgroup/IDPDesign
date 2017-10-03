@@ -16,7 +16,7 @@ import UIKit
 
 @testable import IDPDesign
 
-class LensUIViewControllerProtocolGeneratedSpec: QuickSpec {
+class LensUIViewControllerGeneratedSpec: QuickSpec {
     override func spec() {
         describe("Lens+UIViewControllerGeneratedSpec") {
 
@@ -115,7 +115,7 @@ class LensUIViewControllerProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<UIViewController, UIModalTransitionStyle> = modalTransitionStyle()
                     let object = UIViewController()
 
-                    let value: UIModalTransitionStyle = .crossDissolve
+                    let value: UIModalTransitionStyle = UIModalTransitionStyle()
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -130,7 +130,7 @@ class LensUIViewControllerProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<UIViewController, UIModalPresentationStyle> = modalPresentationStyle()
                     let object = UIViewController()
 
-                    let value: UIModalPresentationStyle = .none
+                    let value: UIModalPresentationStyle = UIModalPresentationStyle()
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -205,7 +205,7 @@ class LensUIViewControllerProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<UIViewController, CGSize> = preferredContentSize()
                     let object = UIViewController()
 
-                    let value: CGSize = CGSize(width:1,height:1)
+                    let value: CGSize = CGSize(width: 1, height: 1)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -295,7 +295,7 @@ class LensUIViewControllerProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<UIViewController, [UIBarButtonItem]?> = toolbarItems()
                     let object = UIViewController()
 
-                    let value: [UIBarButtonItem] = 
+                    let value: [UIBarButtonItem] = [UIBarButtonItem(barButtonSystemItem: .cancel, target: nil, action: nil)]
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

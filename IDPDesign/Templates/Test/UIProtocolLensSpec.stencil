@@ -87,39 +87,31 @@
 {% endmacro %}
 
 {% macro typeSpecificValue variable %}
-    {% if variable.typeName|contains:"UIControlContentHorizontalAlignment" %}
-        .fill
+    {% if variable.typeName|contains:"CGColor" %}
+        UIColor.red.cgColor
     {% else %}
-        {% if variable.typeName|contains:"UIControlContentVerticalAlignment" %}
-            .fill
+        {% if variable.typeName|contains:"UIColor" %}
+            UIColor.red
         {% else %}
-            {% if variable.typeName|contains:"UIViewContentMode" %}
-                .center
+            {% if variable.typeName|contains:"CGPath" %}
+                UIBezierPath(rect: CGRect(x: 1, y: 1, width: 1, height: 1)).cgPath
             {% else %}
-                {% if variable.typeName|contains:"CAEdgeAntialiasingMask" %}
-                    .layerBottomEdge
+                {% if variable.typeName|contains:"UIBezierPath" %}
+                    UIBezierPath(rect: CGRect(x: 1, y: 1, width: 1, height: 1))
                 {% else %}
-                    {% if variable.typeName|contains:"CGColor" %}
-                        UIColor.red.cgColor
+                    {% if variable.typeName|contains:"UIEdgeInsets" %}
+                        UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
                     {% else %}
-                        {% if variable.typeName|contains:"UIColor" %}
-                            UIColor.red
+                        {% if variable.typeName|contains:"[UIBarButtonItem]" %}
+                            [UIBarButtonItem(barButtonSystemItem: .cancel, target: nil, action: nil)]
                         {% else %}
-                            {% if variable.typeName|contains:"CGPath" %}
-                                UIBezierPath(rect: CGRect(x: 1, y: 1, width: 1, height: 1)).cgPath
+                            {% if variable.typeName|contains:"[UIAccessibilityLocationDescriptor]" %}
+                                []
                             {% else %}
-                                {% if variable.typeName|contains:"UIBezierPath" %}
-                                    UIBezierPath(rect: CGRect(x: 1, y: 1, width: 1, height: 1))
+                                {% if variable.name|contains:"defaultTextAttributes" %}
+                                    { var result = object.defaultTextAttributes; result[NSForegroundColorAttributeName] = UIColor.red; return result }()
                                 {% else %}
-                                    {% if variable.typeName|contains:"UIModalTransitionStyle" %}
-                                        .crossDissolve
-                                    {% else %}
-                                        {% if variable.typeName|contains:"UIModalPresentationStyle" %}
-                                            .none
-                                        {% else %}
-                                            {% call genericValue variable %}
-                                        {% endif %}
-                                    {% endif %}
+                                    {% call genericValue variable %}
                                 {% endif %}
                             {% endif %}
                         {% endif %}
@@ -130,14 +122,20 @@
     {% endif %}
 {% endmacro %}
 
+{# {% call genericValue variable %} [UIAccessibilityLocationDescriptor] #}
+
 {% macro value variable %}
-    {% call primitiveValue variable %}
-    {% call typeSpecificValue variable %}
+    {% if variable|annotated:"value" %}
+        {{variable.annotations.value}}
+    {% else %}
+        {% call primitiveValue variable %}
+        {% call typeSpecificValue variable %}
+    {% endif %}
 {% endmacro %}
 
 {# removeNewlines doesn't work for some reason. Use hack instead #}
 {% macro trimmedValue variable %}{% set result %}{% call value variable %}{% endset %}{{ result|replace:"
-",""|replace:" ","" }}{% endmacro %}
+",""|replace:"  ","" }}{% endmacro %}
 
 // done
 
@@ -162,7 +160,7 @@ import WebKit
 
 @testable import IDPDesign
 
-class Lens{{type.name}}GeneratedSpec: QuickSpec {
+class Lens{% call name type %}GeneratedSpec: QuickSpec {
     override func spec() {
         describe("Lens+{% call name type %}GeneratedSpec") {
             {% for variable in type.variables %}

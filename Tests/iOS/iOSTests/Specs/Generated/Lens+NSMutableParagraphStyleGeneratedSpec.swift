@@ -16,7 +16,7 @@ import UIKit
 
 @testable import IDPDesign
 
-class LensNSMutableParagraphStyleProtocolGeneratedSpec: QuickSpec {
+class LensNSMutableParagraphStyleGeneratedSpec: QuickSpec {
     override func spec() {
         describe("Lens+NSMutableParagraphStyleGeneratedSpec") {
 

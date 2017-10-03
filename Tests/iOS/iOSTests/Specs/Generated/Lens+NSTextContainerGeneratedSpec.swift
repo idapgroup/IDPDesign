@@ -16,7 +16,7 @@ import UIKit
 
 @testable import IDPDesign
 
-class LensNSTextContainerProtocolGeneratedSpec: QuickSpec {
+class LensNSTextContainerGeneratedSpec: QuickSpec {
     override func spec() {
         describe("Lens+NSTextContainerGeneratedSpec") {
 
@@ -40,7 +40,7 @@ class LensNSTextContainerProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<NSTextContainer, CGSize> = size()
                     let object = NSTextContainer()
 
-                    let value: CGSize = CGSize(width:1,height:1)
+                    let value: CGSize = CGSize(width: 1, height: 1)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -55,7 +55,7 @@ class LensNSTextContainerProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<NSTextContainer, [UIBezierPath]> = exclusionPaths()
                     let object = NSTextContainer()
 
-                    let value: [UIBezierPath] = UIBezierPath(rect:CGRect(x:1,y:1,width:1,height:1))
+                    let value: [UIBezierPath] = UIBezierPath(rect: CGRect(x: 1, y: 1, width: 1, height: 1))
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

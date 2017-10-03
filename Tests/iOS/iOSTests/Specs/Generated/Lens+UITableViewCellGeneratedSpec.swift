@@ -16,7 +16,7 @@ import UIKit
 
 @testable import IDPDesign
 
-class LensUITableViewCellProtocolGeneratedSpec: QuickSpec {
+class LensUITableViewCellGeneratedSpec: QuickSpec {
     override func spec() {
         describe("Lens+UITableViewCellGeneratedSpec") {
 
@@ -295,7 +295,7 @@ class LensUITableViewCellProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<UITableViewCell, UIEdgeInsets> = separatorInset()
                     let object = UITableViewCell()
 
-                    let value: UIEdgeInsets = UIEdgeInsets()
+                    let value: UIEdgeInsets = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

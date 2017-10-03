@@ -16,7 +16,7 @@ import UIKit
 
 @testable import IDPDesign
 
-class LensNSLayoutManagerProtocolGeneratedSpec: QuickSpec {
+class LensNSLayoutManagerGeneratedSpec: QuickSpec {
     override func spec() {
         describe("Lens+NSLayoutManagerGeneratedSpec") {
 

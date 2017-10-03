@@ -16,7 +16,7 @@ import UIKit
 
 @testable import IDPDesign
 
-class LensUITextViewProtocolGeneratedSpec: QuickSpec {
+class LensUITextViewGeneratedSpec: QuickSpec {
     override func spec() {
         describe("Lens+UITextViewGeneratedSpec") {
 
@@ -265,7 +265,7 @@ class LensUITextViewProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<UITextView, UIEdgeInsets> = textContainerInset()
                     let object = UITextView()
 
-                    let value: UIEdgeInsets = UIEdgeInsets()
+                    let value: UIEdgeInsets = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

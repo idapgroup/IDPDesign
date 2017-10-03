@@ -16,7 +16,7 @@ import UIKit
 
 @testable import IDPDesign
 
-class LensUILabelProtocolGeneratedSpec: QuickSpec {
+class LensUILabelGeneratedSpec: QuickSpec {
     override func spec() {
         describe("Lens+UILabelGeneratedSpec") {
 
@@ -85,7 +85,7 @@ class LensUILabelProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<UILabel, CGSize> = shadowOffset()
                     let object = UILabel()
 
-                    let value: CGSize = CGSize(width:1,height:1)
+                    let value: CGSize = CGSize(width: 1, height: 1)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

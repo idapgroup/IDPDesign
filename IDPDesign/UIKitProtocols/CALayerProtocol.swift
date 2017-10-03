@@ -49,6 +49,8 @@ protocol CALayerProtocol: UIObjectType {
     var shadowOpacity: Float { get set }
     var shadowOffset: CGSize { get set }
     var shadowRadius: CGFloat { get set }
+
+    // sourcery: value = UIBezierPath(rect: CGRect(x: 1, y: 1, width: 1, height: 1)).cgPath
     var shadowPath: CGPath? { get set }
     var actions: [String : CAAction]? { get set }
     var name: String? { get set }

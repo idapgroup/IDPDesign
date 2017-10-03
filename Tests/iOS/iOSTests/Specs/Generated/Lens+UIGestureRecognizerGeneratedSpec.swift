@@ -16,7 +16,7 @@ import UIKit
 
 @testable import IDPDesign
 
-class LensUIGestureRecognizerProtocolGeneratedSpec: QuickSpec {
+class LensUIGestureRecognizerGeneratedSpec: QuickSpec {
     override func spec() {
         describe("Lens+UIGestureRecognizerGeneratedSpec") {
 

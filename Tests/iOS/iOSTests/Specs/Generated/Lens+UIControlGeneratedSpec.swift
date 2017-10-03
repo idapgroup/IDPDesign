@@ -16,7 +16,7 @@ import UIKit
 
 @testable import IDPDesign
 
-class LensUIControlProtocolGeneratedSpec: QuickSpec {
+class LensUIControlGeneratedSpec: QuickSpec {
     override func spec() {
         describe("Lens+UIControlGeneratedSpec") {
 
@@ -25,7 +25,7 @@ class LensUIControlProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<UIControl, UIControlContentHorizontalAlignment> = contentHorizontalAlignment()
                     let object = UIControl()
 
-                    let value: UIControlContentHorizontalAlignment = .fill
+                    let value: UIControlContentHorizontalAlignment = UIControlContentHorizontalAlignment()
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -40,7 +40,7 @@ class LensUIControlProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<UIControl, UIControlContentVerticalAlignment> = contentVerticalAlignment()
                     let object = UIControl()
 
-                    let value: UIControlContentVerticalAlignment = .fill
+                    let value: UIControlContentVerticalAlignment = UIControlContentVerticalAlignment()
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

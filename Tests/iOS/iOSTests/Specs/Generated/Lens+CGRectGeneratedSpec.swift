@@ -16,7 +16,7 @@ import UIKit
 
 @testable import IDPDesign
 
-class LensCGRectProtocolGeneratedSpec: QuickSpec {
+class LensCGRectGeneratedSpec: QuickSpec {
     override func spec() {
         describe("Lens+CGRectGeneratedSpec") {
 
@@ -25,7 +25,7 @@ class LensCGRectProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<CGRect, CGPoint> = origin()
                     let object = CGRect()
 
-                    let value: CGPoint = CGPoint(x:1,y:1)
+                    let value: CGPoint = CGPoint(x: 1, y: 1)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -40,7 +40,7 @@ class LensCGRectProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<CGRect, CGSize> = size()
                     let object = CGRect()
 
-                    let value: CGSize = CGSize(width:1,height:1)
+                    let value: CGSize = CGSize(width: 1, height: 1)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

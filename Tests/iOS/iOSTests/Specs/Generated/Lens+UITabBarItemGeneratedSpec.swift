@@ -16,7 +16,7 @@ import UIKit
 
 @testable import IDPDesign
 
-class LensUITabBarItemProtocolGeneratedSpec: QuickSpec {
+class LensUITabBarItemGeneratedSpec: QuickSpec {
     override func spec() {
         describe("Lens+UITabBarItemGeneratedSpec") {
 

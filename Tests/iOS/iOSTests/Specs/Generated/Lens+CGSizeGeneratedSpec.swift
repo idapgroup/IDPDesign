@@ -16,7 +16,7 @@ import UIKit
 
 @testable import IDPDesign
 
-class LensCGSizeProtocolGeneratedSpec: QuickSpec {
+class LensCGSizeGeneratedSpec: QuickSpec {
     override func spec() {
         describe("Lens+CGSizeGeneratedSpec") {
 

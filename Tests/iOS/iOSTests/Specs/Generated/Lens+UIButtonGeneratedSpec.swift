@@ -16,7 +16,7 @@ import UIKit
 
 @testable import IDPDesign
 
-class LensUIButtonProtocolGeneratedSpec: QuickSpec {
+class LensUIButtonGeneratedSpec: QuickSpec {
     override func spec() {
         describe("Lens+UIButtonGeneratedSpec") {
 
@@ -55,7 +55,7 @@ class LensUIButtonProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<UIButton, UIEdgeInsets> = contentEdgeInsets()
                     let object = UIButton()
 
-                    let value: UIEdgeInsets = UIEdgeInsets()
+                    let value: UIEdgeInsets = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -70,7 +70,7 @@ class LensUIButtonProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<UIButton, UIEdgeInsets> = imageEdgeInsets()
                     let object = UIButton()
 
-                    let value: UIEdgeInsets = UIEdgeInsets()
+                    let value: UIEdgeInsets = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -100,7 +100,7 @@ class LensUIButtonProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<UIButton, UIEdgeInsets> = titleEdgeInsets()
                     let object = UIButton()
 
-                    let value: UIEdgeInsets = UIEdgeInsets()
+                    let value: UIEdgeInsets = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

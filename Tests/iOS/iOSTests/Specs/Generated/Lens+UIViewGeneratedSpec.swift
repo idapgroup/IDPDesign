@@ -16,7 +16,7 @@ import UIKit
 
 @testable import IDPDesign
 
-class LensUIViewProtocolGeneratedSpec: QuickSpec {
+class LensUIViewGeneratedSpec: QuickSpec {
     override func spec() {
         describe("Lens+UIViewGeneratedSpec") {
 
@@ -55,7 +55,7 @@ class LensUIViewProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<UIView, CGRect> = frame()
                     let object = UIView()
 
-                    let value: CGRect = CGRect(x:1,y:1,width:1,height:1)
+                    let value: CGRect = CGRect(x: 1, y: 1, width: 1, height: 1)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -70,7 +70,7 @@ class LensUIViewProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<UIView, CGRect> = bounds()
                     let object = UIView()
 
-                    let value: CGRect = CGRect(x:1,y:1,width:1,height:1)
+                    let value: CGRect = CGRect(x: 1, y: 1, width: 1, height: 1)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -85,7 +85,7 @@ class LensUIViewProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<UIView, CGPoint> = center()
                     let object = UIView()
 
-                    let value: CGPoint = CGPoint(x:1,y:1)
+                    let value: CGPoint = CGPoint(x: 1, y: 1)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -100,7 +100,7 @@ class LensUIViewProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<UIView, CGAffineTransform> = transform()
                     let object = UIView()
 
-                    let value: CGAffineTransform = CGAffineTransform(a:0.5,b:0.5,c:0.5,d:0.5,tx:0.5,ty:0.5)
+                    let value: CGAffineTransform = CGAffineTransform(a: 0.5, b: 0.5, c: 0.5, d: 0.5, tx: 0.5, ty: 0.5)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -220,7 +220,7 @@ class LensUIViewProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<UIView, UIEdgeInsets> = layoutMargins()
                     let object = UIView()
 
-                    let value: UIEdgeInsets = UIEdgeInsets()
+                    let value: UIEdgeInsets = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -340,7 +340,7 @@ class LensUIViewProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<UIView, UIViewContentMode> = contentMode()
                     let object = UIView()
 
-                    let value: UIViewContentMode = .center
+                    let value: UIViewContentMode = UIViewContentMode()
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

@@ -16,7 +16,7 @@ import UIKit
 
 @testable import IDPDesign
 
-class LensNSObjectProtocolGeneratedSpec: QuickSpec {
+class LensNSObjectGeneratedSpec: QuickSpec {
     override func spec() {
         describe("Lens+NSObjectGeneratedSpec") {
 
@@ -145,7 +145,7 @@ class LensNSObjectProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<NSObject, CGRect> = accessibilityFrame()
                     let object = NSObject()
 
-                    let value: CGRect = CGRect(x:1,y:1,width:1,height:1)
+                    let value: CGRect = CGRect(x: 1, y: 1, width: 1, height: 1)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -160,7 +160,7 @@ class LensNSObjectProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<NSObject, UIBezierPath?> = accessibilityPath()
                     let object = NSObject()
 
-                    let value: UIBezierPath = UIBezierPath(rect:CGRect(x:1,y:1,width:1,height:1))
+                    let value: UIBezierPath = UIBezierPath(rect: CGRect(x: 1, y: 1, width: 1, height: 1))
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -175,7 +175,7 @@ class LensNSObjectProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<NSObject, CGPoint> = accessibilityActivationPoint()
                     let object = NSObject()
 
-                    let value: CGPoint = CGPoint(x:1,y:1)
+                    let value: CGPoint = CGPoint(x: 1, y: 1)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -265,7 +265,7 @@ class LensNSObjectProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<NSObject, [UIAccessibilityLocationDescriptor]?> = accessibilityDragSourceDescriptors()
                     let object = NSObject()
 
-                    let value: [UIAccessibilityLocationDescriptor] = 
+                    let value: [UIAccessibilityLocationDescriptor] = []
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -280,7 +280,7 @@ class LensNSObjectProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<NSObject, [UIAccessibilityLocationDescriptor]?> = accessibilityDropPointDescriptors()
                     let object = NSObject()
 
-                    let value: [UIAccessibilityLocationDescriptor] = 
+                    let value: [UIAccessibilityLocationDescriptor] = []
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

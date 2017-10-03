@@ -16,7 +16,7 @@ import UIKit
 
 @testable import IDPDesign
 
-class LensUIBarItemProtocolGeneratedSpec: QuickSpec {
+class LensUIBarItemGeneratedSpec: QuickSpec {
     override func spec() {
         describe("Lens+UIBarItemGeneratedSpec") {
 
@@ -85,7 +85,7 @@ class LensUIBarItemProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<UIBarItem, UIEdgeInsets> = imageInsets()
                     let object = UIBarItem()
 
-                    let value: UIEdgeInsets = UIEdgeInsets()
+                    let value: UIEdgeInsets = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -100,7 +100,7 @@ class LensUIBarItemProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<UIBarItem, UIEdgeInsets> = landscapeImagePhoneInsets()
                     let object = UIBarItem()
 
-                    let value: UIEdgeInsets = UIEdgeInsets()
+                    let value: UIEdgeInsets = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

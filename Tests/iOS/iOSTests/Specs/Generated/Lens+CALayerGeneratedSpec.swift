@@ -16,7 +16,7 @@ import UIKit
 
 @testable import IDPDesign
 
-class LensCALayerProtocolGeneratedSpec: QuickSpec {
+class LensCALayerGeneratedSpec: QuickSpec {
     override func spec() {
         describe("Lens+CALayerGeneratedSpec") {
 
@@ -25,7 +25,7 @@ class LensCALayerProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<CALayer, CGRect> = bounds()
                     let object = CALayer()
 
-                    let value: CGRect = CGRect(x:1,y:1,width:1,height:1)
+                    let value: CGRect = CGRect(x: 1, y: 1, width: 1, height: 1)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -40,7 +40,7 @@ class LensCALayerProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<CALayer, CGPoint> = position()
                     let object = CALayer()
 
-                    let value: CGPoint = CGPoint(x:1,y:1)
+                    let value: CGPoint = CGPoint(x: 1, y: 1)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -70,7 +70,7 @@ class LensCALayerProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<CALayer, CGPoint> = anchorPoint()
                     let object = CALayer()
 
-                    let value: CGPoint = CGPoint(x:1,y:1)
+                    let value: CGPoint = CGPoint(x: 1, y: 1)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -100,7 +100,7 @@ class LensCALayerProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<CALayer, CATransform3D> = transform()
                     let object = CALayer()
 
-                    let value: CATransform3D = CATransform3D(m11:0.5,m12:0.5,m13:0.5,m14:0.5,m21:0.5,m22:0.5,m23:0.5,m24:0.5,m31:0.5,m32:0.5,m33:0.5,m34:0.5,m41:0.5,m42:0.5,m43:0.5,m44:0.5)
+                    let value: CATransform3D = CATransform3D(m11: 0.5, m12: 0.5, m13: 0.5, m14: 0.5, m21: 0.5, m22: 0.5, m23: 0.5, m24: 0.5, m31: 0.5, m32: 0.5, m33: 0.5, m34: 0.5, m41: 0.5, m42: 0.5, m43: 0.5, m44: 0.5)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -115,7 +115,7 @@ class LensCALayerProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<CALayer, CGRect> = frame()
                     let object = CALayer()
 
-                    let value: CGRect = CGRect(x:1,y:1,width:1,height:1)
+                    let value: CGRect = CGRect(x: 1, y: 1, width: 1, height: 1)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -235,7 +235,7 @@ class LensCALayerProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<CALayer, CGRect> = contentsRect()
                     let object = CALayer()
 
-                    let value: CGRect = CGRect(x:1,y:1,width:1,height:1)
+                    let value: CGRect = CGRect(x: 1, y: 1, width: 1, height: 1)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -280,7 +280,7 @@ class LensCALayerProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<CALayer, CGRect> = contentsCenter()
                     let object = CALayer()
 
-                    let value: CGRect = CGRect(x:1,y:1,width:1,height:1)
+                    let value: CGRect = CGRect(x: 1, y: 1, width: 1, height: 1)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -400,7 +400,7 @@ class LensCALayerProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<CALayer, CAEdgeAntialiasingMask> = edgeAntialiasingMask()
                     let object = CALayer()
 
-                    let value: CAEdgeAntialiasingMask = .layerBottomEdge
+                    let value: CAEdgeAntialiasingMask = 
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -625,7 +625,7 @@ class LensCALayerProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<CALayer, CGSize> = shadowOffset()
                     let object = CALayer()
 
-                    let value: CGSize = CGSize(width:1,height:1)
+                    let value: CGSize = CGSize(width: 1, height: 1)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -655,7 +655,7 @@ class LensCALayerProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<CALayer, CGPath?> = shadowPath()
                     let object = CALayer()
 
-                    let value: CGPath = UIBezierPath(rect:CGRect(x:1,y:1,width:1,height:1)).cgPath
+                    let value: CGPath = UIBezierPath(rect: CGRect(x: 1, y: 1, width: 1, height: 1)).cgPath
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

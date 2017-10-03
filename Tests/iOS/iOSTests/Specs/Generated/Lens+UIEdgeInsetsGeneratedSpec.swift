@@ -16,7 +16,7 @@ import UIKit
 
 @testable import IDPDesign
 
-class LensUIEdgeInsetsProtocolGeneratedSpec: QuickSpec {
+class LensUIEdgeInsetsGeneratedSpec: QuickSpec {
     override func spec() {
         describe("Lens+UIEdgeInsetsGeneratedSpec") {
 

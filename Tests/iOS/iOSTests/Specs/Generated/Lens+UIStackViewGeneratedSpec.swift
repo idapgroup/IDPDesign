@@ -16,7 +16,7 @@ import UIKit
 
 @testable import IDPDesign
 
-class LensUIStackViewProtocolGeneratedSpec: QuickSpec {
+class LensUIStackViewGeneratedSpec: QuickSpec {
     override func spec() {
         describe("Lens+UIStackViewGeneratedSpec") {
 
@@ -25,7 +25,7 @@ class LensUIStackViewProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<UIStackView, UILayoutConstraintAxis> = axis()
                     let object = UIStackView()
 
-                    let value: UILayoutConstraintAxis = UILayoutConstraintAxis()
+                    let value: UILayoutConstraintAxis = .horizontal
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -40,7 +40,7 @@ class LensUIStackViewProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<UIStackView, UIStackViewDistribution> = distribution()
                     let object = UIStackView()
 
-                    let value: UIStackViewDistribution = UIStackViewDistribution()
+                    let value: UIStackViewDistribution = .equalCentering
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -55,7 +55,7 @@ class LensUIStackViewProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<UIStackView, UIStackViewAlignment> = alignment()
                     let object = UIStackView()
 
-                    let value: UIStackViewAlignment = UIStackViewAlignment()
+                    let value: UIStackViewAlignment = .center
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

@@ -16,7 +16,7 @@ import UIKit
 
 @testable import IDPDesign
 
-class LensUINavigationBarProtocolGeneratedSpec: QuickSpec {
+class LensUINavigationBarGeneratedSpec: QuickSpec {
     override func spec() {
         describe("Lens+UINavigationBarGeneratedSpec") {
 

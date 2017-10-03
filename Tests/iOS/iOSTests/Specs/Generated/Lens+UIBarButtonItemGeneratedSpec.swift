@@ -16,7 +16,7 @@ import UIKit
 
 @testable import IDPDesign
 
-class LensUIBarButtonItemProtocolGeneratedSpec: QuickSpec {
+class LensUIBarButtonItemGeneratedSpec: QuickSpec {
     override func spec() {
         describe("Lens+UIBarButtonItemGeneratedSpec") {
 
@@ -25,7 +25,7 @@ class LensUIBarButtonItemProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<UIBarButtonItem, UIBarButtonItemStyle> = style()
                     let object = UIBarButtonItem()
 
-                    let value: UIBarButtonItemStyle = UIBarButtonItemStyle()
+                    let value: UIBarButtonItemStyle = .done
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -55,7 +55,7 @@ class LensUIBarButtonItemProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<UIBarButtonItem, Set<String>?> = possibleTitles()
                     let object = UIBarButtonItem()
 
-                    let value: Set<String> = 
+                    let value: Set<String> = Set<String>("mama")
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -80,33 +80,33 @@ class LensUIBarButtonItemProtocolGeneratedSpec: QuickSpec {
                 }
             }
 
-            context("action") {
-                it("should get and set") {
-                    let lens: Lens<UIBarButtonItem, Selector?> = action()
-                    let object = UIBarButtonItem()
-
-                    let value: Selector = 
-
-                    let resultObject = lens.set(object, value)
-                    let resultValue = lens.get(resultObject)
-
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.action).to(equal(value))
-                }
-            }
-
             context("target") {
                 it("should get and set") {
                     let lens: Lens<UIBarButtonItem, AnyObject?> = target()
                     let object = UIBarButtonItem()
 
-                    let value: AnyObject = 
+                    let value: AnyObject = nil
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
                     expect(resultValue).to(equal(value))
                     expect(resultObject.target).to(equal(value))
+                }
+            }
+
+            context("action") {
+                it("should get and set") {
+                    let lens: Lens<UIBarButtonItem, Selector?> = action()
+                    let object = UIBarButtonItem()
+
+                    let value: Selector = nil
+
+                    let resultObject = lens.set(object, value)
+                    let resultValue = lens.get(resultObject)
+
+                    expect(resultValue).to(equal(value))
+                    expect(resultObject.action).to(equal(value))
                 }
             }
 

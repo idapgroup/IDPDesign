@@ -16,7 +16,7 @@ import UIKit
 
 @testable import IDPDesign
 
-class LensUITableViewControllerProtocolGeneratedSpec: QuickSpec {
+class LensUITableViewControllerGeneratedSpec: QuickSpec {
     override func spec() {
         describe("Lens+UITableViewControllerGeneratedSpec") {
 

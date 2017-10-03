@@ -16,7 +16,7 @@ import UIKit
 
 @testable import IDPDesign
 
-class LensCGVectorProtocolGeneratedSpec: QuickSpec {
+class LensCGVectorGeneratedSpec: QuickSpec {
     override func spec() {
         describe("Lens+CGVectorGeneratedSpec") {
 

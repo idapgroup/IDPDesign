@@ -16,7 +16,7 @@ import UIKit
 
 @testable import IDPDesign
 
-class LensUIActivityIndicatorViewProtocolGeneratedSpec: QuickSpec {
+class LensUIActivityIndicatorViewGeneratedSpec: QuickSpec {
     override func spec() {
         describe("Lens+UIActivityIndicatorViewGeneratedSpec") {
 

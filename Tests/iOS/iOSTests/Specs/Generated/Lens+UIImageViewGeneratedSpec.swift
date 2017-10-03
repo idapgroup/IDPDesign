@@ -16,7 +16,7 @@ import UIKit
 
 @testable import IDPDesign
 
-class LensUIImageViewProtocolGeneratedSpec: QuickSpec {
+class LensUIImageViewGeneratedSpec: QuickSpec {
     override func spec() {
         describe("Lens+UIImageViewGeneratedSpec") {
 

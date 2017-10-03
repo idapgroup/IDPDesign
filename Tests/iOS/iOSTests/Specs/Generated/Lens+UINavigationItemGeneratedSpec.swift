@@ -16,7 +16,7 @@ import UIKit
 
 @testable import IDPDesign
 
-class LensUINavigationItemProtocolGeneratedSpec: QuickSpec {
+class LensUINavigationItemGeneratedSpec: QuickSpec {
     override func spec() {
         describe("Lens+UINavigationItemGeneratedSpec") {
 
@@ -100,7 +100,7 @@ class LensUINavigationItemProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<UINavigationItem, [UIBarButtonItem]?> = leftBarButtonItems()
                     let object = UINavigationItem()
 
-                    let value: [UIBarButtonItem] = 
+                    let value: [UIBarButtonItem] = [UIBarButtonItem(barButtonSystemItem: .cancel, target: nil, action: nil)]
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -115,7 +115,7 @@ class LensUINavigationItemProtocolGeneratedSpec: QuickSpec {
                     let lens: Lens<UINavigationItem, [UIBarButtonItem]?> = rightBarButtonItems()
                     let object = UINavigationItem()
 
-                    let value: [UIBarButtonItem] = 
+                    let value: [UIBarButtonItem] = [UIBarButtonItem(barButtonSystemItem: .cancel, target: nil, action: nil)]
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
