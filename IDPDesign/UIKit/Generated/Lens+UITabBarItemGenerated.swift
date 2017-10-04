@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension UITabBarItem: UITabBarItemProtocol { }
-
 public func selectedImage<Object: UITabBarItem>() -> Lens<Object, UIImage?> {
     return Lens(
         get: { $0.selectedImage },

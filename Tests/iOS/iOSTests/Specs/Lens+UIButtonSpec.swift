@@ -13,6 +13,8 @@ import UIKit
 
 @testable import IDPDesign
 
+extension UIButton: UIButtonProtocol { }
+
 class LensUIButtonSpec: QuickSpec {
     override func spec() {
         describe("Lens+UIButtonSpec") {

@@ -4,49 +4,46 @@
 // done
 
 {% for type in types.based.UIObjectType %}
-{% if type.kind == "protocol" %}
-{% if not type.name == "UIObjectType" %}
+    {% if type.kind == "protocol" and not type.name == "UIObjectType" %}
+
 // sourcery:file:Lens+{% call name type %}Generated.swift
 import UIKit
-{% if type.name == "WKWebViewProtocol" %}
+        {% if type.name == "WKWebViewProtocol" %}
 import WebKit
-{% endif %}
+        {% endif %}
 
-extension {% call name type %}: {{type.name}} { }
-{% for variable in type.variables %}
-{% if not variable.isStatic %}
-{% if variable.readAccess == "public" or variable.readAccess == "open" or variable.readAccess == "internal" %}
+            {% for variable in type.variables %}
+                {% if not variable.isStatic %}
+                    {% if variable.readAccess == "public" or variable.readAccess == "open" or variable.readAccess == "internal" %}
 
 {{variable.attributes.available}}
 public func {{variable.name}}<Object: {% call name type %}>() -> Lens<Object, {% call implicitToOptional variable.typeName %}> {
-    {% if variable.writeAccess == "" or variable.writeAccess == "private" or variable.writeAccess == "fileprivate" or variable.isComputed %}
+                        {% if variable.writeAccess == "" or variable.writeAccess == "private" or variable.writeAccess == "fileprivate" or variable.isComputed %}
     return Lens { $0.{{variable.name}} }
-    {% else %}
+                        {% else %}
     return Lens(
         get: { $0.{{variable.name}} },
         setter: { $0.{{variable.name}} = $1 }
     )
-    {% endif %}
+                        {% endif %}
 }
-{% endif %}
-{% endif %}
-{% endfor %}
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
 // sourcery:end
-{% endif %}
-{% endif %}
+    {% endif %}
 {% endfor %}
 
 {% for type in types.based.UIValueType %}
-{% if type.kind == "protocol" %}
-{% if not type.name == "UIValueType" %}
+    {% if type.kind == "protocol" and not type.name == "UIValueType" %}
 // sourcery:file:Lens+{% call name type %}Generated.swift
 import UIKit
 
-{% for variable in type.variables %}
-{% if not variable.isStatic %}
-{% if variable.readAccess == "public" or variable.readAccess == "open" or variable.readAccess == "internal" %}
-{% if variable.writeAccess == "public" or variable.writeAccess == "internal" or variable.writeAccess == "open" %}
-{% if not variable.isComputed and variable.isMutable %}
+        {% for variable in type.variables %}
+            {% if not variable.isStatic %}
+                {% if variable.readAccess == "public" or variable.readAccess == "open" or variable.readAccess == "internal" %}
+                    {% if variable.writeAccess == "public" or variable.writeAccess == "internal" or variable.writeAccess == "open" %}
+                        {% if not variable.isComputed and variable.isMutable %}
 
 {{variable.attributes.available}}
 public func {{variable.name}}() -> Lens<{% call name type %}, {{variable.typeName}}> {
@@ -60,12 +57,11 @@ public func {{variable.name}}() -> Lens<{% call name type %}, {{variable.typeNam
         }
     )
 }
-{% endif %}
-{% endif %}
-{% endif %}
-{% endif %}
-{% endfor %}
+                        {% endif %}
+                    {% endif %}
+                {% endif %}
+            {% endif %}
+        {% endfor %}
 // sourcery:end
-{% endif %}
-{% endif %}
+    {% endif %}
 {% endfor %}

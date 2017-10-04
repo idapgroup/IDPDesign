@@ -13,6 +13,8 @@ import UIKit
 
 @testable import IDPDesign
 
+extension UILongPressGestureRecognizer: UILongPressGestureRecognizerProtocol { }
+
 class LensUILongPressGestureRecognizerSpec: QuickSpec {
     override func spec() {
         describe("Lens+UILongPressGestureRecognizerSpec") {

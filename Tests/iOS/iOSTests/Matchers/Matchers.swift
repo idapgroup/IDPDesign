@@ -32,7 +32,7 @@ func containEqualContent<T: Equatable>(_ dictionary: [AnyHashable: Any]?, type: 
     return containComparableContent(dictionary, type: T.self, for: key) { $0 == $1 }
 }
 
-func containComparableContent<Key: Hashable, Value>(
+func containComparableContent<Key, Value>(
     _ dictionary: [Key: Any]?,
     type: Value.Type,
     for key: Key,

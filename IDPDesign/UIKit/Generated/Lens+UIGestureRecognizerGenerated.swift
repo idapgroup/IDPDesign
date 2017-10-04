@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension UIGestureRecognizer: UIGestureRecognizerProtocol { }
-
 public func delegate<Object: UIGestureRecognizer>() -> Lens<Object, UIGestureRecognizerDelegate?> {
     return Lens(
         get: { $0.delegate },

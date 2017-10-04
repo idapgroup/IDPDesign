@@ -13,6 +13,8 @@ import UIKit
 
 @testable import IDPDesign
 
+extension UITableViewController: UITableViewControllerProtocol { }
+
 class LensUITableViewControllerSpec: QuickSpec {
     override func spec() {
         describe("Lens+UITableViewControllerSpec") {

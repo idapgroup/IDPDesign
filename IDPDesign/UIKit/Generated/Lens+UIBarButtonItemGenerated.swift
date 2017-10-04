@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension UIBarButtonItem: UIBarButtonItemProtocol { }
-
 public func style<Object: UIBarButtonItem>() -> Lens<Object, UIBarButtonItemStyle> {
     return Lens(
         get: { $0.style },

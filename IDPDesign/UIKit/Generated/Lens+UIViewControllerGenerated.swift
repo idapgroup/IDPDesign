@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension UIViewController: UIViewControllerProtocol { }
-
 public func view<Object: UIViewController>() -> Lens<Object, UIView?> {
     return Lens(
         get: { $0.view },

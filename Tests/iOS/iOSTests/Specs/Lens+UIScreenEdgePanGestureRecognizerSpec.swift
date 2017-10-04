@@ -13,6 +13,8 @@ import UIKit
 
 @testable import IDPDesign
 
+extension UIScreenEdgePanGestureRecognizer: UIScreenEdgePanGestureRecognizerProtocol { }
+
 class LensUIScreenEdgePanGestureRecognizerSpec: QuickSpec {
     override func spec() {
         describe("Lens+UIScreenEdgePanGestureRecognizerSpec") {

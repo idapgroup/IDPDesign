@@ -13,6 +13,8 @@ import UIKit
 
 @testable import IDPDesign
 
+extension UITabBar: UITabBarProtocol { }
+
 class LensUITabBarSpec: QuickSpec {
     override func spec() {
         describe("Lens+UITabBarSpec") {

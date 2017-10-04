@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension UIRotationGestureRecognizer: UIRotationGestureRecognizerProtocol { }
-
 public func rotation<Object: UIRotationGestureRecognizer>() -> Lens<Object, CGFloat> {
     return Lens(
         get: { $0.rotation },

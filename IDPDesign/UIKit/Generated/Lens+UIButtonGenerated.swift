@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension UIButton: UIButtonProtocol { }
-
 public func adjustsImageWhenDisabled<Object: UIButton>() -> Lens<Object, Bool> {
     return Lens(
         get: { $0.adjustsImageWhenDisabled },

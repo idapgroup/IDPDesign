@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension UIProgressView: UIProgressViewProtocol { }
-
 public func progressViewStyle<Object: UIProgressView>() -> Lens<Object, UIProgressViewStyle> {
     return Lens(
         get: { $0.progressViewStyle },

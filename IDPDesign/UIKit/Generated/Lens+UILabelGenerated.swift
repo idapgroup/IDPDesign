@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension UILabel: UILabelProtocol { }
-
 public func text<Object: UILabel>() -> Lens<Object, String?> {
     return Lens(
         get: { $0.text },

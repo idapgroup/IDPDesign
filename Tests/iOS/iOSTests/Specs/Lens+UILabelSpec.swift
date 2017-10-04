@@ -13,6 +13,8 @@ import UIKit
 
 @testable import IDPDesign
 
+extension UILabel: UILabelProtocol { }
+
 class LensUILabelSpec: QuickSpec {
     override func spec() {
         describe("Lens+UILabelSpec") {

@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension UITableView: UITableViewProtocol { }
-
 public func dataSource<Object: UITableView>() -> Lens<Object, UITableViewDataSource?> {
     return Lens(
         get: { $0.dataSource },

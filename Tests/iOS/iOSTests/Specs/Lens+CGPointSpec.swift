@@ -13,6 +13,8 @@ import UIKit
 
 @testable import IDPDesign
 
+extension CGPoint: CGPointProtocol { }
+
 class LensCGPointSpec: QuickSpec {
     override func spec() {
         describe("Lens+CGPointSpec") {

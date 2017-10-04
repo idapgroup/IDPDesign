@@ -13,6 +13,8 @@ import UIKit
 
 @testable import IDPDesign
 
+extension NSMutableParagraphStyle: NSMutableParagraphStyleProtocol { }
+
 class LensNSMutableParagraphStyleSpec: QuickSpec {
     override func spec() {
         describe("Lens+NSMutableParagraphStyleSpec") {

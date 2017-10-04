@@ -14,6 +14,8 @@ import WebKit
 
 @testable import IDPDesign
 
+extension WKWebView: WKWebViewProtocol { }
+
 class LensWKWebViewSpec: QuickSpec {
     override func spec() {
         describe("Lens+WKWebViewSpec") {

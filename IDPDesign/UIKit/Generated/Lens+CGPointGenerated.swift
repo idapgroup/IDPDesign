@@ -3,7 +3,6 @@
 
 import UIKit
 
-
 public func x() -> Lens<CGPoint, CGFloat> {
     return Lens(
         get: { $0.x },

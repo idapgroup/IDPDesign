@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension UITabBar: UITabBarProtocol { }
-
 public func delegate<Object: UITabBar>() -> Lens<Object, UITabBarDelegate?> {
     return Lens(
         get: { $0.delegate },

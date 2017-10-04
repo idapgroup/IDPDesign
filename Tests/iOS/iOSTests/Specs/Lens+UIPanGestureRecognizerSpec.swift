@@ -13,6 +13,8 @@ import UIKit
 
 @testable import IDPDesign
 
+extension UIPanGestureRecognizer: UIPanGestureRecognizerProtocol { }
+
 class LensUIPanGestureRecognizerSpec: QuickSpec {
     override func spec() {
         describe("Lens+UIPanGestureRecognizerSpec") {

@@ -13,6 +13,8 @@ import UIKit
 
 @testable import IDPDesign
 
+extension CALayer: CALayerProtocol { }
+
 class LensCALayerSpec: QuickSpec {
     override func spec() {
         describe("Lens+CALayerSpec") {

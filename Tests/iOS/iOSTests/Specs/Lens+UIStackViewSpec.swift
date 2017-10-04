@@ -13,6 +13,8 @@ import UIKit
 
 @testable import IDPDesign
 
+extension UIStackView: UIStackViewProtocol { }
+
 class LensUIStackViewSpec: QuickSpec {
     override func spec() {
         describe("Lens+UIStackViewSpec") {

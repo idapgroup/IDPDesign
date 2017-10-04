@@ -3,9 +3,6 @@
 
 import UIKit
 
-// TODO: SWIFTC CAN'T HANDLE CONFORMANCE IN TESTS FOR SOME REASON
-//extension UINavigationBar: UINavigationBarProtocol { }
-
 public func barStyle<Object: UINavigationBar>() -> Lens<Object, UIBarStyle> {
     return Lens(
         get: { $0.barStyle },

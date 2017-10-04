@@ -13,6 +13,8 @@ import UIKit
 
 @testable import IDPDesign
 
+extension UIBarButtonItem: UIBarButtonItemProtocol { }
+
 fileprivate class Target: NSObject {
     @objc func action(_ sender: Any) { }
 }

@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension UIPanGestureRecognizer: UIPanGestureRecognizerProtocol { }
-
 public func minimumNumberOfTouches<Object: UIPanGestureRecognizer>() -> Lens<Object, Int> {
     return Lens(
         get: { $0.minimumNumberOfTouches },

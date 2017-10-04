@@ -13,6 +13,8 @@ import UIKit
 
 @testable import IDPDesign
 
+extension NSObject: IDPDesign.NSObjectProtocol { }
+
 //class LensNSObjectSpec: QuickSpec {
 //    override func spec() {
 //        describe("Lens+NSObjectSpec") {

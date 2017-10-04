@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension UISwipeGestureRecognizer: UISwipeGestureRecognizerProtocol { }
-
 public func numberOfTouchesRequired<Object: UISwipeGestureRecognizer>() -> Lens<Object, Int> {
     return Lens(
         get: { $0.numberOfTouchesRequired },

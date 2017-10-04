@@ -13,6 +13,8 @@ import UIKit
 
 @testable import IDPDesign
 
+extension CGRect: CGRectProtocol { }
+
 class LensCGRectSpec: QuickSpec {
     override func spec() {
         describe("Lens+CGRectSpec") {

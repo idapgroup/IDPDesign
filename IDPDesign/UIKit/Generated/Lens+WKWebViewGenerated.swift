@@ -4,8 +4,6 @@
 import UIKit
 import WebKit
 
-extension WKWebView: WKWebViewProtocol { }
-
 public func navigationDelegate<Object: WKWebView>() -> Lens<Object, WKNavigationDelegate?> {
     return Lens(
         get: { $0.navigationDelegate },

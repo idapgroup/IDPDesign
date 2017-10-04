@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension UITableViewCell: UITableViewCellProtocol { }
-
 public func imageView<Object: UITableViewCell>() -> Lens<Object, UIImageView?> {
     return Lens { $0.imageView }
 }

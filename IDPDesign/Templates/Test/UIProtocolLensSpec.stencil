@@ -160,6 +160,8 @@ import WebKit
 
 @testable import IDPDesign
 
+extension {% call name type %}: {{type.name}} { }
+
 class Lens{% call name type %}Spec: QuickSpec {
     override func spec() {
         describe("Lens+{% call name type %}Spec") {

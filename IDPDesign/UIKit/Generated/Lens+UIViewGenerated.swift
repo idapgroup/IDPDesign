@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension UIView: UIViewProtocol { }
-
 public func layer<Object: UIView>() -> Lens<Object, CALayer> {
     return Lens { $0.layer }
 }

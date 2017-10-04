@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension UIImageView: UIImageViewProtocol { }
-
 public func image<Object: UIImageView>() -> Lens<Object, UIImage?> {
     return Lens(
         get: { $0.image },

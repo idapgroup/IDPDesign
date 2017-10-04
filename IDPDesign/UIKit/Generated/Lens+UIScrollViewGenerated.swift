@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension UIScrollView: UIScrollViewProtocol { }
-
 public func contentOffset<Object: UIScrollView>() -> Lens<Object, CGPoint> {
     return Lens(
         get: { $0.contentOffset },

@@ -13,6 +13,8 @@ import UIKit
 
 @testable import IDPDesign
 
+extension UIProgressView: UIProgressViewProtocol { }
+
 class LensUIProgressViewSpec: QuickSpec {
     override func spec() {
         describe("Lens+UIProgressViewSpec") {

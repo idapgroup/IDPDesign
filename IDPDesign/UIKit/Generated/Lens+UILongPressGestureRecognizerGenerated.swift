@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension UILongPressGestureRecognizer: UILongPressGestureRecognizerProtocol { }
-
 public func numberOfTapsRequired<Object: UILongPressGestureRecognizer>() -> Lens<Object, Int> {
     return Lens(
         get: { $0.numberOfTapsRequired },

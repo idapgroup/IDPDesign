@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension UIScreenEdgePanGestureRecognizer: UIScreenEdgePanGestureRecognizerProtocol { }
-
 public func edges<Object: UIScreenEdgePanGestureRecognizer>() -> Lens<Object, UIRectEdge> {
     return Lens(
         get: { $0.edges },

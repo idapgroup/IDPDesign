@@ -13,6 +13,8 @@ import UIKit
 
 @testable import IDPDesign
 
+extension CGVector: CGVectorProtocol { }
+
 class LensCGVectorSpec: QuickSpec {
     override func spec() {
         describe("Lens+CGVectorSpec") {

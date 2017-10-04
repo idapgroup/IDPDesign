@@ -13,6 +13,8 @@ import UIKit
 
 @testable import IDPDesign
 
+extension UIEdgeInsets: UIEdgeInsetsProtocol { }
+
 class LensUIEdgeInsetsSpec: QuickSpec {
     override func spec() {
         describe("Lens+UIEdgeInsetsSpec") {

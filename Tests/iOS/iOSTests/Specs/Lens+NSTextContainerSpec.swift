@@ -13,6 +13,8 @@ import UIKit
 
 @testable import IDPDesign
 
+extension NSTextContainer: NSTextContainerProtocol { }
+
 class LensNSTextContainerSpec: QuickSpec {
     override func spec() {
         describe("Lens+NSTextContainerSpec") {

@@ -13,6 +13,8 @@ import UIKit
 
 @testable import IDPDesign
 
+extension UIImageView: UIImageViewProtocol { }
+
 class LensUIImageViewSpec: QuickSpec {
     override func spec() {
         describe("Lens+UIImageViewSpec") {

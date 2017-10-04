@@ -13,6 +13,8 @@ import UIKit
 
 @testable import IDPDesign
 
+extension NSLayoutManager: NSLayoutManagerProtocol { }
+
 class LensNSLayoutManagerSpec: QuickSpec {
     override func spec() {
         describe("Lens+NSLayoutManagerSpec") {

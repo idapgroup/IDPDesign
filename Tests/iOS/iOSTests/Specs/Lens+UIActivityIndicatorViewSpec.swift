@@ -13,6 +13,8 @@ import UIKit
 
 @testable import IDPDesign
 
+extension UIActivityIndicatorView: UIActivityIndicatorViewProtocol { }
+
 class LensUIActivityIndicatorViewSpec: QuickSpec {
     override func spec() {
         describe("Lens+UIActivityIndicatorViewSpec") {

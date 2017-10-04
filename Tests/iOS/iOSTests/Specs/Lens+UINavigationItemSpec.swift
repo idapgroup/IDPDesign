@@ -13,6 +13,8 @@ import UIKit
 
 @testable import IDPDesign
 
+extension UINavigationItem: UINavigationItemProtocol { }
+
 class LensUINavigationItemSpec: QuickSpec {
     override func spec() {
         describe("Lens+UINavigationItemSpec") {

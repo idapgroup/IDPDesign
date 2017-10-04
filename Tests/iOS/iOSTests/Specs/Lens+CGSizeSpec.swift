@@ -13,6 +13,8 @@ import UIKit
 
 @testable import IDPDesign
 
+extension CGSize: CGSizeProtocol { }
+
 class LensCGSizeSpec: QuickSpec {
     override func spec() {
         describe("Lens+CGSizeSpec") {

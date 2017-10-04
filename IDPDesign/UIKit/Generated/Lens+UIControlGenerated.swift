@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension UIControl: UIControlProtocol { }
-
 public func contentHorizontalAlignment<Object: UIControl>() -> Lens<Object, UIControlContentHorizontalAlignment> {
     return Lens(
         get: { $0.contentHorizontalAlignment },

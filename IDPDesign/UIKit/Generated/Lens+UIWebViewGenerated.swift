@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension UIWebView: UIWebViewProtocol { }
-
 public func delegate<Object: UIWebView>() -> Lens<Object, UIWebViewDelegate?> {
     return Lens(
         get: { $0.delegate },

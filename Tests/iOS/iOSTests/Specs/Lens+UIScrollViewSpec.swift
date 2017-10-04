@@ -13,6 +13,8 @@ import UIKit
 
 @testable import IDPDesign
 
+extension UIScrollView: UIScrollViewProtocol { }
+
 class LensUIScrollViewSpec: QuickSpec {
     override func spec() {
         describe("Lens+UIScrollViewSpec") {

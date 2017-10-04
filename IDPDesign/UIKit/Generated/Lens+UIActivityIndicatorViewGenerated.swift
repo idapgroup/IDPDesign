@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension UIActivityIndicatorView: UIActivityIndicatorViewProtocol { }
-
 public func activityIndicatorViewStyle<Object: UIActivityIndicatorView>() -> Lens<Object, UIActivityIndicatorViewStyle> {
     return Lens(
         get: { $0.activityIndicatorViewStyle },

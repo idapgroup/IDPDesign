@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension NSLayoutManager: NSLayoutManagerProtocol { }
-
 public func textStorage<Object: NSLayoutManager>() -> Lens<Object, NSTextStorage?> {
     return Lens(
         get: { $0.textStorage },

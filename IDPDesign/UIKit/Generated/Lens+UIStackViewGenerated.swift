@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension UIStackView: UIStackViewProtocol { }
-
 public func axis<Object: UIStackView>() -> Lens<Object, UILayoutConstraintAxis> {
     return Lens(
         get: { $0.axis },

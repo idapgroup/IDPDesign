@@ -13,6 +13,8 @@ import UIKit
 
 @testable import IDPDesign
 
+extension UISwipeGestureRecognizer: UISwipeGestureRecognizerProtocol { }
+
 class LensUISwipeGestureRecognizerSpec: QuickSpec {
     override func spec() {
         describe("Lens+UISwipeGestureRecognizerSpec") {

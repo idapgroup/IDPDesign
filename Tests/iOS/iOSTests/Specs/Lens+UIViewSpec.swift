@@ -13,6 +13,8 @@ import UIKit
 
 @testable import IDPDesign
 
+extension UIView: UIViewProtocol { }
+
 class LensUIViewSpec: QuickSpec {
     override func spec() {
         describe("Lens+UIViewSpec") {

@@ -13,6 +13,8 @@ import UIKit
 
 @testable import IDPDesign
 
+extension UIWebView: UIWebViewProtocol { }
+
 class LensUIWebViewSpec: QuickSpec {
     override func spec() {
         describe("Lens+UIWebViewSpec") {

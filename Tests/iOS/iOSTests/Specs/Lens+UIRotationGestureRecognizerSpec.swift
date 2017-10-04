@@ -13,6 +13,8 @@ import UIKit
 
 @testable import IDPDesign
 
+extension UIRotationGestureRecognizer: UIRotationGestureRecognizerProtocol { }
+
 class LensUIRotationGestureRecognizerSpec: QuickSpec {
     override func spec() {
         describe("Lens+UIRotationGestureRecognizerSpec") {

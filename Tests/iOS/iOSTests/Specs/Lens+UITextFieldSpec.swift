@@ -13,6 +13,8 @@ import UIKit
 
 @testable import IDPDesign
 
+extension UITextField: UITextFieldProtocol { }
+
 class LensUITextFieldSpec: QuickSpec {
     override func spec() {
         describe("Lens+UITextFieldSpec") {
