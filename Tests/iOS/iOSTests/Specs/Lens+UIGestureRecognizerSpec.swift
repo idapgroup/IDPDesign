@@ -52,14 +52,15 @@ class LensUIGestureRecognizerSpec: QuickSpec {
             context("view") {
                 it("should get and set") {
                     let lens: Lens<UIGestureRecognizer, UIView?> = view()
-                    let object = UIGestureRecognizer()
+                    let object = UITapGestureRecognizer()
 
                     let value: UIView = UIView()
+                    value.addGestureRecognizer(object)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).toNot(equal(value))
+                    expect(resultValue).to(equal(value))
                     expect(resultObject.view).to(equal(resultValue))
                 }
             }

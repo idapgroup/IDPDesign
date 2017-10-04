@@ -183,14 +183,19 @@ class LensCALayerSpec: QuickSpec {
             context("superlayer") {
                 it("should get and set") {
                     let lens: Lens<CALayer, CALayer?> = superlayer()
-                    let object = CALayer()
-
-                    let value: CALayer = CALayer()
+                    
+                    let owner = UIView()
+                    let object = owner.layer
+                    
+                    let valueOwner = UIView(frame: CGRect(x: 1, y: 1, width: 10, height: 10))
+                    valueOwner.addSubview(owner)
+                    
+                    let value = valueOwner.layer
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).toNot(equal(value))
+                    expect(resultValue).to(equal(value))
                     expect(resultObject.superlayer).to(equal(resultValue))
                 }
             }
@@ -230,7 +235,7 @@ class LensCALayerSpec: QuickSpec {
                     let lens: Lens<CALayer, Any?> = contents()
                     let object = CALayer()
 
-                    let value = UIImage().cgImage
+                    let value = UIImage.default.cgImage
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -550,8 +555,8 @@ class LensCALayerSpec: QuickSpec {
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(beIdenticalTo(value))
-                    expect(resultObject.filters).to(beIdenticalTo(value))
+                    expect(resultValue).to(containIdenticalContent(value))
+                    expect(resultObject.filters).to(containIdenticalContent(value))
                 }
             }
 
@@ -560,13 +565,13 @@ class LensCALayerSpec: QuickSpec {
                     let lens: Lens<CALayer, [Any]?> = backgroundFilters()
                     let object = CALayer()
 
-                    let value: [Any]? = nil
+                    let value = CIFilter(name: "CIGaussianBlur").map { [$0] }
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(beIdenticalTo(value))
-                    expect(resultObject.backgroundFilters).to(beIdenticalTo(value))
+                    expect(resultValue).to(containIdenticalContent(value))
+                    expect(resultObject.backgroundFilters).to(containIdenticalContent(value))
                 }
             }
 
@@ -728,13 +733,14 @@ class LensCALayerSpec: QuickSpec {
                     let lens: Lens<CALayer, [AnyHashable : Any]?> = style()
                     let object = CALayer()
 
-                    let value: [AnyHashable : Any]? = nil
+                    let key = "bounds"
+                    let value: [AnyHashable : Any]? = [key: CGRect(x: 1, y: 1, width: 10, height: 10)]
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(beIdenticalTo(value))
-                    expect(resultObject.style).to(beIdenticalTo(value))
+                    expect(resultValue).to(containEqualContent(value, type: CGRect.self, for: key))
+                    expect(resultObject.style).to(containEqualContent(value, type: CGRect.self, for: key))
                 }
             }
         }

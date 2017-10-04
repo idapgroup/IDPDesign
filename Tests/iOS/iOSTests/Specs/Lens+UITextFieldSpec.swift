@@ -112,17 +112,14 @@ class LensUITextFieldSpec: QuickSpec {
                     let lens: Lens<UITextField, [String : Any]> = defaultTextAttributes()
                     let object = UITextField()
 
-                    let value: [String : Any] = {
-                        var result = object.defaultTextAttributes
-                        result[NSForegroundColorAttributeName] = UIColor.red
-                        return result
-                    }()
+                    var value = object.defaultTextAttributes
+                    value[NSForegroundColorAttributeName] = UIColor.red
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(beIdenticalTo(value))
-                    expect(resultObject.defaultTextAttributes).to(beIdenticalTo(value))
+                    expect(resultValue).to(containIdenticalContent(value, for: NSForegroundColorAttributeName))
+                    expect(resultObject.defaultTextAttributes).to(containIdenticalContent(value, for: NSForegroundColorAttributeName))
                 }
             }
 
@@ -146,7 +143,7 @@ class LensUITextFieldSpec: QuickSpec {
                     let lens: Lens<UITextField, NSAttributedString?> = attributedPlaceholder()
                     let object = UITextField()
 
-                    let value: NSAttributedString = NSAttributedString()
+                    let value: NSAttributedString = NSAttributedString(string: "mama")
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -265,16 +262,23 @@ class LensUITextFieldSpec: QuickSpec {
 
             context("typingAttributes") {
                 it("should get and set") {
+                    let object = UITextField(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
+                    UIApplication.shared.keyWindow?.addSubview(object)
+                    object.becomeFirstResponder()
+                    
                     let lens: Lens<UITextField, [String : Any]?> = typingAttributes()
-                    let object = UITextField()
-
-                    let value: [String : Any]? = nil
+                    
+                    let key = NSForegroundColorAttributeName
+                    let value: [String : Any]? = [key : UIColor.red]
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(beIdenticalTo(value))
-                    expect(resultObject.typingAttributes).to(beIdenticalTo(value))
+                    expect(resultValue).to(containIdenticalContent(value, for: key))
+                    expect(resultObject.typingAttributes).to(containIdenticalContent(value, for: key))
+                    
+                    object.resignFirstResponder()
+                    object.removeFromSuperview()
                 }
             }
 

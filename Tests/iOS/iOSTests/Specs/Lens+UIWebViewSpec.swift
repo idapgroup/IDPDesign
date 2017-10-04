@@ -44,8 +44,8 @@ class LensUIWebViewSpec: QuickSpec {
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.scrollView).to(equal(value))
+                    expect(resultValue).toNot(equal(value))
+                    expect(resultObject.scrollView).to(equal(resultValue))
                 }
             }
 
@@ -189,7 +189,7 @@ class LensUIWebViewSpec: QuickSpec {
                     let lens: Lens<UIWebView, CGFloat> = pageLength()
                     let object = UIWebView()
 
-                    let value: CGFloat = 0.5
+                    let value: CGFloat = 100
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -204,28 +204,13 @@ class LensUIWebViewSpec: QuickSpec {
                     let lens: Lens<UIWebView, CGFloat> = gapBetweenPages()
                     let object = UIWebView()
 
-                    let value: CGFloat = 0.5
+                    let value: CGFloat = 100
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
                     expect(resultValue).to(equal(value))
                     expect(resultObject.gapBetweenPages).to(equal(value))
-                }
-            }
-
-            context("pageCount") {
-                it("should get and set") {
-                    let lens: Lens<UIWebView, Int> = pageCount()
-                    let object = UIWebView()
-
-                    let value: Int = 2
-
-                    let resultObject = lens.set(object, value)
-                    let resultValue = lens.get(resultObject)
-
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.pageCount).to(equal(value))
                 }
             }
 

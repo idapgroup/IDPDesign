@@ -27,8 +27,8 @@ class LensUIViewSpec: QuickSpec {
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.layer).to(equal(value))
+                    expect(resultValue).toNot(equal(value))
+                    expect(resultObject.layer).to(equal(resultValue))
                 }
             }
 
@@ -188,6 +188,7 @@ class LensUIViewSpec: QuickSpec {
                     let object = UIView()
 
                     let value: UIView = UIView()
+                    value.addSubview(object)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -203,6 +204,7 @@ class LensUIViewSpec: QuickSpec {
                     let object = UIView()
 
                     let value: UIWindow = UIWindow()
+                    value.addSubview(object)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

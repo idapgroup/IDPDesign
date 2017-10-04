@@ -55,6 +55,7 @@ class LensUITabBarSpec: QuickSpec {
                     let object = UITabBar()
 
                     let value: UITabBarItem = UITabBarItem()
+                    object.items = [value, UITabBarItem(), UITabBarItem()]
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

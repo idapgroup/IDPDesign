@@ -6,10 +6,6 @@ import WebKit
 
 extension WKWebView: WKWebViewProtocol { }
 
-public func configuration<Object: WKWebView>() -> Lens<Object, WKWebViewConfiguration> {
-    return Lens { $0.configuration }
-}
-
 public func navigationDelegate<Object: WKWebView>() -> Lens<Object, WKNavigationDelegate?> {
     return Lens(
         get: { $0.navigationDelegate },
@@ -22,10 +18,6 @@ public func uiDelegate<Object: WKWebView>() -> Lens<Object, WKUIDelegate?> {
         get: { $0.uiDelegate },
         setter: { $0.uiDelegate = $1 }
     )
-}
-
-public func serverTrust<Object: WKWebView>() -> Lens<Object, SecTrust?> {
-    return Lens { $0.serverTrust }
 }
 
 public func allowsBackForwardNavigationGestures<Object: WKWebView>() -> Lens<Object, Bool> {

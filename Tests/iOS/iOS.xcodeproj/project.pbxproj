@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8B355239BF43BF56F1246127 /* Pods_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 403CCC8A7BA4875B404B33B5 /* Pods_iOSTests.framework */; };
 		D70AAE671F84079000BD3AF3 /* Lens+CALayerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70AAE661F84079000BD3AF3 /* Lens+CALayerSpec.swift */; };
+		D719F96E1F84691A00E3AA9F /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D719F96D1F84691A00E3AA9F /* UIImage+Extensions.swift */; };
+		D719F9711F846A8200E3AA9F /* Matchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D719F9701F846A8200E3AA9F /* Matchers.swift */; };
 		D74F4D861F7EC54D0043DC8B /* CALayerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74F4D5A1F7EC54D0043DC8B /* CALayerProtocol.swift */; };
 		D74F4D871F7EC54D0043DC8B /* CGPointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74F4D5B1F7EC54D0043DC8B /* CGPointProtocol.swift */; };
 		D74F4D881F7EC54D0043DC8B /* CGRectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74F4D5C1F7EC54D0043DC8B /* CGRectProtocol.swift */; };
@@ -201,6 +203,8 @@
 		94BCA14EEF8DC27E6362838C /* Pods-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSTests/Pods-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CB4E6F9D00971D700FBD3D03 /* Pods-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSTests/Pods-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		D70AAE661F84079000BD3AF3 /* Lens+CALayerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lens+CALayerSpec.swift"; sourceTree = "<group>"; };
+		D719F96D1F84691A00E3AA9F /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		D719F9701F846A8200E3AA9F /* Matchers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matchers.swift; sourceTree = "<group>"; };
 		D74F4D5A1F7EC54D0043DC8B /* CALayerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CALayerProtocol.swift; sourceTree = "<group>"; };
 		D74F4D5B1F7EC54D0043DC8B /* CGPointProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointProtocol.swift; sourceTree = "<group>"; };
 		D74F4D5C1F7EC54D0043DC8B /* CGRectProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRectProtocol.swift; sourceTree = "<group>"; };
@@ -459,6 +463,14 @@
 			path = Specs;
 			sourceTree = "<group>";
 		};
+		D719F96F1F846A5F00E3AA9F /* Matchers */ = {
+			isa = PBXGroup;
+			children = (
+				D719F9701F846A8200E3AA9F /* Matchers.swift */,
+			);
+			path = Matchers;
+			sourceTree = "<group>";
+		};
 		D74F4D571F7EC54D0043DC8B /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -600,6 +612,7 @@
 			isa = PBXGroup;
 			children = (
 				D7A6C5461F841BA20082C9D8 /* CATransform3D+Equatable.swift */,
+				D719F96D1F84691A00E3AA9F /* UIImage+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -665,6 +678,7 @@
 		D7FF07C31DFF14950079AC04 /* iOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				D719F96F1F846A5F00E3AA9F /* Matchers */,
 				D7A6C5451F841B880082C9D8 /* Extensions */,
 				D70AAE641F84076800BD3AF3 /* Specs */,
 				D7FF07CF1DFF14B70079AC04 /* IDPDesignSpec.swift */,
@@ -1000,6 +1014,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D719F9711F846A8200E3AA9F /* Matchers.swift in Sources */,
 				D70AAE671F84079000BD3AF3 /* Lens+CALayerSpec.swift in Sources */,
 				D7A6C5F21F8444420082C9D8 /* Lens+UIWebViewSpec.swift in Sources */,
 				D7A6C5CA1F8444420082C9D8 /* Lens+UITabBarItemSpec.swift in Sources */,
@@ -1039,6 +1054,7 @@
 				D7A6C5F31F8444420082C9D8 /* Lens+UIPanGestureRecognizerSpec.swift in Sources */,
 				D7A6C5F11F8444420082C9D8 /* Lens+CGVectorSpec.swift in Sources */,
 				D7A6C5E91F8444420082C9D8 /* Lens+UITabBarSpec.swift in Sources */,
+				D719F96E1F84691A00E3AA9F /* UIImage+Extensions.swift in Sources */,
 				D7A6C5CC1F8444420082C9D8 /* Lens+UIPinchGestureRecognizerSpec.swift in Sources */,
 				D7A6C5DF1F8444420082C9D8 /* Lens+UITableViewControllerSpec.swift in Sources */,
 				D7A6C5D81F8444420082C9D8 /* Lens+UIGestureRecognizerSpec.swift in Sources */,

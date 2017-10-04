@@ -130,7 +130,7 @@ class LensUITableViewSpec: QuickSpec {
                     let lens: Lens<UITableView, CGFloat> = estimatedRowHeight()
                     let object = UITableView()
 
-                    let value: CGFloat = 0.5
+                    let value: CGFloat = 20.0
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -145,7 +145,7 @@ class LensUITableViewSpec: QuickSpec {
                     let lens: Lens<UITableView, CGFloat> = estimatedSectionHeaderHeight()
                     let object = UITableView()
 
-                    let value: CGFloat = 0.5
+                    let value: CGFloat = 20.0
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -160,7 +160,7 @@ class LensUITableViewSpec: QuickSpec {
                     let lens: Lens<UITableView, CGFloat> = estimatedSectionFooterHeight()
                     let object = UITableView()
 
-                    let value: CGFloat = 0.5
+                    let value: CGFloat = 20.0
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

@@ -254,8 +254,8 @@ class LensUITextViewSpec: QuickSpec {
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.textContainer).to(equal(value))
+                    expect(resultValue).toNot(equal(value))
+                    expect(resultObject.textContainer).to(equal(resultValue))
                 }
             }
 
@@ -284,8 +284,8 @@ class LensUITextViewSpec: QuickSpec {
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.layoutManager).to(equal(value))
+                    expect(resultValue).toNot(equal(value))
+                    expect(resultObject.layoutManager).to(equal(resultValue))
                 }
             }
 
@@ -315,8 +315,8 @@ class LensUITextViewSpec: QuickSpec {
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(beIdenticalTo(value))
-                    expect(resultObject.linkTextAttributes).to(beIdenticalTo(value))
+                    expect(resultValue).to(containIdenticalContent(value, for: NSForegroundColorAttributeName))
+                    expect(resultObject.linkTextAttributes).to(containIdenticalContent(value, for: NSForegroundColorAttributeName))
                 }
             }
 

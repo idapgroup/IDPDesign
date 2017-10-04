@@ -20,7 +20,6 @@ protocol UIWebViewProtocol: UIViewProtocol {
     var paginationBreakingMode: UIWebPaginationBreakingMode { get set }
     var pageLength: CGFloat { get set }
     var gapBetweenPages: CGFloat { get set }
-    var pageCount: Int { get }
     var allowsPictureInPictureMediaPlayback: Bool { get set }
     var allowsLinkPreview: Bool { get set }
 }

@@ -50,7 +50,7 @@ class LensUITableViewCellSpec: QuickSpec {
             context("detailTextLabel") {
                 it("should get and set") {
                     let lens: Lens<UITableViewCell, UILabel?> = detailTextLabel()
-                    let object = UITableViewCell()
+                    let object = UITableViewCell(style: .value2, reuseIdentifier: nil)
 
                     let value: UILabel = UILabel()
 
@@ -290,15 +290,18 @@ class LensUITableViewCellSpec: QuickSpec {
             context("separatorInset") {
                 it("should get and set") {
                     let lens: Lens<UITableViewCell, UIEdgeInsets> = separatorInset()
-                    let object = UITableViewCell()
+                    let object = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
 
-                    let value: UIEdgeInsets = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
+                    let value: UIEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.separatorInset).to(equal(value))
+                    // UITableViewCell automatically adds 8 pixels for left inset on top of the inset
+                    let referenceValue = UIEdgeInsets(top: 0, left: 18, bottom: 0, right: 10)
+                    
+                    expect(resultValue).to(equal(referenceValue))
+                    expect(resultObject.separatorInset).to(equal(referenceValue))
                 }
             }
 

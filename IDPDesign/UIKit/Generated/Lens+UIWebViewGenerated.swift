@@ -93,10 +93,6 @@ public func gapBetweenPages<Object: UIWebView>() -> Lens<Object, CGFloat> {
     )
 }
 
-public func pageCount<Object: UIWebView>() -> Lens<Object, Int> {
-    return Lens { $0.pageCount }
-}
-
 public func allowsPictureInPictureMediaPlayback<Object: UIWebView>() -> Lens<Object, Bool> {
     return Lens(
         get: { $0.allowsPictureInPictureMediaPlayback },

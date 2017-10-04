@@ -73,6 +73,7 @@ class LensUINavigationBarSpec: QuickSpec {
                     let object = UINavigationBar()
 
                     let value: UINavigationItem = UINavigationItem(title: "mama")
+                    object.pushItem(value, animated: false)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -87,7 +88,10 @@ class LensUINavigationBarSpec: QuickSpec {
                     let lens: Lens<UINavigationBar, UINavigationItem?> = backItem()
                     let object = UINavigationBar()
 
-                    let value: UINavigationItem = UINavigationItem(title: "mama")
+                    let top = UINavigationItem(title: "top")
+                    let value = UINavigationItem(title: "mama")
+                    
+                    [value, top].forEach { object.pushItem($0, animated: false) }
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -178,7 +182,8 @@ class LensUINavigationBarSpec: QuickSpec {
                     let lens: Lens<UINavigationBar, UIImage?> = backIndicatorImage()
                     let object = UINavigationBar()
 
-                    let value: UIImage = UIImage()
+                    let value = UIImage.default
+                    object.backIndicatorTransitionMaskImage = value
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -193,7 +198,8 @@ class LensUINavigationBarSpec: QuickSpec {
                     let lens: Lens<UINavigationBar, UIImage?> = backIndicatorTransitionMaskImage()
                     let object = UINavigationBar()
 
-                    let value: UIImage = UIImage()
+                    let value = UIImage.default
+                    object.backIndicatorImage = value
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

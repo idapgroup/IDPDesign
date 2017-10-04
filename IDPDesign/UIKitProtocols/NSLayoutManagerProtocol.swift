@@ -14,7 +14,7 @@ protocol NSLayoutManagerProtocol: UIObjectType {
     var hyphenationFactor: CGFloat { get set }
     var usesFontLeading: Bool { get set }
     var allowsNonContiguousLayout: Bool { get set }
-    var extraLineFragmentTextContainer: NSTextContainer? { get }
+//    var extraLineFragmentTextContainer: NSTextContainer? { get }
 
 //    var textContainers: [NSTextContainer] { get }
     func addTextContainer(_ container: NSTextContainer)

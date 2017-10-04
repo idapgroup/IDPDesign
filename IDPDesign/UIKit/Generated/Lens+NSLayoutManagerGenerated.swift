@@ -53,7 +53,3 @@ public func allowsNonContiguousLayout<Object: NSLayoutManager>() -> Lens<Object,
         setter: { $0.allowsNonContiguousLayout = $1 }
     )
 }
-
-public func extraLineFragmentTextContainer<Object: NSLayoutManager>() -> Lens<Object, NSTextContainer?> {
-    return Lens { $0.extraLineFragmentTextContainer }
-}

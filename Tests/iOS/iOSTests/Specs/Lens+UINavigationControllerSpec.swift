@@ -98,6 +98,9 @@ class LensUINavigationControllerSpec: QuickSpec {
                 it("should get and set") {
                     let lens: Lens<UINavigationController, UIGestureRecognizer?> = interactivePopGestureRecognizer()
                     let object = UINavigationController()
+                    (0..<2).forEach {_ in
+                        object.pushViewController(UIViewController(), animated: false)
+                    }
 
                     let value: UIGestureRecognizer = UIGestureRecognizer()
 

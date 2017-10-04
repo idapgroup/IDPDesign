@@ -20,15 +20,21 @@ class LensUITabBarItemSpec: QuickSpec {
             context("selectedImage") {
                 it("should get and set") {
                     let lens: Lens<UITabBarItem, UIImage?> = selectedImage()
+                    
+                    let image: (CGFloat) -> UIImage = {
+                        UIImage.sized(CGSize(width: $0, height: $0)).withRenderingMode(.alwaysOriginal)
+                    }
+                    
                     let object = UITabBarItem()
-
-                    let value: UIImage = UIImage()
+                    object.image = image(100)
+                    
+                    let value = image(50)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.selectedImage).to(equal(value))
+                    expect(resultValue?.size).to(equal(value.size))
+                    expect(resultObject.selectedImage?.size).to(equal(value.size))
                 }
             }
 

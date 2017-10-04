@@ -321,8 +321,22 @@ class LensUIScrollViewSpec: QuickSpec {
 
             context("zoomScale") {
                 it("should get and set") {
+                    class Delegate: NSObject, UIScrollViewDelegate {
+                        func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+                            return scrollView.subviews.first
+                        }
+                    }
+                    
                     let lens: Lens<UIScrollView, CGFloat> = zoomScale()
-                    let object = UIScrollView()
+                    
+                    let object = UIScrollView(frame: CGRect(x: 1, y: 1, width: 100, height: 100))
+                    object.addSubview(UIView(frame: CGRect(x: 1, y: 1, width: 100, height: 100)))
+                    
+                    let delegate = Delegate()
+                    object.delegate = delegate
+                    
+                    object.maximumZoomScale = 2.0
+                    object.minimumZoomScale = 0.5
 
                     let value: CGFloat = 0.5
 
@@ -381,8 +395,22 @@ class LensUIScrollViewSpec: QuickSpec {
 
             context("pinchGestureRecognizer") {
                 it("should get and set") {
+                    class Delegate: NSObject, UIScrollViewDelegate {
+                        func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+                            return scrollView.subviews.first
+                        }
+                    }
+                    
                     let lens: Lens<UIScrollView, UIPinchGestureRecognizer?> = pinchGestureRecognizer()
-                    let object = UIScrollView()
+                    
+                    let object = UIScrollView(frame: CGRect(x: 1, y: 1, width: 100, height: 100))
+                    object.addSubview(UIView(frame: CGRect(x: 1, y: 1, width: 100, height: 100)))
+                    
+                    let delegate = Delegate()
+                    object.delegate = delegate
+                    
+                    object.maximumZoomScale = 2.0
+                    object.minimumZoomScale = 0.5
 
                     let value: UIPinchGestureRecognizer = UIPinchGestureRecognizer()
 

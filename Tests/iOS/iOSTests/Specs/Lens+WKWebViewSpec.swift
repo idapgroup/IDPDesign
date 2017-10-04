@@ -17,22 +17,6 @@ import WebKit
 class LensWKWebViewSpec: QuickSpec {
     override func spec() {
         describe("Lens+WKWebViewSpec") {
-
-            context("configuration") {
-                it("should get and set") {
-                    let lens: Lens<WKWebView, WKWebViewConfiguration> = configuration()
-                    let object = WKWebView()
-
-                    let value: WKWebViewConfiguration = WKWebViewConfiguration()
-
-                    let resultObject = lens.set(object, value)
-                    let resultValue = lens.get(resultObject)
-
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.configuration).to(equal(value))
-                }
-            }
-
             context("navigationDelegate") {
                 it("should get and set") {
                     class Delegate: NSObject, WKNavigationDelegate { }
@@ -64,21 +48,6 @@ class LensWKWebViewSpec: QuickSpec {
 
                     expect(resultValue).to(beIdenticalTo(value))
                     expect(resultObject.uiDelegate).to(beIdenticalTo(value))
-                }
-            }
-
-            context("serverTrust") {
-                it("should get and set") {
-                    let lens: Lens<WKWebView, SecTrust?> = serverTrust()
-                    let object = WKWebView()
-
-                    let value: SecTrust? = nil
-
-                    let resultObject = lens.set(object, value)
-                    let resultValue = lens.get(resultObject)
-
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.serverTrust).to(equal(value))
                 }
             }
 
@@ -137,8 +106,8 @@ class LensWKWebViewSpec: QuickSpec {
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.scrollView).to(equal(value))
+                    expect(resultValue).toNot(equal(value))
+                    expect(resultObject.scrollView).to(equal(resultValue))
                 }
             }
         }

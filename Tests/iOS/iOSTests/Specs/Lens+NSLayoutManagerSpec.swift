@@ -123,21 +123,6 @@ class LensNSLayoutManagerSpec: QuickSpec {
                     expect(resultObject.allowsNonContiguousLayout).to(equal(value))
                 }
             }
-
-            context("extraLineFragmentTextContainer") {
-                it("should get and set") {
-                    let lens: Lens<NSLayoutManager, NSTextContainer?> = extraLineFragmentTextContainer()
-                    let object = NSLayoutManager()
-
-                    let value: NSTextContainer = NSTextContainer(size: CGSize(width: 1, height: 1))
-
-                    let resultObject = lens.set(object, value)
-                    let resultValue = lens.get(resultObject)
-
-                    expect(resultValue).toNot(equal(value))
-                    expect(resultObject.extraLineFragmentTextContainer).to(equal(resultValue))
-                }
-            }
         }
     }
 }

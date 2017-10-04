@@ -50,9 +50,11 @@ class LensUIViewControllerSpec: QuickSpec {
             context("parent") {
                 it("should get and set") {
                     let lens: Lens<UIViewController, UIViewController?> = parent()
+                    
                     let object = UIViewController()
-
-                    let value: UIViewController = UIViewController()
+                    
+                    let value = UINavigationController()
+                    value.pushViewController(object, animated: false)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -222,8 +224,8 @@ class LensUIViewControllerSpec: QuickSpec {
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.editButtonItem).to(equal(value))
+                    expect(resultValue).toNot(equal(value))
+                    expect(resultObject.editButtonItem).to(equal(resultValue))
                 }
             }
 
@@ -237,8 +239,8 @@ class LensUIViewControllerSpec: QuickSpec {
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(equal(value))
-                    expect(resultObject.navigationItem).to(equal(value))
+                    expect(resultValue).toNot(equal(value))
+                    expect(resultObject.navigationItem).to(equal(resultValue))
                 }
             }
 
@@ -263,6 +265,7 @@ class LensUIViewControllerSpec: QuickSpec {
                     let object = UIViewController()
 
                     let value: UINavigationController = UINavigationController()
+                    value.pushViewController(object, animated: false)
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
