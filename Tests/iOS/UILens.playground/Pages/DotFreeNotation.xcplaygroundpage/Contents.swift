@@ -32,14 +32,25 @@ let buttonTitleStyle: Style<UIButton> = design(
 
 button |> buttonStyle • buttonTitleStyle
 
-print(button.backgroundColor as Any)
-print(button.titleLabel?.backgroundColor as Any)
-print(button.titleLabel?.alpha as Any)
-print(button.titleLabel?.layer.isDoubleSided as Any)
-print(button.titleLabel?.layer.masksToBounds as Any)
+func scope(_ execute: () -> ()) {
+    call(execute)
+}
 
-print(button.backgroundColor as Any)
-print(button.titleLabel?.backgroundColor as Any)
-print(button.titleLabel?.alpha as Any)
-print(button.titleLabel?.layer.isDoubleSided as Any)
-print(button.titleLabel?.layer.masksToBounds as Any)
+func call<T>(_ execute: () -> T) -> T{
+    return execute()
+}
+
+scope {
+    func print<T>(_ value: T) {
+        Swift.print(value as Any)
+    }
+    
+    let label = button.titleLabel
+    let layer = label?.layer
+    
+    print(button.backgroundColor)
+    print(label?.backgroundColor)
+    print(label?.alpha)
+    print(layer?.isDoubleSided)
+    print(layer?.masksToBounds)
+}
