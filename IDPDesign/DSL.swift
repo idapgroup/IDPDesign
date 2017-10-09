@@ -41,6 +41,28 @@ public func ~ <Object, Property>(lens: Lens<Object, Property>, style: Style<Prop
 }
 
 /**
+ Applies styles to lens.
+ 
+ - note: Swiftc fails to derive proper types as of Swift 4.0 without specifying the type.
+ 
+ - returns: Style for lens.
+ */
+public func ~ <Object, Property>(lens: Lens<Object, Property>, styles: [Style<Property>]) -> Style<Object> {
+    return lens ~ Style(styles)
+}
+
+/**
+ Applies styles to lens optional.
+ 
+ - note: Swiftc fails to derive proper types as of Swift 4.0 without specifying the type.
+ 
+ - returns: Style for lens.
+ */
+public func ~ <Object, Property>(lens: Lens<Object, Property?>, styles: [Style<Property>]) -> Style<Object> {
+    return lens ~ lift(Style(styles))
+}
+
+/**
  Applies property value to lens getter.
  
  - returns: Style for property.
@@ -67,6 +89,29 @@ public func ~ <Object, Property>(lens: LensGetter<Object, Property?>, property: 
  */
 public func ~ <Object, Property>(lens: LensGetter<Object, Property>, style: Style<Property>) -> Style<Object> {
     return lens() ~ style
+}
+
+/**
+ Applies styles to lens getter.
+ 
+ - note: Swiftc fails to derive proper types as of Swift 4.0 without specifying the type.
+ 
+ - returns: Style for lens.
+ */
+public func ~ <Object, Property>(lens: LensGetter<Object, Property>, styles: [Style<Property>]) -> Style<Object> {
+    return lens() ~ styles
+}
+
+/**
+ Applies styles to lens optional getter.
+ 
+ - note: Duplication. Swiftc fails without it.
+ - note: Swiftc fails to derive proper types as of Swift 4.0 without specifying the type.
+ 
+ - returns: Style for lens.
+ */
+public func ~ <Object, Property>(lens: LensGetter<Object, Property?>, styles: [Style<Property>]) -> Style<Object> {
+    return lens() ~ styles
 }
 
 /**
