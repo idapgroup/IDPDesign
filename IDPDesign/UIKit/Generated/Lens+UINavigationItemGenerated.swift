@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension UINavigationItem: UINavigationItemProtocol { }
-
 public func title<Object: UINavigationItem>() -> Lens<Object, String?> {
     return Lens(
         get: { $0.title },

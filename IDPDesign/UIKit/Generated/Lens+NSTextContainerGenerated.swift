@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension NSTextContainer: NSTextContainerProtocol { }
-
 public func layoutManager<Object: NSTextContainer>() -> Lens<Object, NSLayoutManager?> {
     return Lens(
         get: { $0.layoutManager },

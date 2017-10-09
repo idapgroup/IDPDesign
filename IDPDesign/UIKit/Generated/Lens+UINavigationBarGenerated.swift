@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension UINavigationBar: UINavigationBarProtocol { }
-
 public func barStyle<Object: UINavigationBar>() -> Lens<Object, UIBarStyle> {
     return Lens(
         get: { $0.barStyle },
@@ -38,13 +36,6 @@ public func items<Object: UINavigationBar>() -> Lens<Object, [UINavigationItem]?
     return Lens(
         get: { $0.items },
         setter: { $0.items = $1 }
-    )
-}
-
-public func tintColor<Object: UINavigationBar>() -> Lens<Object, UIColor?> {
-    return Lens(
-        get: { $0.tintColor },
-        setter: { $0.tintColor = $1 }
     )
 }
 

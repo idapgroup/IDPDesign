@@ -8,11 +8,9 @@
 
 import UIKit
 
-public extension Lens where Object: UITabBarItem, Property == [String : Any]? {
-    public static func badgeTextAttributes(for state: UIControlState) -> Lens {
-        return Lens(
-            get: { $0.badgeTextAttributes(for: state) },
-            setter: { $0.setBadgeTextAttributes($1, for: state) }
-        )
-    }
+public func badgeTextAttributes<Object: UITabBarItem>(for state: UIControlState) -> Lens<Object, [String : Any]?> {
+    return Lens(
+        get: { $0.badgeTextAttributes(for: state) },
+        setter: { $0.setBadgeTextAttributes($1, for: state) }
+    )
 }

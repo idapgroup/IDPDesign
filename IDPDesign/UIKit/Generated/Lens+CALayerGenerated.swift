@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension CALayer: CALayerProtocol { }
-
 public func bounds<Object: CALayer>() -> Lens<Object, CGRect> {
     return Lens(
         get: { $0.bounds },

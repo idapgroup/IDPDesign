@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension UINavigationController: UINavigationControllerProtocol { }
-
 public func isNavigationBarHidden<Object: UINavigationController>() -> Lens<Object, Bool> {
     return Lens(
         get: { $0.isNavigationBarHidden },

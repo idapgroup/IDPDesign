@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension NSObject: NSObjectProtocol { }
-
 public func isAccessibilityElement<Object: NSObject>() -> Lens<Object, Bool> {
     return Lens(
         get: { $0.isAccessibilityElement },

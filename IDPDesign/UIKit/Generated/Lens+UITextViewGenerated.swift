@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension UITextView: UITextViewProtocol { }
-
 public func delegate<Object: UITextView>() -> Lens<Object, UITextViewDelegate?> {
     return Lens(
         get: { $0.delegate },

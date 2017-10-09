@@ -13,7 +13,6 @@ protocol UINavigationBarProtocol: UIObjectType {
     var topItem: UINavigationItem? { get }
     var backItem: UINavigationItem? { get }
     var items: [UINavigationItem]? { get set }
-    var tintColor: UIColor! { get set }
     var barTintColor: UIColor? { get set }
     var shadowImage: UIImage? { get set }
     var titleTextAttributes: [NSAttributedStringKey : Any]? { get set }

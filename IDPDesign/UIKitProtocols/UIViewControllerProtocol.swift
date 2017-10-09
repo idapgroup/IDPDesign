@@ -18,7 +18,6 @@ protocol UIViewControllerProtocol: UIObjectType {
     var modalPresentationCapturesStatusBarAppearance: Bool { get set }
     var edgesForExtendedLayout: UIRectEdge { get set }
     var extendedLayoutIncludesOpaqueBars: Bool { get set }
-    var automaticallyAdjustsScrollViewInsets: Bool { get set }
     var preferredContentSize: CGSize { get set }
     var isEditing: Bool { get set }
     var editButtonItem: UIBarButtonItem { get }

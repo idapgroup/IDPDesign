@@ -8,17 +8,15 @@
 
 import UIKit
 
-public extension Lens where Object: UIActivityIndicatorView, Property == Bool {
-    public static var isAnimating: Lens {
-        return Lens(
-            get: { $0.isAnimating },
-            setter: {
-                if $1 {
-                    $0.startAnimating()
-                } else {
-                    $0.stopAnimating()
-                }
+public func isAnimating<Object: UIActivityIndicatorView>() -> Lens<Object, Bool> {
+    return Lens(
+        get: { $0.isAnimating },
+        setter: {
+            if $1 {
+                $0.startAnimating()
+            } else {
+                $0.stopAnimating()
             }
-        )
-    }
+        }
+    )
 }

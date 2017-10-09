@@ -7,8 +7,13 @@
 //
 
 protocol UIStackViewProtocol: UIObjectType {
+    // sourcery: value = .horizontal
     var axis: UILayoutConstraintAxis { get set }
+
+    // sourcery: value = .equalCentering
     var distribution: UIStackViewDistribution { get set }
+
+    // sourcery: value = .center
     var alignment: UIStackViewAlignment { get set }
     var spacing: CGFloat { get set }
     var isBaselineRelativeArrangement: Bool { get set }

@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension UITabBar: UITabBarProtocol { }
-
 public func delegate<Object: UITabBar>() -> Lens<Object, UITabBarDelegate?> {
     return Lens(
         get: { $0.delegate },
@@ -23,13 +21,6 @@ public func selectedItem<Object: UITabBar>() -> Lens<Object, UITabBarItem?> {
     return Lens(
         get: { $0.selectedItem },
         setter: { $0.selectedItem = $1 }
-    )
-}
-
-public func tintColor<Object: UITabBar>() -> Lens<Object, UIColor?> {
-    return Lens(
-        get: { $0.tintColor },
-        setter: { $0.tintColor = $1 }
     )
 }
 

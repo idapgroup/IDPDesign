@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension UITableViewController: UITableViewControllerProtocol { }
-
 public func tableView<Object: UITableViewController>() -> Lens<Object, UITableView?> {
     return Lens(
         get: { $0.tableView },

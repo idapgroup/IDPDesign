@@ -9,10 +9,8 @@
 import WebKit
 
 protocol WKWebViewProtocol: UIObjectType {
-    var configuration: WKWebViewConfiguration { get }
     var navigationDelegate: WKNavigationDelegate? { get set }
     var uiDelegate: WKUIDelegate? { get set }
-    var serverTrust: SecTrust? { get }
     var allowsBackForwardNavigationGestures: Bool { get set }
     var customUserAgent: String? { get set }
     var allowsLinkPreview: Bool { get set }

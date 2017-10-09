@@ -1,5 +1,0 @@
-sources:
-    - "UIKitProtocols"
-templates:
-    - "Templates"
-output: "UIKit/Generated"

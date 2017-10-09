@@ -1,0 +1,194 @@
+{% macro name type %}{{type.name|replace:"Protocol",""}}{% endmacro %}
+{% macro implicitToOptional typeName %}{{typeName|replace:"!","?"}}{% endmacro %}
+{% macro optionalToValue typeName %}{{typeName|replace:"?",""|replace:"!",""}}{% endmacro %}
+
+{% macro boolValue variable %}
+    {% if variable.typeName|contains:"Bool" %}
+        !object.{{variable.name}}
+    {% endif %}
+{% endmacro %}
+
+{% macro floatValue variable %}
+    {% if variable.typeName|contains:"Float"|contains:"Double" %}
+        0.5
+    {% endif %}
+{% endmacro %}
+
+{% macro intValue variable %}
+    {% if variable.typeName|contains:"Int" %}
+        2
+    {% endif %}
+{% endmacro %}
+
+{% macro rectValue variable %}
+    {% if variable.typeName|contains:"CGRect" %}
+        CGRect(x: 1, y: 1, width: 1, height: 1)
+    {% endif %}
+{% endmacro %}
+
+{% macro pointValue variable %}
+    {% if variable.typeName|contains:"CGPoint" %}
+        CGPoint(x: 1, y: 1)
+    {% endif %}
+{% endmacro %}
+
+{% macro sizeValue variable %}
+    {% if variable.typeName|contains:"CGSize" %}
+        CGSize(width: 1, height: 1)
+    {% endif %}
+{% endmacro %}
+
+{% macro stringValue variable %}
+    {% if variable.typeName|hasPrefix:"String" %}
+        "mama"
+    {% endif %}
+{% endmacro %}
+
+{% macro affineTransformValue variable %}
+    {% if variable.typeName|contains:"CGAffineTransform" %}
+        CGAffineTransform(a: 0.5, b: 0.5, c: 0.5, d: 0.5, tx: 0.5, ty: 0.5)
+    {% endif %}
+{% endmacro %}
+
+{% macro transform3dValue variable %}
+    {% if variable.typeName|contains:"CATransform3D" %}
+        CATransform3D(m11: 0.5, m12: 0.5, m13: 0.5, m14: 0.5, m21: 0.5, m22: 0.5, m23: 0.5, m24: 0.5, m31: 0.5, m32: 0.5, m33: 0.5, m34: 0.5, m41: 0.5, m42: 0.5, m43: 0.5, m44: 0.5)
+    {% endif %}
+{% endmacro %}
+
+{% macro numberValue variable %}
+    {% call floatValue variable %}
+    {% call intValue variable %}
+{% endmacro %}
+
+{% macro cgValue variable %}
+    {% call rectValue variable %}
+    {% call pointValue variable %}
+    {% call sizeValue variable %}
+{% endmacro %}
+
+{% macro transformValue variable %}
+    {% call affineTransformValue variable %}
+    {% call transform3dValue variable %}
+{% endmacro %}
+
+{% macro primitiveValue variable %}
+    {% call numberValue variable %}
+    {% call cgValue variable %}
+    {% call boolValue variable %}
+    {% call transformValue variable %}
+    {% call stringValue variable %}
+{% endmacro %}
+
+{% macro genericValue variable %}
+    {% if variable.typeName|hasPrefix:"UI" or variable.typeName|hasPrefix:"NS" or variable.typeName|contains:"CALayer" %}
+        {% call optionalToValue variable.typeName %}()
+    {% endif %}
+{% endmacro %}
+
+{% macro typeSpecificValue variable %}
+    {% if variable.typeName|contains:"CGColor" %}
+        UIColor.red.cgColor
+    {% else %}
+        {% if variable.typeName|contains:"UIColor" %}
+            UIColor.red
+        {% else %}
+            {% if variable.typeName|contains:"CGPath" %}
+                UIBezierPath(rect: CGRect(x: 1, y: 1, width: 1, height: 1)).cgPath
+            {% else %}
+                {% if variable.typeName|contains:"UIBezierPath" %}
+                    UIBezierPath(rect: CGRect(x: 1, y: 1, width: 1, height: 1))
+                {% else %}
+                    {% if variable.typeName|contains:"UIEdgeInsets" %}
+                        UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
+                    {% else %}
+                        {% if variable.typeName|contains:"[UIBarButtonItem]" %}
+                            [UIBarButtonItem(barButtonSystemItem: .cancel, target: nil, action: nil)]
+                        {% else %}
+                            {% if variable.typeName|contains:"[UIAccessibilityLocationDescriptor]" %}
+                                []
+                            {% else %}
+                                {% if variable.name|contains:"defaultTextAttributes" %}
+                                    { var result = object.defaultTextAttributes; result[NSForegroundColorAttributeName] = UIColor.red; return result }()
+                                {% else %}
+                                    {% call genericValue variable %}
+                                {% endif %}
+                            {% endif %}
+                        {% endif %}
+                    {% endif %}
+                {% endif %}
+            {% endif %}
+        {% endif %}
+    {% endif %}
+{% endmacro %}
+
+{# {% call genericValue variable %} [UIAccessibilityLocationDescriptor] #}
+
+{% macro value variable %}
+    {% if variable|annotated:"value" %}
+        {{variable.annotations.value}}
+    {% else %}
+        {% call primitiveValue variable %}
+        {% call typeSpecificValue variable %}
+    {% endif %}
+{% endmacro %}
+
+{# removeNewlines doesn't work for some reason. Use hack instead #}
+{% macro trimmedValue variable %}{% set result %}{% call value variable %}{% endset %}{{ result|replace:"
+",""|replace:"  ","" }}{% endmacro %}
+
+// done
+
+{% for type in types.protocols %}
+    {% if not type.name == "UIObjectType" or not type.name == "UIValueType" %}
+// sourcery:file:Lens+{% call name type %}Spec.swift
+//
+//  Lens+{% call name type %}Spec.swift
+//  iOSTests
+//
+//  Created by Oleksa 'trimm' Korin on 9/2/17.
+//  Copyright © 2017 Oleksa 'trimm' Korin. All rights reserved.
+//
+
+import Quick
+import Nimble
+
+import UIKit
+        {% if type.name == "WKWebViewProtocol" %}
+import WebKit
+        {% endif %}
+
+@testable import IDPDesign
+
+extension {% call name type %}: {{type.name}} { }
+
+class Lens{% call name type %}Spec: QuickSpec {
+    override func spec() {
+        describe("Lens+{% call name type %}Spec") {
+            {% for variable in type.variables %}
+                {% if not variable.isStatic %}
+                    {% if variable.readAccess == "public" or variable.readAccess == "open" or variable.readAccess == "internal" %}
+
+            context("{{variable.name}}") {
+                it("should get and set") {
+                    let lens: Lens<{% call name type %}, {% call implicitToOptional variable.typeName %}> = {{variable.name}}()
+                    let object = {% call name type %}()
+
+                    let value: {% call optionalToValue variable.typeName %} = {% call trimmedValue variable %}
+
+                    let resultObject = lens.set(object, value)
+                    let resultValue = lens.get(resultObject)
+
+                    expect(resultValue).to(equal(value))
+                    expect(resultObject.{{variable.name}}).to(equal(value))
+                }
+            }
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+        }
+    }
+}
+// sourcery:end
+    {% endif %}
+{% endfor %}

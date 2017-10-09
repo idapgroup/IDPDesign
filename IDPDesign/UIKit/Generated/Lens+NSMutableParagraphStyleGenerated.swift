@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension NSMutableParagraphStyle: NSMutableParagraphStyleProtocol { }
-
 public func lineSpacing<Object: NSMutableParagraphStyle>() -> Lens<Object, CGFloat> {
     return Lens(
         get: { $0.lineSpacing },

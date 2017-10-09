@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension UIViewController: UIViewControllerProtocol { }
-
 public func view<Object: UIViewController>() -> Lens<Object, UIView?> {
     return Lens(
         get: { $0.view },
@@ -76,13 +74,6 @@ public func extendedLayoutIncludesOpaqueBars<Object: UIViewController>() -> Lens
     return Lens(
         get: { $0.extendedLayoutIncludesOpaqueBars },
         setter: { $0.extendedLayoutIncludesOpaqueBars = $1 }
-    )
-}
-
-public func automaticallyAdjustsScrollViewInsets<Object: UIViewController>() -> Lens<Object, Bool> {
-    return Lens(
-        get: { $0.automaticallyAdjustsScrollViewInsets },
-        setter: { $0.automaticallyAdjustsScrollViewInsets = $1 }
     )
 }
 

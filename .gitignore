@@ -139,4 +139,7 @@ playground.xcworkspace
 !*.xcworkspace/contents.xcworkspacedata
 /*.gcno
 
+### Sourcery ###
+*.profraw
+
 # End of https://www.gitignore.io/api/macos,swift,xcode,objective-c

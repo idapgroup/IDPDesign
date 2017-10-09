@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension UILabel: UILabelProtocol { }
-
 public func text<Object: UILabel>() -> Lens<Object, String?> {
     return Lens(
         get: { $0.text },
@@ -72,13 +70,6 @@ public func isHighlighted<Object: UILabel>() -> Lens<Object, Bool> {
     return Lens(
         get: { $0.isHighlighted },
         setter: { $0.isHighlighted = $1 }
-    )
-}
-
-public func isUserInteractionEnabled<Object: UILabel>() -> Lens<Object, Bool> {
-    return Lens(
-        get: { $0.isUserInteractionEnabled },
-        setter: { $0.isUserInteractionEnabled = $1 }
     )
 }
 

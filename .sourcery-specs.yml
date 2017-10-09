@@ -1,0 +1,5 @@
+sources:
+    - "IDPDesign/UIKitProtocols"
+templates:
+    - "IDPDesign/Templates/Test"
+output: "Tests/iOS/iOSTests/Specs/Generated"

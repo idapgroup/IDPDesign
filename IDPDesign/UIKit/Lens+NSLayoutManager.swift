@@ -8,16 +8,14 @@
 
 import UIKit
 
-public extension Lens where Object: NSLayoutManager, Property == [NSTextContainer] {
-    public static var textContainers: Lens {
-        return Lens(
-            get: { $0.textContainers },
-            setter: {
-                $0.removeAllTextContainers()
-                $1.forEach($0.addTextContainer)
-            }
-        )
-    }
+public func textContainers<Object: NSLayoutManager>() -> Lens<Object, [NSTextContainer]> {
+    return Lens(
+        get: { $0.textContainers },
+        setter: {
+            $0.removeAllTextContainers()
+            $1.forEach($0.addTextContainer)
+        }
+    )
 }
 
 fileprivate extension NSLayoutManager {

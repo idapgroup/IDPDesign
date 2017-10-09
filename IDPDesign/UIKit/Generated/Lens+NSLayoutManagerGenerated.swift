@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension NSLayoutManager: NSLayoutManagerProtocol { }
-
 public func textStorage<Object: NSLayoutManager>() -> Lens<Object, NSTextStorage?> {
     return Lens(
         get: { $0.textStorage },
@@ -52,8 +50,4 @@ public func allowsNonContiguousLayout<Object: NSLayoutManager>() -> Lens<Object,
         get: { $0.allowsNonContiguousLayout },
         setter: { $0.allowsNonContiguousLayout = $1 }
     )
-}
-
-public func extraLineFragmentTextContainer<Object: NSLayoutManager>() -> Lens<Object, NSTextContainer?> {
-    return Lens { $0.extraLineFragmentTextContainer }
 }

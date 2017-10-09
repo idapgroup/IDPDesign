@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension UITapGestureRecognizer: UITapGestureRecognizerProtocol { }
-
 public func numberOfTapsRequired<Object: UITapGestureRecognizer>() -> Lens<Object, Int> {
     return Lens(
         get: { $0.numberOfTapsRequired },

@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension UIBarItem: UIBarItemProtocol { }
-
 public func isEnabled<Object: UIBarItem>() -> Lens<Object, Bool> {
     return Lens(
         get: { $0.isEnabled },

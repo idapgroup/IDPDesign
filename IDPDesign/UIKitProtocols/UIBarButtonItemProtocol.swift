@@ -7,12 +7,21 @@
 //
 
 protocol UIBarButtonItemProtocol: UIObjectType {
+
+    // sourcery: value = .done
     var style: UIBarButtonItemStyle { get set }
     var width: CGFloat { get set }
+
+    // sourcery: value = Set<String>("mama")
     var possibleTitles: Set<String>? { get set }
     var customView: UIView? { get set }
-    var action: Selector? { get set }
+
+    // sourcery: value = nil
     var target: AnyObject? { get set }
+
+    // sourcery: value = nil
+    var action: Selector? { get set }
+
     var tintColor: UIColor? { get set }
 
     func backgroundImage(for state: UIControlState, barMetrics: UIBarMetrics) -> UIImage?

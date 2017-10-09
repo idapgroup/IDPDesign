@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension UIWebView: UIWebViewProtocol { }
-
 public func delegate<Object: UIWebView>() -> Lens<Object, UIWebViewDelegate?> {
     return Lens(
         get: { $0.delegate },
@@ -91,10 +89,6 @@ public func gapBetweenPages<Object: UIWebView>() -> Lens<Object, CGFloat> {
         get: { $0.gapBetweenPages },
         setter: { $0.gapBetweenPages = $1 }
     )
-}
-
-public func pageCount<Object: UIWebView>() -> Lens<Object, Int> {
-    return Lens { $0.pageCount }
 }
 
 public func allowsPictureInPictureMediaPlayback<Object: UIWebView>() -> Lens<Object, Bool> {

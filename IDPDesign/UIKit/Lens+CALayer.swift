@@ -10,11 +10,9 @@ import UIKit
 import CoreGraphics
 import QuartzCore
 
-public extension Lens where Object: CALayer, Property == CGAffineTransform {
-    public static var affineTransform: Lens {
-        return Lens(
-            get: { $0.affineTransform() },
-            setter: { $0.setAffineTransform($1) }
-        )
-    }
+public func affineTransform<Object: CALayer>() -> Lens<Object, CGAffineTransform> {
+    return Lens(
+        get: { $0.affineTransform() },
+        setter: { $0.setAffineTransform($1) }
+    )
 }

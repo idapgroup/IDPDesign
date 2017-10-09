@@ -8,20 +8,16 @@
 
 import UIKit
 
-public extension Lens where Object: UINavigationBar, Property == UIImage? {
-    public static func backgroundImage(for barMetrics: UIBarMetrics) -> Lens {
-        return Lens(
-            get: { $0.backgroundImage(for: barMetrics) },
-            setter: { $0.setBackgroundImage($1, for: barMetrics) }
-        )
-    }
+public func backgroundImage<Object: UINavigationBar>(for barMetrics: UIBarMetrics) -> Lens<Object, UIImage?> {
+    return Lens(
+        get: { $0.backgroundImage(for: barMetrics) },
+        setter: { $0.setBackgroundImage($1, for: barMetrics) }
+    )
 }
 
-public extension Lens where Object: UINavigationBar, Property == UIImage? {
-    public static func backgroundImage(for barPosition: UIBarPosition, barMetrics: UIBarMetrics) -> Lens {
-        return Lens(
-            get: { $0.backgroundImage(for: barPosition, barMetrics: barMetrics) },
-            setter: { $0.setBackgroundImage($1, for: barPosition, barMetrics: barMetrics) }
-        )
-    }
+public func backgroundImage<Object: UINavigationBar>(for barPosition: UIBarPosition, barMetrics: UIBarMetrics) -> Lens<Object, UIImage?> {
+    return Lens(
+        get: { $0.backgroundImage(for: barPosition, barMetrics: barMetrics) },
+        setter: { $0.setBackgroundImage($1, for: barPosition, barMetrics: barMetrics) }
+    )
 }

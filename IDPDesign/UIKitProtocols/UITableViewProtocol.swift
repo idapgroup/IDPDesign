@@ -27,6 +27,8 @@ protocol UITableViewProtocol: UIObjectType {
     var sectionIndexColor: UIColor? { get set }
     var sectionIndexBackgroundColor: UIColor? { get set }
     var sectionIndexTrackingBackgroundColor: UIColor? { get set }
+
+    // sourcery: value = .none
     var separatorStyle: UITableViewCellSeparatorStyle { get set }
     var separatorColor: UIColor? { get set }
     var separatorEffect: UIVisualEffect? { get set }

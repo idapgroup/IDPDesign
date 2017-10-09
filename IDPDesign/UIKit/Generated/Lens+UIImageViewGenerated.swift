@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension UIImageView: UIImageViewProtocol { }
-
 public func image<Object: UIImageView>() -> Lens<Object, UIImage?> {
     return Lens(
         get: { $0.image },
@@ -16,13 +14,6 @@ public func highlightedImage<Object: UIImageView>() -> Lens<Object, UIImage?> {
     return Lens(
         get: { $0.highlightedImage },
         setter: { $0.highlightedImage = $1 }
-    )
-}
-
-public func isUserInteractionEnabled<Object: UIImageView>() -> Lens<Object, Bool> {
-    return Lens(
-        get: { $0.isUserInteractionEnabled },
-        setter: { $0.isUserInteractionEnabled = $1 }
     )
 }
 
@@ -58,12 +49,5 @@ public func animationRepeatCount<Object: UIImageView>() -> Lens<Object, Int> {
     return Lens(
         get: { $0.animationRepeatCount },
         setter: { $0.animationRepeatCount = $1 }
-    )
-}
-
-public func tintColor<Object: UIImageView>() -> Lens<Object, UIColor?> {
-    return Lens(
-        get: { $0.tintColor },
-        setter: { $0.tintColor = $1 }
     )
 }

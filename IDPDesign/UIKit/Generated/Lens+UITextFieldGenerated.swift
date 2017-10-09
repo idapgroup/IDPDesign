@@ -3,8 +3,6 @@
 
 import UIKit
 
-extension UITextField: UITextFieldProtocol { }
-
 public func text<Object: UITextField>() -> Lens<Object, String?> {
     return Lens(
         get: { $0.text },
