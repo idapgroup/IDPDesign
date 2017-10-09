@@ -36,10 +36,7 @@ public func ~ <Object, Property>(lens: Lens<Object, Property?>, property: Proper
  */
 public func ~ <Object, Property>(lens: Lens<Object, Property>, style: Style<Property>) -> Style<Object> {
     return Style {
-        lens.set(
-            $0,
-            lens.get($0) |> style
-        )
+        lens.set($0, lens.get($0) |> style)
     }
 }
 
@@ -107,12 +104,12 @@ public func • <A, B, C>(lhs: Lens<A, B?>, rhs: Lens<B, C>) -> Lens<A, C?> {
 
 /// Compose two lens getters into lens getter to have direct access to the subproperty of a property of object
 public func • <A, B, C>(lhs: @escaping LensGetter<A, B>, rhs: @escaping LensGetter<B, C>) -> LensGetter<A, C> {
-    return { lhs().compose(rhs()) }
+    return { lhs() • rhs() }
 }
 
 /// Compose two lens getters into lens getter to have direct access to the optional subproperty of a property of object
 public func • <A, B, C>(lhs: @escaping LensGetter<A, B?>, rhs: @escaping LensGetter<B, C>) -> LensGetter<A, C?> {
-    return { lhs().bind(rhs()) }
+    return { lhs() • rhs() }
 }
 
 /// Compose two styles
