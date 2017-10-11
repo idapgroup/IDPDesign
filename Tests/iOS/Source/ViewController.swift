@@ -22,13 +22,14 @@ class ViewController: UIViewController {
         
         let button = UIButton()
         
-        let style: Style<UIButton> = design(
-            viewStyle(),
-            frame ~ .zero
+        let buttonStyle: Style<UIButton> = design(
+            isUserInteractionEnabled ~ false,
+            backgroundColor ~ .red
         )
-            
-        let titleStyle: Style<UIButton> = design(
+        
+        let buttonTitleStyle: Style<UIButton> = design(
             titleLabel ~ design(
+                viewStyle(),
                 layer ~ design(
                     masksToBounds ~ false
                 ),
@@ -40,12 +41,29 @@ class ViewController: UIViewController {
             )
         )
         
-        button |> style • titleStyle
+        button |> buttonStyle • buttonTitleStyle
         
-        print(button.backgroundColor as Any)
-        print(button.titleLabel?.backgroundColor as Any)
-        print(button.titleLabel?.alpha as Any)
-        print(button.titleLabel?.layer.isDoubleSided as Any)
-        print(button.titleLabel?.layer.masksToBounds as Any)
+        func scope(_ execute: () -> ()) {
+            call(execute)
+        }
+        
+        func call<T>(_ execute: () -> T) -> T{
+            return execute()
+        }
+        
+        scope {
+            func print<T>(_ value: T) {
+                Swift.print(value as Any)
+            }
+            
+            let label = button.titleLabel
+            let layer = label?.layer
+            
+            print(button.backgroundColor)
+            print(label?.backgroundColor)
+            print(label?.alpha)
+            print(layer?.isDoubleSided)
+            print(layer?.masksToBounds)
+        }
     }
 }

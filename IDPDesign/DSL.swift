@@ -36,11 +36,30 @@ public func ~ <Object, Property>(lens: Lens<Object, Property?>, property: Proper
  */
 public func ~ <Object, Property>(lens: Lens<Object, Property>, style: Style<Property>) -> Style<Object> {
     return Style {
-        lens.set(
-            $0,
-            lens.get($0) |> style
-        )
+        lens.set($0, lens.get($0) |> style)
     }
+}
+
+/**
+ Applies styles to lens.
+ 
+ - note: Swiftc fails to derive proper types as of Swift 4.0 without specifying the type.
+ 
+ - returns: Style for lens.
+ */
+public func ~ <Object, Property>(lens: Lens<Object, Property>, styles: [Style<Property>]) -> Style<Object> {
+    return lens ~ Style(styles)
+}
+
+/**
+ Applies styles to lens optional.
+ 
+ - note: Swiftc fails to derive proper types as of Swift 4.0 without specifying the type.
+ 
+ - returns: Style for lens.
+ */
+public func ~ <Object, Property>(lens: Lens<Object, Property?>, styles: [Style<Property>]) -> Style<Object> {
+    return lens ~ lift(Style(styles))
 }
 
 /**
@@ -70,6 +89,29 @@ public func ~ <Object, Property>(lens: LensGetter<Object, Property?>, property: 
  */
 public func ~ <Object, Property>(lens: LensGetter<Object, Property>, style: Style<Property>) -> Style<Object> {
     return lens() ~ style
+}
+
+/**
+ Applies styles to lens getter.
+ 
+ - note: Swiftc fails to derive proper types as of Swift 4.0 without specifying the type.
+ 
+ - returns: Style for lens.
+ */
+public func ~ <Object, Property>(lens: LensGetter<Object, Property>, styles: [Style<Property>]) -> Style<Object> {
+    return lens() ~ styles
+}
+
+/**
+ Applies styles to lens optional getter.
+ 
+ - note: Duplication. Swiftc fails without it.
+ - note: Swiftc fails to derive proper types as of Swift 4.0 without specifying the type.
+ 
+ - returns: Style for lens.
+ */
+public func ~ <Object, Property>(lens: LensGetter<Object, Property?>, styles: [Style<Property>]) -> Style<Object> {
+    return lens() ~ styles
 }
 
 /**
@@ -107,12 +149,12 @@ public func • <A, B, C>(lhs: Lens<A, B?>, rhs: Lens<B, C>) -> Lens<A, C?> {
 
 /// Compose two lens getters into lens getter to have direct access to the subproperty of a property of object
 public func • <A, B, C>(lhs: @escaping LensGetter<A, B>, rhs: @escaping LensGetter<B, C>) -> LensGetter<A, C> {
-    return { lhs().compose(rhs()) }
+    return { lhs() • rhs() }
 }
 
 /// Compose two lens getters into lens getter to have direct access to the optional subproperty of a property of object
 public func • <A, B, C>(lhs: @escaping LensGetter<A, B?>, rhs: @escaping LensGetter<B, C>) -> LensGetter<A, C?> {
-    return { lhs().bind(rhs()) }
+    return { lhs() • rhs() }
 }
 
 /// Compose two styles

@@ -44,6 +44,7 @@ public struct Lens<Object, Property> {
     // MARK: -
     // MARK: Public
     
+    /// Compose with lens to have direct access to the subproperty of a property of object
     public func compose<Subproperty>(_ lens: Lens<Property, Subproperty>) -> Lens<Object, Subproperty> {
         return Lens<Object, Subproperty>(
             get: self.get • lens.get,
@@ -56,16 +57,18 @@ public struct Lens<Object, Property> {
         )
     }
     
+    /// Compose with lens to have direct access to the optional subproperty of a property of object
     public func bind<UnwrappedProperty, Subproperty>(_ lens: Lens<UnwrappedProperty, Subproperty>) -> Lens<Object, Subproperty?>
         where Property == UnwrappedProperty?
     {
         return Lens<Object, Subproperty?>(
             get: { self.get($0).flatMap(lens.get) },
             set: { object, property in
-                let value = self.get(object)
-                let newValue = value.flatMap { value in
-                    property.flatMap { lens.set(value, $0) }
-                }
+                let newValue = self
+                    .get(object)
+                    .flatMap { value in
+                        property.flatMap { lens.set(value, $0) }
+                    }
                 
                 return self.set(object, newValue)
             }
