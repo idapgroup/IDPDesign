@@ -31,8 +31,7 @@ class LensUINavigationBarSpec: QuickSpec {
                     let resultValue = lens.get(resultObject)
 
                     expect(resultValue).to(equal(value))
-                    // TODO: SWIFTC CRASH???
-//                    expect(resultObject.barStyle).to(equal(value))
+                    expect(resultObject.barStyle).to(equal(value))
                 }
             }
 
@@ -49,9 +48,7 @@ class LensUINavigationBarSpec: QuickSpec {
                     let resultValue = lens.get(resultObject)
 
                     expect(resultValue).to(beIdenticalTo(value))
-                    
-                    // TODO: SWIFTC CRASH???
-//                    expect(resultObject.delegate).to(beIdenticalTo(value))
+                    expect(resultObject.delegate).to(beIdenticalTo(value))
                 }
             }
 

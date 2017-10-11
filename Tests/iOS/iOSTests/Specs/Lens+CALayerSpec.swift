@@ -312,7 +312,7 @@ class LensCALayerSpec: QuickSpec {
                     let lens: Lens<CALayer, String> = contentsFormat()
                     let object = CALayer()
 
-                    let value: String = kCAContentsFormatGray8Uint
+                    let value: String = kCAContentsFormatRGBA8Uint
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -697,21 +697,20 @@ class LensCALayerSpec: QuickSpec {
                 }
             }
 
-            // TODO: SWIFTC CRASHES!!!
-//            context("name") {
-//                it("should get and set") {
-//                    let lens: Lens<CALayer, String?> = name()
-//                    let object = CALayer()
-//
-//                    let value: String = "mama"
-//
-//                    let resultObject = lens.set(object, value)
-//                    let resultValue = lens.get(resultObject)
-//
-//                    expect(resultValue).to(equal(value))
-//                    expect(resultObject.name).to(equal(value))
-//                }
-//            }
+            context("name") {
+                it("should get and set") {
+                    let lens: Lens<CALayer, String?> = IDPDesign.name()
+                    let object = CALayer()
+
+                    let value: String = "mama"
+
+                    let resultObject = lens.set(object, value)
+                    let resultValue = lens.get(resultObject)
+
+                    expect(resultValue).to(equal(value))
+                    expect(resultObject.name).to(equal(value))
+                }
+            }
 
             context("delegate") {
                 it("should get and set") {
