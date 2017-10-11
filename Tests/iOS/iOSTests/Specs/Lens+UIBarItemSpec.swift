@@ -13,7 +13,7 @@ import UIKit
 
 @testable import IDPDesign
 
-// TODO: SWIFTC CAN'T HANDLE CONFORMANCE IN TESTS FOR, BECAUSE PODS ARE STILL 3.2
+// TODO: SWIFTC CAN'T HANDLE CONFORMANCE IN TESTS, BECAUSE PODS ARE STILL 3.2
 // extension UIBarItem: UIBarItemProtocol { }
 
 class LensUIBarItemSpec: QuickSpec {

@@ -13,7 +13,7 @@ import UIKit
 
 @testable import IDPDesign
 
-// TODO: SWIFTC CAN'T HANDLE CONFORMANCE IN TESTS FOR, BECAUSE PODS ARE STILL 3.2
+// TODO: SWIFTC CAN'T HANDLE CONFORMANCE IN TESTS, BECAUSE PODS ARE STILL 3.2
 //extension UINavigationBar: UINavigationBarProtocol { }
 
 class LensUINavigationBarSpec: QuickSpec {
@@ -161,7 +161,7 @@ class LensUINavigationBarSpec: QuickSpec {
                 }
             }
 
-            // TODO: SWIFTC CRASH
+// TODO: SWIFTC CRASH, CAN'T FIND A VALID FUNCTION NAME, REASONS UNKNOWN
 //            context("titleTextAttributes") {
 //                it("should get and set") {
 //                    let lens: Lens<UINavigationBar, [NSAttributedStringKey : Any]?> = titleTextAttributes()
