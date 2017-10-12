@@ -1,0 +1,6 @@
+use_frameworks!
+
+target 'iOSTests' do
+  pod 'Quick', '~>1.2.0'
+  pod 'Nimble', '~>7.0.2'
+end
