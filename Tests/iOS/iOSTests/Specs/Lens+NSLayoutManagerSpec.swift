@@ -18,7 +18,22 @@ extension NSLayoutManager: NSLayoutManagerProtocol { }
 class LensNSLayoutManagerSpec: QuickSpec {
     override func spec() {
         describe("Lens+NSLayoutManagerSpec") {
-
+            
+            context("textContainers") {
+                it("should get and set") {
+                    let lens: Lens<NSLayoutManager, [NSTextContainer]> = textContainers()
+                    let object = NSLayoutManager()
+                    
+                    let value = [NSTextContainer(size: CGSize(width: 100, height: 60))]
+                    
+                    let resultObject = lens.set(object, value)
+                    let resultValue = lens.get(resultObject)
+                    
+                    expect(resultValue).to(equal(value))
+                    expect(resultObject.textContainers).to(equal(value))
+                }
+            }
+            
             context("textStorage") {
                 it("should get and set") {
                     let lens: Lens<NSLayoutManager, NSTextStorage?> = textStorage()
