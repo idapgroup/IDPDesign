@@ -15,6 +15,7 @@ public func titleTextAttributes<Object: UIBarItem>(for state: UIControlState) ->
     )
 }
 
+// WARNING: transform is needed because of UIKit API inconsistency
 fileprivate func toAttributedStringKey(_ value: [String : Any]) -> [NSAttributedStringKey: Any] {
     var result = [NSAttributedStringKey: Any]()
     value.forEach {

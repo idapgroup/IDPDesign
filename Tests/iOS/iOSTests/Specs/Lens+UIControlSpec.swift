@@ -15,9 +15,50 @@ import UIKit
 
 extension UIControl: UIControlProtocol { }
 
+fileprivate class Target: NSObject {
+    @objc func action(_ sender: Any) { }
+}
+
 class LensUIControlSpec: QuickSpec {
     override func spec() {
         describe("Lens+UIControlSpec") {
+            
+//            public func actions<Object: UIControl>() -> Lens<Object, [UIControlAction]> {
+//                return Lens(
+//                    get: { $0.allActions },
+//                    setter: {
+//                        $0.removeTarget(nil, action: nil, for: .allEvents)
+//                        $1.forEach($0.addTarget(_:action:for:))
+//                }
+//                )
+//            }
+            
+            context("actions") {
+                it("should get and set") {
+                    let lens: Lens<UIControl, [UIControlAction]> = actions()
+                    let object = UIControl()
+                    
+                    let value: UIControlAction = (Target(), #selector(Target.action(_:)), .touchUpInside)
+                    
+                    let resultObject = lens.set(object, [value])
+                    let resultValue = lens.get(resultObject)
+                    
+                    expect(resultValue.count).to(equal(1))
+                    
+                    let resultAction = resultValue.first
+                    expect(resultAction?.target).to(beIdenticalTo(value.target))
+                    expect(resultAction?.action).to(equal(value.action))
+                    expect(resultAction?.controlEvents).to(equal(value.controlEvents))
+
+                    let allTargets = resultObject.allTargets
+                    expect(allTargets.count).to(equal(1))
+                    expect(allTargets.first).to(beIdenticalTo(value.target))
+                    
+                    let resultObjectActions = resultObject.actions(forTarget: value.target, forControlEvent: value.controlEvents) ?? []
+                    expect(resultObjectActions.count).to(equal(1))
+                    expect(resultObjectActions.first).to(equal(value.action.description))
+                }
+            }
 
             context("contentHorizontalAlignment") {
                 it("should get and set") {

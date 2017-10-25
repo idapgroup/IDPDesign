@@ -19,6 +19,45 @@ import UIKit
 class LensUINavigationBarSpec: QuickSpec {
     override func spec() {
         describe("Lens+UINavigationBarSpec") {
+            
+            context("backgroundImage(for:)") {
+                it("should get and set") {
+                    let metrics = UIBarMetrics.compact
+                    
+                    let lens: Lens<UINavigationBar, UIImage?> = backgroundImage(for: metrics)
+                    let object = UINavigationBar()
+                    
+                    let value = UIImage.default
+                    
+                    let resultObject = lens.set(object, value)
+                    let resultValue = lens.get(resultObject)
+                    
+                    let expectedValue = value.resizableImage(withCapInsets: UIEdgeInsets())
+                    
+                    expect(resultValue).to(equal(expectedValue))
+                    expect(resultObject.backgroundImage(for: metrics)).to(equal(expectedValue))
+                }
+            }
+            
+            context("backgroundImage(for:, barMetrics:)") {
+                it("should get and set") {
+                    let position = UIBarPosition.top
+                    let metrics = UIBarMetrics.compact
+                    
+                    let lens: Lens<UINavigationBar, UIImage?> = backgroundImage(for: position, barMetrics: metrics)
+                    let object = UINavigationBar()
+                    
+                    let value = UIImage.default
+                    
+                    let resultObject = lens.set(object, value)
+                    let resultValue = lens.get(resultObject)
+                    
+                    let expectedValue = value.resizableImage(withCapInsets: UIEdgeInsets())
+                    
+                    expect(resultValue).to(equal(expectedValue))
+                    expect(resultObject.backgroundImage(for: position, barMetrics: metrics)).to(equal(expectedValue))
+                }
+            }
 
             context("barStyle") {
                 it("should get and set") {

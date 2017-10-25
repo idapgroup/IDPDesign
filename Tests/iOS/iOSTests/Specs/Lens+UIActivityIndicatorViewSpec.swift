@@ -18,7 +18,23 @@ extension UIActivityIndicatorView: UIActivityIndicatorViewProtocol { }
 class LensUIActivityIndicatorViewSpec: QuickSpec {
     override func spec() {
         describe("Lens+UIActivityIndicatorViewSpec") {
-
+            
+            context("isAnimating") {
+                it("should get and set") {
+                    let lens: Lens<UIActivityIndicatorView, Bool> = isAnimating()
+                    let object = UIActivityIndicatorView()
+                    object.stopAnimating()
+                    
+                    let value = true
+                    
+                    let resultObject = lens.set(object, value)
+                    let resultValue = lens.get(resultObject)
+                    
+                    expect(resultValue).to(equal(value))
+                    expect(resultObject.isAnimating).to(equal(value))
+                }
+            }
+            
             context("activityIndicatorViewStyle") {
                 it("should get and set") {
                     let lens: Lens<UIActivityIndicatorView, UIActivityIndicatorViewStyle> = activityIndicatorViewStyle()
