@@ -18,6 +18,7 @@ extension CALayer: CALayerProtocol { }
 class LensCALayerSpec: QuickSpec {
     override func spec() {
         describe("Lens+CALayerSpec") {
+            
             context("affineTransform") {
                 it("should get and set") {
                     let lens: Lens<CALayer, CGAffineTransform> = affineTransform()

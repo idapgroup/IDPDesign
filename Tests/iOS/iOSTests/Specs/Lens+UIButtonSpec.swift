@@ -18,6 +18,91 @@ extension UIButton: UIButtonProtocol { }
 class LensUIButtonSpec: QuickSpec {
     override func spec() {
         describe("Lens+UIButtonSpec") {
+            
+            context("backgroundImage(for:)") {
+                it("should get and set") {
+                    let state = UIControlState.disabled
+                    
+                    let lens: Lens<UIButton, UIImage?> = backgroundImage(for: state)
+                    let object = UIButton()
+                    
+                    let value = UIImage.default
+                    
+                    let resultObject = lens.set(object, value)
+                    let resultValue = lens.get(resultObject)
+                    
+                    expect(resultValue).to(equal(value))
+                    expect(resultObject.backgroundImage(for: state)).to(equal(value))
+                }
+            }
+            
+            context("title(for:)") {
+                it("should get and set") {
+                    let state = UIControlState.disabled
+                    
+                    let lens: Lens<UIButton, String?> = title(for: state)
+                    let object = UIButton()
+                    
+                    let value = "mama"
+                    
+                    let resultObject = lens.set(object, value)
+                    let resultValue = lens.get(resultObject)
+                    
+                    expect(resultValue).to(equal(value))
+                    expect(resultObject.title(for: state)).to(equal(value))
+                }
+            }
+            
+            context("image(for:)") {
+                it("should get and set") {
+                    let state = UIControlState.disabled
+                    
+                    let lens: Lens<UIButton, UIImage?> = image(for: state)
+                    let object = UIButton()
+                    
+                    let value = UIImage.default
+                    
+                    let resultObject = lens.set(object, value)
+                    let resultValue = lens.get(resultObject)
+                    
+                    expect(resultValue).to(equal(value))
+                    expect(resultObject.image(for: state)).to(equal(value))
+                }
+            }
+
+            context("title(for:)") {
+                it("should get and set") {
+                    let state = UIControlState.disabled
+                    
+                    let lens: Lens<UIButton, NSAttributedString?> = attributedTitle(for: state)
+                    let object = UIButton()
+                    
+                    let value = NSAttributedString(string: "mama")
+                    
+                    let resultObject = lens.set(object, value)
+                    let resultValue = lens.get(resultObject)
+                    
+                    expect(resultValue).to(equal(value))
+                    expect(resultObject.attributedTitle(for: state)).to(equal(value))
+                }
+            }
+            
+            context("titleColor(for:)") {
+                it("should get and set") {
+                    let state = UIControlState.disabled
+                    
+                    let lens: Lens<UIButton, UIColor?> = titleColor(for: state)
+                    let object = UIButton()
+                    
+                    let value = UIColor.red
+                    
+                    let resultObject = lens.set(object, value)
+                    let resultValue = lens.get(resultObject)
+                    
+                    expect(resultValue).to(equal(value))
+                    expect(resultObject.titleColor(for: state)).to(equal(value))
+                }
+            }
 
             context("adjustsImageWhenDisabled") {
                 it("should get and set") {

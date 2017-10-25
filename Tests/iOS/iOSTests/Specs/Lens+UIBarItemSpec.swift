@@ -19,6 +19,29 @@ import UIKit
 class LensUIBarItemSpec: QuickSpec {
     override func spec() {
         describe("Lens+UIBarItemSpec") {
+            
+//            public func titleTextAttributes<Object: UIBarItem>(for state: UIControlState) -> Lens<Object, [NSAttributedStringKey : Any]?> {
+//                return Lens(
+//                    get: { $0.titleTextAttributes(for: state).map(toAttributedStringKey) },
+//                    setter: { $0.setTitleTextAttributes($1, for: state) }
+//                )
+//            }
+            
+// TODO: SWIFTC CRASH, CAN'T FIND A VALID FUNCTION NAME, REASONS UNKNOWN
+//            context("titleTextAttributes") {
+//                it("should get and set") {
+//                    let lens: Lens<UIBarItem, [NSAttributedStringKey : Any]?> = titleTextAttributes()
+//                    let object = UIBarButtonItem()
+//
+//                    let value: [NSAttributedStringKey : Any] = [:]
+//
+//                    let resultObject = lens.set(object, value)
+//                    let resultValue = lens.get(resultObject)
+//
+//                    expect(resultValue).to(equal(value))
+//                    expect(resultObject.titleTextAttributes).to(equal(value))
+//                }
+//            }
 
             context("isEnabled") {
                 it("should get and set") {

@@ -30,7 +30,7 @@ public func backgroundVerticalPositionAdjustment<Object: UIBarButtonItem>(for ba
 }
 
 
-public func titlePositionAdjustment<Object: UIBarButtonItem>(for state: UIControlState, barMetrics: UIBarMetrics) -> Lens<Object, UIOffset> {
+public func titlePositionAdjustment<Object: UIBarButtonItem>(for barMetrics: UIBarMetrics) -> Lens<Object, UIOffset> {
     return Lens(
         get: { $0.titlePositionAdjustment(for: barMetrics) },
         setter: { $0.setTitlePositionAdjustment($1, for: barMetrics) }
@@ -44,17 +44,16 @@ public func backButtonBackgroundImage<Object: UIBarButtonItem>(for state: UICont
     )
 }
 
-public func backButtonTitlePositionAdjustment<Object: UIBarButtonItem>(for state: UIControlState, barMetrics: UIBarMetrics) -> Lens<Object, UIOffset> {
+public func backButtonTitlePositionAdjustment<Object: UIBarButtonItem>(for barMetrics: UIBarMetrics) -> Lens<Object, UIOffset> {
     return Lens(
         get: { $0.backButtonTitlePositionAdjustment(for: barMetrics) },
         setter: { $0.setBackButtonTitlePositionAdjustment($1, for: barMetrics) }
     )
 }
 
-public func backButtonBackgroundVerticalPositionAdjustment<Object: UIBarButtonItem>(for state: UIControlState, barMetrics: UIBarMetrics) -> Lens<Object, CGFloat> {
+public func backButtonBackgroundVerticalPositionAdjustment<Object: UIBarButtonItem>(for barMetrics: UIBarMetrics) -> Lens<Object, CGFloat> {
     return Lens(
         get: { $0.backButtonBackgroundVerticalPositionAdjustment(for: barMetrics) },
         setter: { $0.setBackButtonBackgroundVerticalPositionAdjustment($1, for: barMetrics) }
     )
 }
-
