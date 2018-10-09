@@ -113,15 +113,16 @@ class LensUITextFieldSpec: QuickSpec {
                 it("should get and set") {
                     let lens: Lens<UITextField, [String : Any]> = defaultTextAttributes()
                     let object = UITextField()
-
+                    
+                    let key = NSAttributedStringKey.foregroundColor.rawValue
                     var value = object.defaultTextAttributes
-                    value[NSForegroundColorAttributeName] = UIColor.red
+                    value[key] = UIColor.red
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(containIdenticalContent(value, for: NSForegroundColorAttributeName))
-                    expect(resultObject.defaultTextAttributes).to(containIdenticalContent(value, for: NSForegroundColorAttributeName))
+                    expect(resultValue).to(containIdenticalContent(value, for: key))
+                    expect(resultObject.defaultTextAttributes).to(containIdenticalContent(value, for: key))
                 }
             }
 
@@ -270,7 +271,7 @@ class LensUITextFieldSpec: QuickSpec {
                     
                     let lens: Lens<UITextField, [String : Any]?> = typingAttributes()
                     
-                    let key = NSForegroundColorAttributeName
+                    let key = NSAttributedStringKey.foregroundColor.rawValue
                     let value: [String : Any]? = [key : UIColor.red]
 
                     let resultObject = lens.set(object, value)

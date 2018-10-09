@@ -310,15 +310,16 @@ class LensUITextViewSpec: QuickSpec {
                 it("should get and set") {
                     let lens: Lens<UITextView, [String : Any]?> = linkTextAttributes()
                     let object = UITextView()
-
+                    
+                    let key = NSAttributedStringKey.foregroundColor.rawValue
                     var value: [String : Any]! = object.linkTextAttributes
-                    value[NSForegroundColorAttributeName] = UIColor.red
+                    value[key] = UIColor.red
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
-                    expect(resultValue).to(containIdenticalContent(value, for: NSForegroundColorAttributeName))
-                    expect(resultObject.linkTextAttributes).to(containIdenticalContent(value, for: NSForegroundColorAttributeName))
+                    expect(resultValue).to(containIdenticalContent(value, for: key))
+                    expect(resultObject.linkTextAttributes).to(containIdenticalContent(value, for: key))
                 }
             }
 

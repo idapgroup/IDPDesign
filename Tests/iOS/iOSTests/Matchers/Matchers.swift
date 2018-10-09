@@ -13,10 +13,8 @@ func containIdenticalContent(_ values: [Any]?) -> Predicate<[Any]> {
         let result = try expression.evaluate() ?? []
         let matches = result.count == values?.count
             && zip(values ?? [], result)
-                .map {
-                    let (lhs, rhs) = $0
-                    
-                    return lhs as AnyObject === rhs as AnyObject
+                .map { lhs, rhs in
+                    lhs as AnyObject === rhs as AnyObject
                 }
                 .reduce(true) { $0 && $1 }
         
@@ -24,11 +22,11 @@ func containIdenticalContent(_ values: [Any]?) -> Predicate<[Any]> {
     }
 }
 
-func containIdenticalContent(_ dictionary: [String: Any]?, for key: String) -> Predicate<[String: Any]?> {
+func containIdenticalContent<Key: Hashable>(_ dictionary: [Key: Any]?, for key: Key) -> Predicate<[Key: Any]?> {
     return containComparableContent(dictionary, type: AnyObject.self, for: key) { $0 === $1 }
 }
 
-func containEqualContent<T: Equatable>(_ dictionary: [AnyHashable: Any]?, type: T.Type, for key: AnyHashable) -> Predicate<[AnyHashable: Any]?> {
+func containEqualContent<T: Equatable, Key: Hashable>(_ dictionary: [Key: Any]?, type: T.Type, for key: Key) -> Predicate<[Key: Any]?> {
     return containComparableContent(dictionary, type: T.self, for: key) { $0 == $1 }
 }
 
@@ -42,9 +40,9 @@ func containComparableContent<Key, Value>(
 {
     return Predicate.define { expression in
         let result = try expression.evaluate() ?? [:]
-        let values = [result, dictionary].flatMap { $0?[key] as? Value }
+        let values = [result, dictionary].compactMap { $0?[key] as? Value }
         let matches = values.count == 2 && comparator(values[0], values[1])
         
-        return PredicateResult(status: PredicateStatus(bool: matches), message: .fail("Array contains non-comparable values"))
+        return PredicateResult(status: PredicateStatus(bool: matches), message: .fail("Dictionary contains non-comparable values"))
     }
 }
