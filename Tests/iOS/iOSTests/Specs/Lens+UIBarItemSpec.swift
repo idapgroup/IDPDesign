@@ -13,35 +13,41 @@ import UIKit
 
 @testable import IDPDesign
 
-// TODO: SWIFTC CAN'T HANDLE CONFORMANCE IN TESTS, BECAUSE PODS ARE STILL 3.2
-// extension UIBarItem: UIBarItemProtocol { }
+extension UIBarItem: UIBarItemProtocol { }
 
 class LensUIBarItemSpec: QuickSpec {
     override func spec() {
         describe("Lens+UIBarItemSpec") {
             
-//            public func titleTextAttributes<Object: UIBarItem>(for state: UIControlState) -> Lens<Object, [NSAttributedStringKey : Any]?> {
-//                return Lens(
-//                    get: { $0.titleTextAttributes(for: state).map(toAttributedStringKey) },
-//                    setter: { $0.setTitleTextAttributes($1, for: state) }
-//                )
-//            }
+            func toAttributedStringKey(_ value: [String : Any]) -> [NSAttributedStringKey: Any] {
+                var result = [NSAttributedStringKey: Any]()
+                value.forEach {
+                    let key = NSAttributedStringKey($0.key)
+                    result[key] = $0.value
+                }
+                
+                return result
+            }
             
-// TODO: SWIFTC CRASH, CAN'T FIND A VALID FUNCTION NAME, REASONS UNKNOWN
-//            context("titleTextAttributes") {
-//                it("should get and set") {
-//                    let lens: Lens<UIBarItem, [NSAttributedStringKey : Any]?> = titleTextAttributes()
-//                    let object = UIBarButtonItem()
-//
-//                    let value: [NSAttributedStringKey : Any] = [:]
-//
-//                    let resultObject = lens.set(object, value)
-//                    let resultValue = lens.get(resultObject)
-//
-//                    expect(resultValue).to(equal(value))
-//                    expect(resultObject.titleTextAttributes).to(equal(value))
-//                }
-//            }
+            context("titleTextAttributes") {
+                it("should get and set") {
+                    let state = UIControlState.normal
+                    let lens: Lens<UIBarButtonItem, [NSAttributedStringKey : Any]?> = titleTextAttributes(for: state)
+                    let object = UIBarButtonItem()
+
+                    let color = UIColor.red
+                    let key = NSAttributedStringKey.foregroundColor
+                    let value: [NSAttributedStringKey : Any]? = [key: color]
+
+                    let resultObject = lens.set(object, value)
+                    let resultValue = lens.get(resultObject)
+                    
+                    expect(resultValue).to(containIdenticalContent(value, for: key))
+                    
+                    let objectValue = resultObject.titleTextAttributes(for: state).map(toAttributedStringKey)
+                    expect(objectValue).to(containIdenticalContent(value, for: key))
+                }
+            }
 
             context("isEnabled") {
                 it("should get and set") {

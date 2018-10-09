@@ -13,8 +13,7 @@ import UIKit
 
 @testable import IDPDesign
 
-// TODO: SWIFTC CAN'T HANDLE CONFORMANCE IN TESTS, BECAUSE PODS ARE STILL 3.2
-//extension UINavigationBar: UINavigationBarProtocol { }
+extension UINavigationBar: UINavigationBarProtocol { }
 
 class LensUINavigationBarSpec: QuickSpec {
     override func spec() {
@@ -200,21 +199,22 @@ class LensUINavigationBarSpec: QuickSpec {
                 }
             }
 
-// TODO: SWIFTC CRASH, CAN'T FIND A VALID FUNCTION NAME, REASONS UNKNOWN
-//            context("titleTextAttributes") {
-//                it("should get and set") {
-//                    let lens: Lens<UINavigationBar, [NSAttributedStringKey : Any]?> = titleTextAttributes()
-//                    let object = UINavigationBar()
-//
-//                    let value: [NSAttributedStringKey : Any] = [:]
-//
-//                    let resultObject = lens.set(object, value)
-//                    let resultValue = lens.get(resultObject)
-//
-//                    expect(resultValue).to(equal(value))
-//                    expect(resultObject.titleTextAttributes).to(equal(value))
-//                }
-//            }
+            context("titleTextAttributes") {
+                it("should get and set") {
+                    let lens: Lens<UINavigationBar, [NSAttributedStringKey : Any]?> = titleTextAttributes()
+                    let object = UINavigationBar()
+                    
+                    let color = UIColor.red
+                    let key = NSAttributedStringKey.foregroundColor
+                    let value: [NSAttributedStringKey : Any] = [key: color]
+
+                    let resultObject = lens.set(object, value)
+                    let resultValue = lens.get(resultObject)
+
+                    expect(resultValue).to(containIdenticalContent(value, for: key))
+                    expect(resultObject.titleTextAttributes).to(containIdenticalContent(value, for: key))
+                }
+            }
 
             context("backIndicatorImage") {
                 it("should get and set") {
