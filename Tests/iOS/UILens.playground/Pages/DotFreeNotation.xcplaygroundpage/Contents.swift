@@ -20,7 +20,7 @@ let buttonTitleStyle: Style<UIButton> = design(
     titleLabel ~ design(
         viewStyle(),
         layer ~ design(
-            masksToBounds ~ false
+            masksToBounds ~ true
         ),
         alpha ~ 0.5,
         backgroundColor ~ .green
