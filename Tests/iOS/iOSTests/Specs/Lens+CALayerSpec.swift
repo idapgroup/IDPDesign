@@ -265,10 +265,10 @@ class LensCALayerSpec: QuickSpec {
 
             context("contentsGravity") {
                 it("should get and set") {
-                    let lens: Lens<CALayer, String> = contentsGravity()
+                    let lens: Lens<CALayer, CALayerContentsGravity> = contentsGravity()
                     let object = CALayer()
 
-                    let value: String = kCAGravityBottom
+                    let value = CALayerContentsGravity.bottom
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -310,10 +310,10 @@ class LensCALayerSpec: QuickSpec {
 
             context("contentsFormat") {
                 it("should get and set") {
-                    let lens: Lens<CALayer, String> = contentsFormat()
+                    let lens: Lens<CALayer, CALayerContentsFormat> = contentsFormat()
                     let object = CALayer()
 
-                    let value: String = kCAContentsFormatRGBA8Uint
+                    let value = CALayerContentsFormat.RGBA8Uint
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -325,10 +325,10 @@ class LensCALayerSpec: QuickSpec {
 
             context("minificationFilter") {
                 it("should get and set") {
-                    let lens: Lens<CALayer, String> = minificationFilter()
+                    let lens: Lens<CALayer, CALayerContentsFilter> = minificationFilter()
                     let object = CALayer()
 
-                    let value: String = kCAFilterNearest
+                    let value = CALayerContentsFilter.nearest
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -340,10 +340,10 @@ class LensCALayerSpec: QuickSpec {
 
             context("magnificationFilter") {
                 it("should get and set") {
-                    let lens: Lens<CALayer, String> = magnificationFilter()
+                    let lens: Lens<CALayer, CALayerContentsFilter> = magnificationFilter()
                     let object = CALayer()
 
-                    let value: String = kCAFilterNearest
+                    let value = CALayerContentsFilter.nearest
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

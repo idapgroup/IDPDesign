@@ -53,7 +53,7 @@ public func shadowImage<Object: UINavigationBar>() -> Lens<Object, UIImage?> {
     )
 }
 
-public func titleTextAttributes<Object: UINavigationBar>() -> Lens<Object, [NSAttributedStringKey : Any]?> {
+public func titleTextAttributes<Object: UINavigationBar>() -> Lens<Object, [NSAttributedString.Key : Any]?> {
     return Lens(
         get: { $0.titleTextAttributes },
         setter: { $0.titleTextAttributes = $1 }

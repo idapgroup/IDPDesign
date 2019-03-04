@@ -37,16 +37,16 @@ class LensUIActivityIndicatorViewSpec: QuickSpec {
             
             context("activityIndicatorViewStyle") {
                 it("should get and set") {
-                    let lens: Lens<UIActivityIndicatorView, UIActivityIndicatorViewStyle> = activityIndicatorViewStyle()
+                    let lens: Lens<UIActivityIndicatorView, UIActivityIndicatorView.Style> = activityIndicatorViewStyle()
                     let object = UIActivityIndicatorView()
 
-                    let value: UIActivityIndicatorViewStyle = .whiteLarge
+                    let value: UIActivityIndicatorView.Style = .whiteLarge
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
 
                     expect(resultValue).to(equal(value))
-                    expect(resultObject.activityIndicatorViewStyle).to(equal(value))
+                    expect(resultObject.style).to(equal(value))
                 }
             }
 

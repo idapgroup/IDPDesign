@@ -15,7 +15,7 @@ protocol UITabBarProtocol: UIObjectType {
     var backgroundImage: UIImage? { get set }
     var selectionIndicatorImage: UIImage? { get set }
     var shadowImage: UIImage? { get set }
-    var itemPositioning: UITabBarItemPositioning { get set }
+    var itemPositioning: UITabBar.ItemPositioning { get set }
     var itemWidth: CGFloat { get set }
     var itemSpacing: CGFloat { get set }
     var barStyle: UIBarStyle { get set }

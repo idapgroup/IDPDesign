@@ -10,7 +10,7 @@ public func numberOfTouchesRequired<Object: UISwipeGestureRecognizer>() -> Lens<
     )
 }
 
-public func direction<Object: UISwipeGestureRecognizer>() -> Lens<Object, UISwipeGestureRecognizerDirection> {
+public func direction<Object: UISwipeGestureRecognizer>() -> Lens<Object, UISwipeGestureRecognizer.Direction> {
     return Lens(
         get: { $0.direction },
         setter: { $0.direction = $1 }

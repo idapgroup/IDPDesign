@@ -96,10 +96,10 @@ class LensUITextFieldSpec: QuickSpec {
 
             context("borderStyle") {
                 it("should get and set") {
-                    let lens: Lens<UITextField, UITextBorderStyle> = borderStyle()
+                    let lens: Lens<UITextField, UITextField.BorderStyle> = borderStyle()
                     let object = UITextField()
 
-                    let value: UITextBorderStyle = .roundedRect
+                    let value: UITextField.BorderStyle = .roundedRect
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -111,10 +111,10 @@ class LensUITextFieldSpec: QuickSpec {
 
             context("defaultTextAttributes") {
                 it("should get and set") {
-                    let lens: Lens<UITextField, [String : Any]> = defaultTextAttributes()
+                    let lens: Lens<UITextField, [NSAttributedString.Key : Any]> = defaultTextAttributes()
                     let object = UITextField()
                     
-                    let key = NSAttributedStringKey.foregroundColor.rawValue
+                    let key = NSAttributedString.Key.foregroundColor
                     var value = object.defaultTextAttributes
                     value[key] = UIColor.red
 
@@ -269,10 +269,10 @@ class LensUITextFieldSpec: QuickSpec {
                     UIApplication.shared.keyWindow?.addSubview(object)
                     object.becomeFirstResponder()
                     
-                    let lens: Lens<UITextField, [String : Any]?> = typingAttributes()
+                    let lens: Lens<UITextField, [NSAttributedString.Key : Any]?> = typingAttributes()
                     
-                    let key = NSAttributedStringKey.foregroundColor.rawValue
-                    let value: [String : Any]? = [key : UIColor.red]
+                    let key = NSAttributedString.Key.foregroundColor
+                    let value: [NSAttributedString.Key : Any]? = [key : UIColor.red]
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -287,10 +287,10 @@ class LensUITextFieldSpec: QuickSpec {
 
             context("clearButtonMode") {
                 it("should get and set") {
-                    let lens: Lens<UITextField, UITextFieldViewMode> = clearButtonMode()
+                    let lens: Lens<UITextField, UITextField.ViewMode> = clearButtonMode()
                     let object = UITextField()
 
-                    let value: UITextFieldViewMode = .unlessEditing
+                    let value: UITextField.ViewMode = .unlessEditing
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -317,10 +317,10 @@ class LensUITextFieldSpec: QuickSpec {
 
             context("leftViewMode") {
                 it("should get and set") {
-                    let lens: Lens<UITextField, UITextFieldViewMode> = leftViewMode()
+                    let lens: Lens<UITextField, UITextField.ViewMode> = leftViewMode()
                     let object = UITextField()
 
-                    let value: UITextFieldViewMode = .unlessEditing
+                    let value: UITextField.ViewMode = .unlessEditing
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -347,10 +347,10 @@ class LensUITextFieldSpec: QuickSpec {
 
             context("rightViewMode") {
                 it("should get and set") {
-                    let lens: Lens<UITextField, UITextFieldViewMode> = rightViewMode()
+                    let lens: Lens<UITextField, UITextField.ViewMode> = rightViewMode()
                     let object = UITextField()
 
-                    let value: UITextFieldViewMode = .unlessEditing
+                    let value: UITextField.ViewMode = .unlessEditing
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

@@ -94,21 +94,21 @@ public func scrollIndicatorInsets<Object: UIScrollView>() -> Lens<Object, UIEdge
     )
 }
 
-public func indicatorStyle<Object: UIScrollView>() -> Lens<Object, UIScrollViewIndicatorStyle> {
+public func indicatorStyle<Object: UIScrollView>() -> Lens<Object, UIScrollView.IndicatorStyle> {
     return Lens(
         get: { $0.indicatorStyle },
         setter: { $0.indicatorStyle = $1 }
     )
 }
 
-public func decelerationRate<Object: UIScrollView>() -> Lens<Object, CGFloat> {
+public func decelerationRate<Object: UIScrollView>() -> Lens<Object, UIScrollView.DecelerationRate> {
     return Lens(
         get: { $0.decelerationRate },
         setter: { $0.decelerationRate = $1 }
     )
 }
 
-public func indexDisplayMode<Object: UIScrollView>() -> Lens<Object, UIScrollViewIndexDisplayMode> {
+public func indexDisplayMode<Object: UIScrollView>() -> Lens<Object, UIScrollView.IndexDisplayMode> {
     return Lens(
         get: { $0.indexDisplayMode },
         setter: { $0.indexDisplayMode = $1 }
@@ -172,7 +172,7 @@ public func pinchGestureRecognizer<Object: UIScrollView>() -> Lens<Object, UIPin
     return Lens { $0.pinchGestureRecognizer }
 }
 
-public func keyboardDismissMode<Object: UIScrollView>() -> Lens<Object, UIScrollViewKeyboardDismissMode> {
+public func keyboardDismissMode<Object: UIScrollView>() -> Lens<Object, UIScrollView.KeyboardDismissMode> {
     return Lens(
         get: { $0.keyboardDismissMode },
         setter: { $0.keyboardDismissMode = $1 }

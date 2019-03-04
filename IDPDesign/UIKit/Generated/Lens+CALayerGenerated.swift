@@ -105,7 +105,7 @@ public func contentsRect<Object: CALayer>() -> Lens<Object, CGRect> {
     )
 }
 
-public func contentsGravity<Object: CALayer>() -> Lens<Object, String> {
+public func contentsGravity<Object: CALayer>() -> Lens<Object, CALayerContentsGravity> {
     return Lens(
         get: { $0.contentsGravity },
         setter: { $0.contentsGravity = $1 }
@@ -126,21 +126,21 @@ public func contentsCenter<Object: CALayer>() -> Lens<Object, CGRect> {
     )
 }
 
-public func contentsFormat<Object: CALayer>() -> Lens<Object, String> {
+public func contentsFormat<Object: CALayer>() -> Lens<Object, CALayerContentsFormat> {
     return Lens(
         get: { $0.contentsFormat },
         setter: { $0.contentsFormat = $1 }
     )
 }
 
-public func minificationFilter<Object: CALayer>() -> Lens<Object, String> {
+public func minificationFilter<Object: CALayer>() -> Lens<Object, CALayerContentsFilter> {
     return Lens(
         get: { $0.minificationFilter },
         setter: { $0.minificationFilter = $1 }
     )
 }
 
-public func magnificationFilter<Object: CALayer>() -> Lens<Object, String> {
+public func magnificationFilter<Object: CALayer>() -> Lens<Object, CALayerContentsFilter> {
     return Lens(
         get: { $0.magnificationFilter },
         setter: { $0.magnificationFilter = $1 }

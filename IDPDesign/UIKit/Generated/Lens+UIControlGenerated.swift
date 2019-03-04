@@ -3,14 +3,14 @@
 
 import UIKit
 
-public func contentHorizontalAlignment<Object: UIControl>() -> Lens<Object, UIControlContentHorizontalAlignment> {
+public func contentHorizontalAlignment<Object: UIControl>() -> Lens<Object, UIControl.ContentHorizontalAlignment> {
     return Lens(
         get: { $0.contentHorizontalAlignment },
         setter: { $0.contentHorizontalAlignment = $1 }
     )
 }
 
-public func contentVerticalAlignment<Object: UIControl>() -> Lens<Object, UIControlContentVerticalAlignment> {
+public func contentVerticalAlignment<Object: UIControl>() -> Lens<Object, UIControl.ContentVerticalAlignment> {
     return Lens(
         get: { $0.contentVerticalAlignment },
         setter: { $0.contentVerticalAlignment = $1 }

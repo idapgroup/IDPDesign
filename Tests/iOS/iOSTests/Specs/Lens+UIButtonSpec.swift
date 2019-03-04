@@ -21,7 +21,7 @@ class LensUIButtonSpec: QuickSpec {
             
             context("backgroundImage(for:)") {
                 it("should get and set") {
-                    let state = UIControlState.disabled
+                    let state = UIControl.State.disabled
                     
                     let lens: Lens<UIButton, UIImage?> = backgroundImage(for: state)
                     let object = UIButton()
@@ -38,7 +38,7 @@ class LensUIButtonSpec: QuickSpec {
             
             context("title(for:)") {
                 it("should get and set") {
-                    let state = UIControlState.disabled
+                    let state = UIControl.State.disabled
                     
                     let lens: Lens<UIButton, String?> = title(for: state)
                     let object = UIButton()
@@ -55,7 +55,7 @@ class LensUIButtonSpec: QuickSpec {
             
             context("image(for:)") {
                 it("should get and set") {
-                    let state = UIControlState.disabled
+                    let state = UIControl.State.disabled
                     
                     let lens: Lens<UIButton, UIImage?> = image(for: state)
                     let object = UIButton()
@@ -72,7 +72,7 @@ class LensUIButtonSpec: QuickSpec {
 
             context("title(for:)") {
                 it("should get and set") {
-                    let state = UIControlState.disabled
+                    let state = UIControl.State.disabled
                     
                     let lens: Lens<UIButton, NSAttributedString?> = attributedTitle(for: state)
                     let object = UIButton()
@@ -89,7 +89,7 @@ class LensUIButtonSpec: QuickSpec {
             
             context("titleColor(for:)") {
                 it("should get and set") {
-                    let state = UIControlState.disabled
+                    let state = UIControl.State.disabled
                     
                     let lens: Lens<UIButton, UIColor?> = titleColor(for: state)
                     let object = UIButton()

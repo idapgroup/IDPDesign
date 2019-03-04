@@ -143,7 +143,7 @@ public func sectionIndexTrackingBackgroundColor<Object: UITableView>() -> Lens<O
     )
 }
 
-public func separatorStyle<Object: UITableView>() -> Lens<Object, UITableViewCellSeparatorStyle> {
+public func separatorStyle<Object: UITableView>() -> Lens<Object, UITableViewCell.SeparatorStyle> {
     return Lens(
         get: { $0.separatorStyle },
         setter: { $0.separatorStyle = $1 }

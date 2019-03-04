@@ -19,10 +19,10 @@ class LensUIBarItemSpec: QuickSpec {
     override func spec() {
         describe("Lens+UIBarItemSpec") {
             
-            func toAttributedStringKey(_ value: [String : Any]) -> [NSAttributedStringKey: Any] {
-                var result = [NSAttributedStringKey: Any]()
+            func toAttributedStringKey(_ value: [String : Any]) -> [NSAttributedString.Key: Any] {
+                var result = [NSAttributedString.Key: Any]()
                 value.forEach {
-                    let key = NSAttributedStringKey($0.key)
+                    let key = NSAttributedString.Key($0.key)
                     result[key] = $0.value
                 }
                 
@@ -31,20 +31,20 @@ class LensUIBarItemSpec: QuickSpec {
             
             context("titleTextAttributes") {
                 it("should get and set") {
-                    let state = UIControlState.normal
-                    let lens: Lens<UIBarButtonItem, [NSAttributedStringKey : Any]?> = titleTextAttributes(for: state)
+                    let state = UIControl.State.normal
+                    let lens: Lens<UIBarButtonItem, [NSAttributedString.Key : Any]?> = titleTextAttributes(for: state)
                     let object = UIBarButtonItem()
 
                     let color = UIColor.red
-                    let key = NSAttributedStringKey.foregroundColor
-                    let value: [NSAttributedStringKey : Any]? = [key: color]
+                    let key = NSAttributedString.Key.foregroundColor
+                    let value: [NSAttributedString.Key : Any]? = [key: color]
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
                     
                     expect(resultValue).to(containIdenticalContent(value, for: key))
                     
-                    let objectValue = resultObject.titleTextAttributes(for: state).map(toAttributedStringKey)
+                    let objectValue = resultObject.titleTextAttributes(for: state)
                     expect(objectValue).to(containIdenticalContent(value, for: key))
                 }
             }

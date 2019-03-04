@@ -188,10 +188,10 @@ class LensUITextViewSpec: QuickSpec {
 
             context("typingAttributes") {
                 it("should get and set") {
-                    let lens: Lens<UITextView, [String : Any]> = typingAttributes()
+                    let lens: Lens<UITextView, [NSAttributedString.Key : Any]> = typingAttributes()
                     let object = UITextView()
 
-                    let value: [String : Any] = [:]
+                    let value: [NSAttributedString.Key : Any] = [:]
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -308,11 +308,11 @@ class LensUITextViewSpec: QuickSpec {
 
             context("linkTextAttributes") {
                 it("should get and set") {
-                    let lens: Lens<UITextView, [String : Any]?> = linkTextAttributes()
+                    let lens: Lens<UITextView, [NSAttributedString.Key : Any]?> = linkTextAttributes()
                     let object = UITextView()
                     
-                    let key = NSAttributedStringKey.foregroundColor.rawValue
-                    var value: [String : Any]! = object.linkTextAttributes
+                    let key = NSAttributedString.Key.foregroundColor
+                    var value: [NSAttributedString.Key : Any]! = object.linkTextAttributes
                     value[key] = UIColor.red
 
                     let resultObject = lens.set(object, value)

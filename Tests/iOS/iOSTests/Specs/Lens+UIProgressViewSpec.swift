@@ -21,10 +21,10 @@ class LensUIProgressViewSpec: QuickSpec {
 
             context("progressViewStyle") {
                 it("should get and set") {
-                    let lens: Lens<UIProgressView, UIProgressViewStyle> = progressViewStyle()
+                    let lens: Lens<UIProgressView, UIProgressView.Style> = progressViewStyle()
                     let object = UIProgressView()
 
-                    let value: UIProgressViewStyle = .bar
+                    let value: UIProgressView.Style = .bar
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

@@ -20,9 +20,9 @@ protocol UIScrollViewProtocol: UIObjectType {
     var showsHorizontalScrollIndicator: Bool { get set }
     var showsVerticalScrollIndicator: Bool { get set }
     var scrollIndicatorInsets: UIEdgeInsets { get set }
-    var indicatorStyle: UIScrollViewIndicatorStyle { get set }
-    var decelerationRate: CGFloat { get set }
-    var indexDisplayMode: UIScrollViewIndexDisplayMode { get set }
+    var indicatorStyle: UIScrollView.IndicatorStyle { get set }
+    var decelerationRate: UIScrollView.DecelerationRate { get set }
+    var indexDisplayMode: UIScrollView.IndexDisplayMode { get set }
     var delaysContentTouches: Bool { get set }
     var canCancelContentTouches: Bool { get set }
     var minimumZoomScale: CGFloat { get set }
@@ -32,6 +32,6 @@ protocol UIScrollViewProtocol: UIObjectType {
     var scrollsToTop: Bool { get set }
     var panGestureRecognizer: UIPanGestureRecognizer { get }
     var pinchGestureRecognizer: UIPinchGestureRecognizer? { get }
-    var keyboardDismissMode: UIScrollViewKeyboardDismissMode { get set }
+    var keyboardDismissMode: UIScrollView.KeyboardDismissMode { get set }
     var refreshControl: UIRefreshControl? { get set }
 }

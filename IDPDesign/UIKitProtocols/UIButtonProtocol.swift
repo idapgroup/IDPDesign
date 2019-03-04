@@ -15,18 +15,18 @@ protocol UIButtonProtocol: UIObjectType {
     var titleEdgeInsets: UIEdgeInsets { get set }
     var titleLabel: UILabel? { get }
 
-    func backgroundImage(for state: UIControlState) -> UIImage?
-    func setBackgroundImage(_ backgroundImage: UIImage?, for state: UIControlState)
+    func backgroundImage(for state: UIControl.State) -> UIImage?
+    func setBackgroundImage(_ backgroundImage: UIImage?, for state: UIControl.State)
 
-    func title(for state: UIControlState) -> String?
-    func setTitle(_ title: String?, for state: UIControlState)
+    func title(for state: UIControl.State) -> String?
+    func setTitle(_ title: String?, for state: UIControl.State)
 
-    func image(for state: UIControlState) -> UIImage?
-    func setImage(_ image: UIImage?, for state: UIControlState)
+    func image(for state: UIControl.State) -> UIImage?
+    func setImage(_ image: UIImage?, for state: UIControl.State)
 
-    func attributedTitle(for state: UIControlState) -> NSAttributedString?
-    func setAttributedTitle(_ title: NSAttributedString?, for state: UIControlState)
+    func attributedTitle(for state: UIControl.State) -> NSAttributedString?
+    func setAttributedTitle(_ title: NSAttributedString?, for state: UIControl.State)
 
-    func titleColor(for state: UIControlState) -> UIColor?
-    func setTitleColor(_ color: UIColor?, for: UIControlState)
+    func titleColor(for state: UIControl.State) -> UIColor?
+    func setTitleColor(_ color: UIColor?, for: UIControl.State)
 }

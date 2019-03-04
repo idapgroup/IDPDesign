@@ -126,10 +126,10 @@ class LensUITableViewCellSpec: QuickSpec {
 
             context("selectionStyle") {
                 it("should get and set") {
-                    let lens: Lens<UITableViewCell, UITableViewCellSelectionStyle> = selectionStyle()
+                    let lens: Lens<UITableViewCell, UITableViewCell.SelectionStyle> = selectionStyle()
                     let object = UITableViewCell()
 
-                    let value: UITableViewCellSelectionStyle = .none
+                    let value: UITableViewCell.SelectionStyle = .none
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -201,10 +201,10 @@ class LensUITableViewCellSpec: QuickSpec {
 
             context("accessoryType") {
                 it("should get and set") {
-                    let lens: Lens<UITableViewCell, UITableViewCellAccessoryType> = accessoryType()
+                    let lens: Lens<UITableViewCell, UITableViewCell.AccessoryType> = accessoryType()
                     let object = UITableViewCell()
 
-                    let value: UITableViewCellAccessoryType = .checkmark
+                    let value: UITableViewCell.AccessoryType = .checkmark
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -231,10 +231,10 @@ class LensUITableViewCellSpec: QuickSpec {
 
             context("editingAccessoryType") {
                 it("should get and set") {
-                    let lens: Lens<UITableViewCell, UITableViewCellAccessoryType> = editingAccessoryType()
+                    let lens: Lens<UITableViewCell, UITableViewCell.AccessoryType> = editingAccessoryType()
                     let object = UITableViewCell()
 
-                    let value: UITableViewCellAccessoryType = .checkmark
+                    let value: UITableViewCell.AccessoryType = .checkmark
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -324,10 +324,10 @@ class LensUITableViewCellSpec: QuickSpec {
 
             context("focusStyle") {
                 it("should get and set") {
-                    let lens: Lens<UITableViewCell, UITableViewCellFocusStyle> = focusStyle()
+                    let lens: Lens<UITableViewCell, UITableViewCell.FocusStyle> = focusStyle()
                     let object = UITableViewCell()
 
-                    let value: UITableViewCellFocusStyle = .custom
+                    let value: UITableViewCell.FocusStyle = .custom
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

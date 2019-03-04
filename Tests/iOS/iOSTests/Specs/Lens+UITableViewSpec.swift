@@ -339,10 +339,10 @@ class LensUITableViewSpec: QuickSpec {
 
             context("separatorStyle") {
                 it("should get and set") {
-                    let lens: Lens<UITableView, UITableViewCellSeparatorStyle> = separatorStyle()
+                    let lens: Lens<UITableView, UITableViewCell.SeparatorStyle> = separatorStyle()
                     let object = UITableView()
 
-                    let value: UITableViewCellSeparatorStyle = .none
+                    let value: UITableViewCell.SeparatorStyle = .none
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

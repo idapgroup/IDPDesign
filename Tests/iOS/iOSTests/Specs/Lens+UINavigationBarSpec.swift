@@ -201,12 +201,12 @@ class LensUINavigationBarSpec: QuickSpec {
 
             context("titleTextAttributes") {
                 it("should get and set") {
-                    let lens: Lens<UINavigationBar, [NSAttributedStringKey : Any]?> = titleTextAttributes()
+                    let lens: Lens<UINavigationBar, [NSAttributedString.Key : Any]?> = titleTextAttributes()
                     let object = UINavigationBar()
                     
                     let color = UIColor.red
-                    let key = NSAttributedStringKey.foregroundColor
-                    let value: [NSAttributedStringKey : Any] = [key: color]
+                    let key = NSAttributedString.Key.foregroundColor
+                    let value: [NSAttributedString.Key : Any] = [key: color]
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

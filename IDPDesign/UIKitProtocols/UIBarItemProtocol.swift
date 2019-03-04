@@ -15,6 +15,6 @@ protocol UIBarItemProtocol: UIObjectType {
     var landscapeImagePhoneInsets: UIEdgeInsets { get set }
     var tag: Int { get set }
 
-    func titleTextAttributes(for state: UIControlState) -> [String : Any]?
-    func setTitleTextAttributes(_ attributes: [NSAttributedStringKey : Any]?, for state: UIControlState)
+    func titleTextAttributes(for state: UIControl.State) -> [NSAttributedString.Key : Any]?
+    func setTitleTextAttributes(_ attributes: [NSAttributedString.Key : Any]?, for state: UIControl.State)
 }

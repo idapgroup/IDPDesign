@@ -7,9 +7,9 @@
 //
 
 protocol UIActivityIndicatorViewProtocol: UIObjectType {
-    var activityIndicatorViewStyle: UIActivityIndicatorViewStyle { get set }
+    var style: UIActivityIndicatorView.Style { get set }
     var hidesWhenStopped: Bool { get set }
-    var color: UIColor? { get set }
+    var color: UIColor! { get set }
 
     func startAnimating()
     func stopAnimating()

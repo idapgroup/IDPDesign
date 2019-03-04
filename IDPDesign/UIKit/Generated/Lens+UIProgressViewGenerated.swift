@@ -3,7 +3,7 @@
 
 import UIKit
 
-public func progressViewStyle<Object: UIProgressView>() -> Lens<Object, UIProgressViewStyle> {
+public func progressViewStyle<Object: UIProgressView>() -> Lens<Object, UIProgressView.Style> {
     return Lens(
         get: { $0.progressViewStyle },
         setter: { $0.progressViewStyle = $1 }

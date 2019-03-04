@@ -158,10 +158,10 @@ class LensUIWebViewSpec: QuickSpec {
 
             context("paginationMode") {
                 it("should get and set") {
-                    let lens: Lens<UIWebView, UIWebPaginationMode> = paginationMode()
+                    let lens: Lens<UIWebView, UIWebView.PaginationMode> = paginationMode()
                     let object = UIWebView()
 
-                    let value: UIWebPaginationMode = .bottomToTop
+                    let value: UIWebView.PaginationMode = .bottomToTop
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -173,10 +173,10 @@ class LensUIWebViewSpec: QuickSpec {
 
             context("paginationBreakingMode") {
                 it("should get and set") {
-                    let lens: Lens<UIWebView, UIWebPaginationBreakingMode> = paginationBreakingMode()
+                    let lens: Lens<UIWebView, UIWebView.PaginationBreakingMode> = paginationBreakingMode()
                     let object = UIWebView()
 
-                    let value: UIWebPaginationBreakingMode = .column
+                    let value: UIWebView.PaginationBreakingMode = .column
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

@@ -3,10 +3,10 @@
 
 import UIKit
 
-public func activityIndicatorViewStyle<Object: UIActivityIndicatorView>() -> Lens<Object, UIActivityIndicatorViewStyle> {
+public func activityIndicatorViewStyle<Object: UIActivityIndicatorView>() -> Lens<Object, UIActivityIndicatorView.Style> {
     return Lens(
-        get: { $0.activityIndicatorViewStyle },
-        setter: { $0.activityIndicatorViewStyle = $1 }
+        get: { $0.style },
+        setter: { $0.style = $1 }
     )
 }
 

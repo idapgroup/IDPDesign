@@ -18,7 +18,7 @@ protocol UITextViewProtocol: UIObjectType {
     var dataDetectorTypes: UIDataDetectorTypes { get set }
     var allowsEditingTextAttributes: Bool { get set }
     var attributedText: NSAttributedString! { get set }
-    var typingAttributes: [String : Any] { get set }
+    var typingAttributes: [NSAttributedString.Key : Any] { get set }
     var inputView: UIView? { get set }
     var inputAccessoryView: UIView? { get set }
     var clearsOnInsertion: Bool { get set }
@@ -26,7 +26,7 @@ protocol UITextViewProtocol: UIObjectType {
     var textContainerInset: UIEdgeInsets { get set }
     var layoutManager: NSLayoutManager { get }
     var textStorage: NSTextStorage { get }
-    var linkTextAttributes: [String : Any]! { get set }
+    var linkTextAttributes: [NSAttributedString.Key : Any]! { get set }
 
     // UITextInputTraits
     var autocorrectionType: UITextAutocorrectionType { get set }

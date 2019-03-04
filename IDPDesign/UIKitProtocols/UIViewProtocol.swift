@@ -17,7 +17,7 @@ protocol UIViewProtocol: UIObjectType {
     var isMultipleTouchEnabled: Bool { get set }
     var isExclusiveTouch: Bool { get set }
     var autoresizesSubviews: Bool { get set }
-    var autoresizingMask: UIViewAutoresizing { get set }
+    var autoresizingMask: UIView.AutoresizingMask { get set }
     var superview: UIView? { get }
     var window: UIWindow? { get }
     var layoutMargins: UIEdgeInsets { get set }
@@ -28,10 +28,10 @@ protocol UIViewProtocol: UIObjectType {
     var isOpaque: Bool { get set }
     var clearsContextBeforeDrawing: Bool { get set }
     var isHidden: Bool { get set }
-    var contentMode: UIViewContentMode { get set }
+    var contentMode: UIView.ContentMode { get set }
     var mask: UIView? { get set }
     var tintColor: UIColor! { get set }
-    var tintAdjustmentMode: UIViewTintAdjustmentMode { get set }
+    var tintAdjustmentMode: UIView.TintAdjustmentMode { get set }
     var semanticContentAttribute: UISemanticContentAttribute { get set }
     var tag: Int { get set }
     var translatesAutoresizingMaskIntoConstraints: Bool { get set }
