@@ -171,10 +171,10 @@ class LensUIViewSpec: QuickSpec {
 
             context("autoresizingMask") {
                 it("should get and set") {
-                    let lens: Lens<UIView, UIViewAutoresizing> = autoresizingMask()
+                    let lens: Lens<UIView, UIView.AutoresizingMask> = autoresizingMask()
                     let object = UIView()
 
-                    let value: UIViewAutoresizing = UIViewAutoresizing()
+                    let value: UIView.AutoresizingMask = UIView.AutoresizingMask()
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -338,10 +338,10 @@ class LensUIViewSpec: QuickSpec {
 
             context("contentMode") {
                 it("should get and set") {
-                    let lens: Lens<UIView, UIViewContentMode> = contentMode()
+                    let lens: Lens<UIView, UIView.ContentMode> = contentMode()
                     let object = UIView()
 
-                    let value: UIViewContentMode = .redraw
+                    let value: UIView.ContentMode = .redraw
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -383,10 +383,10 @@ class LensUIViewSpec: QuickSpec {
 
             context("tintAdjustmentMode") {
                 it("should get and set") {
-                    let lens: Lens<UIView, UIViewTintAdjustmentMode> = tintAdjustmentMode()
+                    let lens: Lens<UIView, UIView.TintAdjustmentMode> = tintAdjustmentMode()
                     let object = UIView()
 
-                    let value: UIViewTintAdjustmentMode = .dimmed
+                    let value: UIView.TintAdjustmentMode = .dimmed
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

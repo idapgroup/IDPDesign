@@ -63,14 +63,14 @@ public func keyboardDisplayRequiresUserAction<Object: UIWebView>() -> Lens<Objec
     )
 }
 
-public func paginationMode<Object: UIWebView>() -> Lens<Object, UIWebPaginationMode> {
+public func paginationMode<Object: UIWebView>() -> Lens<Object, UIWebView.PaginationMode> {
     return Lens(
         get: { $0.paginationMode },
         setter: { $0.paginationMode = $1 }
     )
 }
 
-public func paginationBreakingMode<Object: UIWebView>() -> Lens<Object, UIWebPaginationBreakingMode> {
+public func paginationBreakingMode<Object: UIWebView>() -> Lens<Object, UIWebView.PaginationBreakingMode> {
     return Lens(
         get: { $0.paginationBreakingMode },
         setter: { $0.paginationBreakingMode = $1 }

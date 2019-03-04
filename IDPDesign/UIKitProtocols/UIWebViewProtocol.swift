@@ -16,8 +16,8 @@ protocol UIWebViewProtocol: UIViewProtocol {
     var mediaPlaybackAllowsAirPlay: Bool { get set }
     var suppressesIncrementalRendering: Bool { get set }
     var keyboardDisplayRequiresUserAction: Bool { get set }
-    var paginationMode: UIWebPaginationMode { get set }
-    var paginationBreakingMode: UIWebPaginationBreakingMode { get set }
+    var paginationMode: UIWebView.PaginationMode { get set }
+    var paginationBreakingMode: UIWebView.PaginationBreakingMode { get set }
     var pageLength: CGFloat { get set }
     var gapBetweenPages: CGFloat { get set }
     var allowsPictureInPictureMediaPlayback: Bool { get set }

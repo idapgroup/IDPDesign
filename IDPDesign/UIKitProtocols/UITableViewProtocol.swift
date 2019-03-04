@@ -29,7 +29,7 @@ protocol UITableViewProtocol: UIObjectType {
     var sectionIndexTrackingBackgroundColor: UIColor? { get set }
 
     // sourcery: value = .none
-    var separatorStyle: UITableViewCellSeparatorStyle { get set }
+    var separatorStyle: UITableViewCell.SeparatorStyle { get set }
     var separatorColor: UIColor? { get set }
     var separatorEffect: UIVisualEffect? { get set }
     var cellLayoutMarginsFollowReadableWidth: Bool { get set }

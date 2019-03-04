@@ -80,7 +80,7 @@ public func attributedText<Object: UITextView>() -> Lens<Object, NSAttributedStr
     )
 }
 
-public func typingAttributes<Object: UITextView>() -> Lens<Object, [String : Any]> {
+public func typingAttributes<Object: UITextView>() -> Lens<Object, [NSAttributedString.Key : Any]> {
     return Lens(
         get: { $0.typingAttributes },
         setter: { $0.typingAttributes = $1 }
@@ -127,7 +127,7 @@ public func textStorage<Object: UITextView>() -> Lens<Object, NSTextStorage> {
     return Lens { $0.textStorage }
 }
 
-public func linkTextAttributes<Object: UITextView>() -> Lens<Object, [String : Any]?> {
+public func linkTextAttributes<Object: UITextView>() -> Lens<Object, [NSAttributedString.Key : Any]?> {
     return Lens(
         get: { $0.linkTextAttributes },
         setter: { $0.linkTextAttributes = $1 }

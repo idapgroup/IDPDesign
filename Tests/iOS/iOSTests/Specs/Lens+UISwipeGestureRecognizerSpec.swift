@@ -36,10 +36,10 @@ class LensUISwipeGestureRecognizerSpec: QuickSpec {
 
             context("direction") {
                 it("should get and set") {
-                    let lens: Lens<UISwipeGestureRecognizer, UISwipeGestureRecognizerDirection> = direction()
+                    let lens: Lens<UISwipeGestureRecognizer, UISwipeGestureRecognizer.Direction> = direction()
                     let object = UISwipeGestureRecognizer()
 
-                    let value: UISwipeGestureRecognizerDirection = UISwipeGestureRecognizerDirection()
+                    let value: UISwipeGestureRecognizer.Direction = UISwipeGestureRecognizer.Direction()
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

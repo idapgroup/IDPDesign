@@ -8,5 +8,5 @@
 
 protocol UISwipeGestureRecognizerProtocol: UIObjectType {
     var numberOfTouchesRequired: Int { get set }
-    var direction: UISwipeGestureRecognizerDirection { get set }
+    var direction: UISwipeGestureRecognizer.Direction { get set }
 }

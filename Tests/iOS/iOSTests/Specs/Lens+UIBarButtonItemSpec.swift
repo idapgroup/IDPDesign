@@ -25,7 +25,7 @@ class LensUIBarButtonItemSpec: QuickSpec {
             
             context("backgroundImage(for:, barMetrics:)") {
                 it("should get and set") {
-                    let state = UIControlState.disabled
+                    let state = UIControl.State.disabled
                     let metrics = UIBarMetrics.compact
                     
                     let lens: Lens<UIBarButtonItem, UIImage?> = backgroundImage(for: state, barMetrics: metrics)
@@ -43,8 +43,8 @@ class LensUIBarButtonItemSpec: QuickSpec {
             
             context("backgroundImage(for:, style:, barMetrics:)") {
                 it("should get and set") {
-                    let state = UIControlState.disabled
-                    let style = UIBarButtonItemStyle.plain
+                    let state = UIControl.State.disabled
+                    let style = UIBarButtonItem.Style.plain
                     let metrics = UIBarMetrics.compact
                     
                     let lens: Lens<UIBarButtonItem, UIImage?> = backgroundImage(for: state, style: style, barMetrics: metrics)
@@ -96,7 +96,7 @@ class LensUIBarButtonItemSpec: QuickSpec {
 
             context("backButtonBackgroundImage(for:, barMetrics:)") {
                 it("should get and set") {
-                    let state = UIControlState.disabled
+                    let state = UIControl.State.disabled
                     let metrics = UIBarMetrics.compact
                     
                     let lens: Lens<UIBarButtonItem, UIImage?> = backButtonBackgroundImage(for: state, barMetrics: metrics)
@@ -148,10 +148,10 @@ class LensUIBarButtonItemSpec: QuickSpec {
 
             context("style") {
                 it("should get and set") {
-                    let lens: Lens<UIBarButtonItem, UIBarButtonItemStyle> = style()
+                    let lens: Lens<UIBarButtonItem, UIBarButtonItem.Style> = style()
                     let object = UIBarButtonItem()
 
-                    let value: UIBarButtonItemStyle = .done
+                    let value: UIBarButtonItem.Style = .done
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

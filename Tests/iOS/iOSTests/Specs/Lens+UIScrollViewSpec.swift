@@ -218,10 +218,10 @@ class LensUIScrollViewSpec: QuickSpec {
 
             context("indicatorStyle") {
                 it("should get and set") {
-                    let lens: Lens<UIScrollView, UIScrollViewIndicatorStyle> = indicatorStyle()
+                    let lens: Lens<UIScrollView, UIScrollView.IndicatorStyle> = indicatorStyle()
                     let object = UIScrollView()
 
-                    let value: UIScrollViewIndicatorStyle = .white
+                    let value: UIScrollView.IndicatorStyle = .white
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -233,10 +233,10 @@ class LensUIScrollViewSpec: QuickSpec {
 
             context("decelerationRate") {
                 it("should get and set") {
-                    let lens: Lens<UIScrollView, CGFloat> = decelerationRate()
+                    let lens: Lens<UIScrollView, UIScrollView.DecelerationRate> = decelerationRate()
                     let object = UIScrollView()
 
-                    let value: CGFloat = UIScrollViewDecelerationRateFast
+                    let value = UIScrollView.DecelerationRate.fast
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -248,10 +248,10 @@ class LensUIScrollViewSpec: QuickSpec {
 
             context("indexDisplayMode") {
                 it("should get and set") {
-                    let lens: Lens<UIScrollView, UIScrollViewIndexDisplayMode> = indexDisplayMode()
+                    let lens: Lens<UIScrollView, UIScrollView.IndexDisplayMode> = indexDisplayMode()
                     let object = UIScrollView()
 
-                    let value: UIScrollViewIndexDisplayMode = .alwaysHidden
+                    let value: UIScrollView.IndexDisplayMode = .alwaysHidden
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -426,10 +426,10 @@ class LensUIScrollViewSpec: QuickSpec {
 
             context("keyboardDismissMode") {
                 it("should get and set") {
-                    let lens: Lens<UIScrollView, UIScrollViewKeyboardDismissMode> = keyboardDismissMode()
+                    let lens: Lens<UIScrollView, UIScrollView.KeyboardDismissMode> = keyboardDismissMode()
                     let object = UIScrollView()
 
-                    let value: UIScrollViewKeyboardDismissMode = .interactive
+                    let value: UIScrollView.KeyboardDismissMode = .interactive
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

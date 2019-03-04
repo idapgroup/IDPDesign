@@ -62,10 +62,10 @@ class LensUIControlSpec: QuickSpec {
 
             context("contentHorizontalAlignment") {
                 it("should get and set") {
-                    let lens: Lens<UIControl, UIControlContentHorizontalAlignment> = contentHorizontalAlignment()
+                    let lens: Lens<UIControl, UIControl.ContentHorizontalAlignment> = contentHorizontalAlignment()
                     let object = UIControl()
 
-                    let value: UIControlContentHorizontalAlignment = .right
+                    let value: UIControl.ContentHorizontalAlignment = .right
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -77,10 +77,10 @@ class LensUIControlSpec: QuickSpec {
 
             context("contentVerticalAlignment") {
                 it("should get and set") {
-                    let lens: Lens<UIControl, UIControlContentVerticalAlignment> = contentVerticalAlignment()
+                    let lens: Lens<UIControl, UIControl.ContentVerticalAlignment> = contentVerticalAlignment()
                     let object = UIControl()
 
-                    let value: UIControlContentVerticalAlignment = .bottom
+                    let value: UIControl.ContentVerticalAlignment = .bottom
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

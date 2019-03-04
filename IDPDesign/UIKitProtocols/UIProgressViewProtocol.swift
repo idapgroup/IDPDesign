@@ -7,7 +7,7 @@
 //
 
 protocol UIProgressViewProtocol: UIObjectType {
-    var progressViewStyle: UIProgressViewStyle { get set }
+    var progressViewStyle: UIProgressView.Style { get set }
     var progress: Float { get set }
     var progressTintColor: UIColor? { get set }
     var trackTintColor: UIColor? { get set }

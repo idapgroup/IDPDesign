@@ -8,14 +8,14 @@
 
 import UIKit
 
-public func backgroundImage<Object: UIBarButtonItem>(for state: UIControlState, barMetrics: UIBarMetrics) -> Lens<Object, UIImage?> {
+public func backgroundImage<Object: UIBarButtonItem>(for state: UIControl.State, barMetrics: UIBarMetrics) -> Lens<Object, UIImage?> {
     return Lens(
         get: { $0.backgroundImage(for: state, barMetrics: barMetrics) },
         setter: { $0.setBackgroundImage($1, for: state, barMetrics: barMetrics) }
     )
 }
 
-public func backgroundImage<Object: UIBarButtonItem>(for state: UIControlState, style: UIBarButtonItemStyle, barMetrics: UIBarMetrics) -> Lens<Object, UIImage?> {
+public func backgroundImage<Object: UIBarButtonItem>(for state: UIControl.State, style: UIBarButtonItem.Style, barMetrics: UIBarMetrics) -> Lens<Object, UIImage?> {
     return Lens(
         get: { $0.backgroundImage(for: state, style: style, barMetrics: barMetrics) },
         setter: { $0.setBackgroundImage($1, for: state, style: style, barMetrics: barMetrics) }
@@ -37,7 +37,7 @@ public func titlePositionAdjustment<Object: UIBarButtonItem>(for barMetrics: UIB
     )
 }
 
-public func backButtonBackgroundImage<Object: UIBarButtonItem>(for state: UIControlState, barMetrics: UIBarMetrics) -> Lens<Object, UIImage?> {
+public func backButtonBackgroundImage<Object: UIBarButtonItem>(for state: UIControl.State, barMetrics: UIBarMetrics) -> Lens<Object, UIImage?> {
     return Lens(
         get: { $0.backButtonBackgroundImage(for: state, barMetrics: barMetrics) },
         setter: { $0.setBackButtonBackgroundImage($1, for: state, barMetrics: barMetrics) }

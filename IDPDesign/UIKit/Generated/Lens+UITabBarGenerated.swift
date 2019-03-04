@@ -59,7 +59,7 @@ public func shadowImage<Object: UITabBar>() -> Lens<Object, UIImage?> {
     )
 }
 
-public func itemPositioning<Object: UITabBar>() -> Lens<Object, UITabBarItemPositioning> {
+public func itemPositioning<Object: UITabBar>() -> Lens<Object, UITabBar.ItemPositioning> {
     return Lens(
         get: { $0.itemPositioning },
         setter: { $0.itemPositioning = $1 }

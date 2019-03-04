@@ -8,13 +8,13 @@
 
 protocol UIStackViewProtocol: UIObjectType {
     // sourcery: value = .horizontal
-    var axis: UILayoutConstraintAxis { get set }
+    var axis: NSLayoutConstraint.Axis { get set }
 
     // sourcery: value = .equalCentering
-    var distribution: UIStackViewDistribution { get set }
+    var distribution: UIStackView.Distribution { get set }
 
     // sourcery: value = .center
-    var alignment: UIStackViewAlignment { get set }
+    var alignment: UIStackView.Alignment { get set }
     var spacing: CGFloat { get set }
     var isBaselineRelativeArrangement: Bool { get set }
     var isLayoutMarginsRelativeArrangement: Bool { get set }

@@ -3,7 +3,7 @@
 
 import UIKit
 
-public func style<Object: UIBarButtonItem>() -> Lens<Object, UIBarButtonItemStyle> {
+public func style<Object: UIBarButtonItem>() -> Lens<Object, UIBarButtonItem.Style> {
     return Lens(
         get: { $0.style },
         setter: { $0.style = $1 }

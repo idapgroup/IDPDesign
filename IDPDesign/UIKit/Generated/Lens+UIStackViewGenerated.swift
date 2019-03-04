@@ -3,21 +3,21 @@
 
 import UIKit
 
-public func axis<Object: UIStackView>() -> Lens<Object, UILayoutConstraintAxis> {
+public func axis<Object: UIStackView>() -> Lens<Object, NSLayoutConstraint.Axis> {
     return Lens(
         get: { $0.axis },
         setter: { $0.axis = $1 }
     )
 }
 
-public func distribution<Object: UIStackView>() -> Lens<Object, UIStackViewDistribution> {
+public func distribution<Object: UIStackView>() -> Lens<Object, UIStackView.Distribution> {
     return Lens(
         get: { $0.distribution },
         setter: { $0.distribution = $1 }
     )
 }
 
-public func alignment<Object: UIStackView>() -> Lens<Object, UIStackViewAlignment> {
+public func alignment<Object: UIStackView>() -> Lens<Object, UIStackView.Alignment> {
     return Lens(
         get: { $0.alignment },
         setter: { $0.alignment = $1 }

@@ -38,14 +38,14 @@ public func textAlignment<Object: UITextField>() -> Lens<Object, NSTextAlignment
     )
 }
 
-public func borderStyle<Object: UITextField>() -> Lens<Object, UITextBorderStyle> {
+public func borderStyle<Object: UITextField>() -> Lens<Object, UITextField.BorderStyle> {
     return Lens(
         get: { $0.borderStyle },
         setter: { $0.borderStyle = $1 }
     )
 }
 
-public func defaultTextAttributes<Object: UITextField>() -> Lens<Object, [String : Any]> {
+public func defaultTextAttributes<Object: UITextField>() -> Lens<Object, [NSAttributedString.Key : Any]> {
     return Lens(
         get: { $0.defaultTextAttributes },
         setter: { $0.defaultTextAttributes = $1 }
@@ -115,14 +115,14 @@ public func allowsEditingTextAttributes<Object: UITextField>() -> Lens<Object, B
     )
 }
 
-public func typingAttributes<Object: UITextField>() -> Lens<Object, [String : Any]?> {
+public func typingAttributes<Object: UITextField>() -> Lens<Object, [NSAttributedString.Key : Any]?> {
     return Lens(
         get: { $0.typingAttributes },
         setter: { $0.typingAttributes = $1 }
     )
 }
 
-public func clearButtonMode<Object: UITextField>() -> Lens<Object, UITextFieldViewMode> {
+public func clearButtonMode<Object: UITextField>() -> Lens<Object, UITextField.ViewMode> {
     return Lens(
         get: { $0.clearButtonMode },
         setter: { $0.clearButtonMode = $1 }
@@ -136,7 +136,7 @@ public func leftView<Object: UITextField>() -> Lens<Object, UIView?> {
     )
 }
 
-public func leftViewMode<Object: UITextField>() -> Lens<Object, UITextFieldViewMode> {
+public func leftViewMode<Object: UITextField>() -> Lens<Object, UITextField.ViewMode> {
     return Lens(
         get: { $0.leftViewMode },
         setter: { $0.leftViewMode = $1 }
@@ -150,7 +150,7 @@ public func rightView<Object: UITextField>() -> Lens<Object, UIView?> {
     )
 }
 
-public func rightViewMode<Object: UITextField>() -> Lens<Object, UITextFieldViewMode> {
+public func rightViewMode<Object: UITextField>() -> Lens<Object, UITextField.ViewMode> {
     return Lens(
         get: { $0.rightViewMode },
         setter: { $0.rightViewMode = $1 }

@@ -70,7 +70,7 @@ public func autoresizesSubviews<Object: UIView>() -> Lens<Object, Bool> {
     )
 }
 
-public func autoresizingMask<Object: UIView>() -> Lens<Object, UIViewAutoresizing> {
+public func autoresizingMask<Object: UIView>() -> Lens<Object, UIView.AutoresizingMask> {
     return Lens(
         get: { $0.autoresizingMask },
         setter: { $0.autoresizingMask = $1 }
@@ -141,7 +141,7 @@ public func isHidden<Object: UIView>() -> Lens<Object, Bool> {
     )
 }
 
-public func contentMode<Object: UIView>() -> Lens<Object, UIViewContentMode> {
+public func contentMode<Object: UIView>() -> Lens<Object, UIView.ContentMode> {
     return Lens(
         get: { $0.contentMode },
         setter: { $0.contentMode = $1 }
@@ -162,7 +162,7 @@ public func tintColor<Object: UIView>() -> Lens<Object, UIColor?> {
     )
 }
 
-public func tintAdjustmentMode<Object: UIView>() -> Lens<Object, UIViewTintAdjustmentMode> {
+public func tintAdjustmentMode<Object: UIView>() -> Lens<Object, UIView.TintAdjustmentMode> {
     return Lens(
         get: { $0.tintAdjustmentMode },
         setter: { $0.tintAdjustmentMode = $1 }

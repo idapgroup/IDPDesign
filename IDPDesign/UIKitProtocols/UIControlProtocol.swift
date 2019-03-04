@@ -7,8 +7,8 @@
 //
 
 protocol UIControlProtocol: UIObjectType {
-    var contentHorizontalAlignment: UIControlContentHorizontalAlignment { get set }
-    var contentVerticalAlignment: UIControlContentVerticalAlignment { get set }
+    var contentHorizontalAlignment: UIControl.ContentHorizontalAlignment { get set }
+    var contentVerticalAlignment: UIControl.ContentVerticalAlignment { get set }
     var isEnabled: Bool { get set }
     var isHighlighted: Bool { get set }
     var isSelected: Bool { get set }

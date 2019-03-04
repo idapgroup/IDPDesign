@@ -15,7 +15,7 @@ protocol UINavigationBarProtocol: UIObjectType {
     var items: [UINavigationItem]? { get set }
     var barTintColor: UIColor? { get set }
     var shadowImage: UIImage? { get set }
-    var titleTextAttributes: [NSAttributedStringKey : Any]? { get set }
+    var titleTextAttributes: [NSAttributedString.Key : Any]? { get set }
     var backIndicatorImage: UIImage? { get set }
     var backIndicatorTransitionMaskImage: UIImage? { get set }
 

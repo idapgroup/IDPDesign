@@ -159,10 +159,10 @@ class LensUITabBarSpec: QuickSpec {
 
             context("itemPositioning") {
                 it("should get and set") {
-                    let lens: Lens<UITabBar, UITabBarItemPositioning> = itemPositioning()
+                    let lens: Lens<UITabBar, UITabBar.ItemPositioning> = itemPositioning()
                     let object = UITabBar()
 
-                    let value: UITabBarItemPositioning = .fill
+                    let value: UITabBar.ItemPositioning = .fill
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

@@ -40,7 +40,7 @@ public func multipleSelectionBackgroundView<Object: UITableViewCell>() -> Lens<O
     )
 }
 
-public func selectionStyle<Object: UITableViewCell>() -> Lens<Object, UITableViewCellSelectionStyle> {
+public func selectionStyle<Object: UITableViewCell>() -> Lens<Object, UITableViewCell.SelectionStyle> {
     return Lens(
         get: { $0.selectionStyle },
         setter: { $0.selectionStyle = $1 }
@@ -75,7 +75,7 @@ public func shouldIndentWhileEditing<Object: UITableViewCell>() -> Lens<Object, 
     )
 }
 
-public func accessoryType<Object: UITableViewCell>() -> Lens<Object, UITableViewCellAccessoryType> {
+public func accessoryType<Object: UITableViewCell>() -> Lens<Object, UITableViewCell.AccessoryType> {
     return Lens(
         get: { $0.accessoryType },
         setter: { $0.accessoryType = $1 }
@@ -89,7 +89,7 @@ public func accessoryView<Object: UITableViewCell>() -> Lens<Object, UIView?> {
     )
 }
 
-public func editingAccessoryType<Object: UITableViewCell>() -> Lens<Object, UITableViewCellAccessoryType> {
+public func editingAccessoryType<Object: UITableViewCell>() -> Lens<Object, UITableViewCell.AccessoryType> {
     return Lens(
         get: { $0.editingAccessoryType },
         setter: { $0.editingAccessoryType = $1 }
@@ -131,7 +131,7 @@ public func isEditing<Object: UITableViewCell>() -> Lens<Object, Bool> {
     )
 }
 
-public func focusStyle<Object: UITableViewCell>() -> Lens<Object, UITableViewCellFocusStyle> {
+public func focusStyle<Object: UITableViewCell>() -> Lens<Object, UITableViewCell.FocusStyle> {
     return Lens(
         get: { $0.focusStyle },
         setter: { $0.focusStyle = $1 }

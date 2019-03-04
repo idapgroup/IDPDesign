@@ -8,7 +8,7 @@
 
 import UIKit
 
-public typealias UIControlAction = (target: Any?, action: Selector, controlEvents: UIControlEvents)
+public typealias UIControlAction = (target: Any?, action: Selector, controlEvents: UIControl.Event)
 
 public func actions<Object: UIControl>() -> Lens<Object, [UIControlAction]> {
     return Lens(
@@ -23,7 +23,7 @@ public func actions<Object: UIControl>() -> Lens<Object, [UIControlAction]> {
 fileprivate extension UIControl {
     fileprivate var allActions: [UIControlAction] {
         return bitComponents(for: self.allControlEvents.rawValue)
-            .map(UIControlEvents.init(rawValue:))
+            .map(UIControl.Event.init(rawValue:))
             .flatMap { event in
                 self.allTargets.flatMap { target in
                     (self.actions(forTarget: target, forControlEvent: event) ?? [])

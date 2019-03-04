@@ -21,10 +21,10 @@ class LensUIStackViewSpec: QuickSpec {
 
             context("axis") {
                 it("should get and set") {
-                    let lens: Lens<UIStackView, UILayoutConstraintAxis> = axis()
+                    let lens: Lens<UIStackView, NSLayoutConstraint.Axis> = axis()
                     let object = UIStackView()
 
-                    let value: UILayoutConstraintAxis = .horizontal
+                    let value: NSLayoutConstraint.Axis = .horizontal
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -36,10 +36,10 @@ class LensUIStackViewSpec: QuickSpec {
 
             context("distribution") {
                 it("should get and set") {
-                    let lens: Lens<UIStackView, UIStackViewDistribution> = distribution()
+                    let lens: Lens<UIStackView, UIStackView.Distribution> = distribution()
                     let object = UIStackView()
 
-                    let value: UIStackViewDistribution = .equalCentering
+                    let value: UIStackView.Distribution = .equalCentering
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -51,10 +51,10 @@ class LensUIStackViewSpec: QuickSpec {
 
             context("alignment") {
                 it("should get and set") {
-                    let lens: Lens<UIStackView, UIStackViewAlignment> = alignment()
+                    let lens: Lens<UIStackView, UIStackView.Alignment> = alignment()
                     let object = UIStackView()
 
-                    let value: UIStackViewAlignment = .center
+                    let value: UIStackView.Alignment = .center
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)

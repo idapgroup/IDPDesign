@@ -22,12 +22,12 @@ protocol CALayerProtocol: UIObjectType {
     var masksToBounds: Bool { get set }
     var contents: Any? { get set }
     var contentsRect: CGRect { get set }
-    var contentsGravity: String { get set }
+    var contentsGravity: CALayerContentsGravity { get set }
     var contentsScale: CGFloat { get set }
     var contentsCenter: CGRect { get set }
-    var contentsFormat: String { get set }
-    var minificationFilter: String { get set }
-    var magnificationFilter: String { get set }
+    var contentsFormat: CALayerContentsFormat { get set }
+    var minificationFilter: CALayerContentsFilter { get set }
+    var magnificationFilter: CALayerContentsFilter { get set }
     var minificationFilterBias: Float { get set }
     var isOpaque: Bool { get set }
     var needsDisplayOnBoundsChange: Bool { get set }

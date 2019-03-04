@@ -8,20 +8,9 @@
 
 import UIKit
 
-public func titleTextAttributes<Object: UIBarItem>(for state: UIControlState) -> Lens<Object, [NSAttributedStringKey : Any]?> {
+public func titleTextAttributes<Object: UIBarItem>(for state: UIControl.State) -> Lens<Object, [NSAttributedString.Key : Any]?> {
     return Lens(
-        get: { $0.titleTextAttributes(for: state).map(toAttributedStringKey) },
+        get: { $0.titleTextAttributes(for: state) },
         setter: { $0.setTitleTextAttributes($1, for: state) }
     )
-}
-
-// WARNING: transform is needed because of UIKit API inconsistency
-fileprivate func toAttributedStringKey(_ value: [String : Any]) -> [NSAttributedStringKey: Any] {
-    var result = [NSAttributedStringKey: Any]()
-    value.forEach {
-        let key = NSAttributedStringKey($0.key)
-        result[key] = $0.value
-    }
-    
-    return result
 }

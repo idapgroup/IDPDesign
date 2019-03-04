@@ -117,7 +117,7 @@ class LensUIGestureRecognizerSpec: QuickSpec {
                     let lens: Lens<UIGestureRecognizer, [NSNumber]> = allowedTouchTypes()
                     let object = UIGestureRecognizer()
 
-                    let value: [NSNumber] = [UITouchType.direct.rawValue as NSNumber]
+                    let value: [NSNumber] = [UITouch.TouchType.direct.rawValue as NSNumber]
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
@@ -132,7 +132,7 @@ class LensUIGestureRecognizerSpec: QuickSpec {
                     let lens: Lens<UIGestureRecognizer, [NSNumber]> = allowedPressTypes()
                     let object = UIGestureRecognizer()
 
-                    let value: [NSNumber] = [UIPressType.leftArrow.rawValue as NSNumber]
+                    let value: [NSNumber] = [UIPress.PressType.leftArrow.rawValue as NSNumber]
 
                     let resultObject = lens.set(object, value)
                     let resultValue = lens.get(resultObject)
