@@ -54,7 +54,6 @@
 		D74F4DAD1F7EC54D0043DC8B /* UITextViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74F4D811F7EC54D0043DC8B /* UITextViewProtocol.swift */; };
 		D74F4DAE1F7EC54D0043DC8B /* UIViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74F4D821F7EC54D0043DC8B /* UIViewControllerProtocol.swift */; };
 		D74F4DAF1F7EC54D0043DC8B /* UIViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74F4D831F7EC54D0043DC8B /* UIViewProtocol.swift */; };
-		D74F4DB01F7EC54D0043DC8B /* UIWebViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74F4D841F7EC54D0043DC8B /* UIWebViewProtocol.swift */; };
 		D74F4DB11F7EC54D0043DC8B /* WKWebViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74F4D851F7EC54D0043DC8B /* WKWebViewProtocol.swift */; };
 		D74F4E441F7EDB750043DC8B /* Lens+CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74F4E421F7ED7500043DC8B /* Lens+CALayer.swift */; };
 		D74F4E451F7EDB770043DC8B /* Lens+NSLayoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74F4E391F7ED74F0043DC8B /* Lens+NSLayoutManager.swift */; };
@@ -245,7 +244,6 @@
 		D74F4D811F7EC54D0043DC8B /* UITextViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewProtocol.swift; sourceTree = "<group>"; };
 		D74F4D821F7EC54D0043DC8B /* UIViewControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerProtocol.swift; sourceTree = "<group>"; };
 		D74F4D831F7EC54D0043DC8B /* UIViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewProtocol.swift; sourceTree = "<group>"; };
-		D74F4D841F7EC54D0043DC8B /* UIWebViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWebViewProtocol.swift; sourceTree = "<group>"; };
 		D74F4D851F7EC54D0043DC8B /* WKWebViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebViewProtocol.swift; sourceTree = "<group>"; };
 		D74F4E391F7ED74F0043DC8B /* Lens+NSLayoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lens+NSLayoutManager.swift"; sourceTree = "<group>"; };
 		D74F4E3A1F7ED74F0043DC8B /* Lens+UIBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lens+UIBarItem.swift"; sourceTree = "<group>"; };
@@ -527,7 +525,6 @@
 				D74F4D811F7EC54D0043DC8B /* UITextViewProtocol.swift */,
 				D74F4D821F7EC54D0043DC8B /* UIViewControllerProtocol.swift */,
 				D74F4D831F7EC54D0043DC8B /* UIViewProtocol.swift */,
-				D74F4D841F7EC54D0043DC8B /* UIWebViewProtocol.swift */,
 				D74F4D851F7EC54D0043DC8B /* WKWebViewProtocol.swift */,
 			);
 			path = UIKitProtocols;
@@ -875,7 +872,6 @@
 			files = (
 				D74F4DA61F7EC54D0043DC8B /* UITabBarProtocol.swift in Sources */,
 				D793C5E61F7EE69000375223 /* Lens+UIRotationGestureRecognizerGenerated.swift in Sources */,
-				D74F4DB01F7EC54D0043DC8B /* UIWebViewProtocol.swift in Sources */,
 				D793C5DC1F7EE69000375223 /* Lens+UIStackViewGenerated.swift in Sources */,
 				D74F4E471F7EDB770043DC8B /* Lens+UIBarButtonItem.swift in Sources */,
 				D74F4DA41F7EC54D0043DC8B /* UISwipeGestureRecognizerProtocol.swift in Sources */,
