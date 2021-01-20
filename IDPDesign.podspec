@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name      = "IDPDesign"
-  s.version   = "0.2.0"
+  s.version   = "0.5.0"
   s.summary   = "Placeholder"
   s.description  = <<-DESC
                      Placeholder
