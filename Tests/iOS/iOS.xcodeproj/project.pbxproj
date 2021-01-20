@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8B355239BF43BF56F1246127 /* Pods_iOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 403CCC8A7BA4875B404B33B5 /* Pods_iOSTests.framework */; };
+		96064EAA25B848D7001D904D /* Lens+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96064EA925B848D7001D904D /* Lens+UITextField.swift */; };
 		D70AAE671F84079000BD3AF3 /* Lens+CALayerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70AAE661F84079000BD3AF3 /* Lens+CALayerSpec.swift */; };
 		D719F96E1F84691A00E3AA9F /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D719F96D1F84691A00E3AA9F /* UIImage+Extensions.swift */; };
 		D719F9711F846A8200E3AA9F /* Matchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D719F9701F846A8200E3AA9F /* Matchers.swift */; };
@@ -199,6 +200,7 @@
 /* Begin PBXFileReference section */
 		403CCC8A7BA4875B404B33B5 /* Pods_iOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94BCA14EEF8DC27E6362838C /* Pods-iOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSTests/Pods-iOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		96064EA925B848D7001D904D /* Lens+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lens+UITextField.swift"; sourceTree = "<group>"; };
 		CB4E6F9D00971D700FBD3D03 /* Pods-iOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSTests/Pods-iOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		D70AAE661F84079000BD3AF3 /* Lens+CALayerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lens+CALayerSpec.swift"; sourceTree = "<group>"; };
 		D719F96D1F84691A00E3AA9F /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
@@ -478,6 +480,7 @@
 				D74F4E401F7ED7500043DC8B /* Lens+UIImageView.swift */,
 				D74F4E3E1F7ED7500043DC8B /* Lens+UINavigationBar.swift */,
 				D74F4E411F7ED7500043DC8B /* Lens+UITabBarItem.swift */,
+				96064EA925B848D7001D904D /* Lens+UITextField.swift */,
 				D74F4E3D1F7ED7500043DC8B /* Lens+UIView.swift */,
 				D74F4DB31F7EC6DC0043DC8B /* Generated */,
 			);
@@ -787,6 +790,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -938,6 +942,7 @@
 				D793C5EC1F7EE69000375223 /* Lens+UITabBarGenerated.swift in Sources */,
 				D74F4D881F7EC54D0043DC8B /* CGRectProtocol.swift in Sources */,
 				D74F4DA71F7EC54D0043DC8B /* UITableViewCellProtocol.swift in Sources */,
+				96064EAA25B848D7001D904D /* Lens+UITextField.swift in Sources */,
 				D74F4DAA1F7EC54D0043DC8B /* UITapGestureRecognizerProtocol.swift in Sources */,
 				D74F4DAC1F7EC54D0043DC8B /* UITextInputTraitsProtocol.swift in Sources */,
 				D74F4DAB1F7EC54D0043DC8B /* UITextFieldProtocol.swift in Sources */,
