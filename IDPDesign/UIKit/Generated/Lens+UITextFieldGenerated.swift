@@ -115,13 +115,6 @@ public func allowsEditingTextAttributes<Object: UITextField>() -> Lens<Object, B
     )
 }
 
-public func typingAttributes<Object: UITextField>() -> Lens<Object, [NSAttributedString.Key : Any]?> {
-    return Lens(
-        get: { $0.typingAttributes },
-        setter: { $0.typingAttributes = $1 }
-    )
-}
-
 public func clearButtonMode<Object: UITextField>() -> Lens<Object, UITextField.ViewMode> {
     return Lens(
         get: { $0.clearButtonMode },
